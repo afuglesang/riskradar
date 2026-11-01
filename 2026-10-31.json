@@ -1,0 +1,1193 @@
+{
+ "calendar": [
+  {
+   "d": "2026-11-01",
+   "t": "OPEC+-møte (saudisk produksjon under kvote)"
+  },
+  {
+   "d": "2026-11-03",
+   "t": "Mellomvalg i USA; varslet vindu for nye angrep på Iran etterpå"
+  },
+  {
+   "d": "2026-11-04",
+   "t": "Frist for endelig valgresultat i Israel"
+  },
+  {
+   "d": "2026-11-06",
+   "t": "Amerikansk jobbrapport (ledighet)"
+  },
+  {
+   "d": "2026-11",
+   "t": "Trilaterale tekniske samtaler om Ukraina (dato ikke satt)"
+  },
+  {
+   "d": "2026-12",
+   "t": "El Niño ventes å toppe (nov–jan)"
+  },
+  {
+   "d": "2027-04",
+   "t": "«2027-vinduet» for PLA-beredskap, ifølge amerikanske militære ledere"
+  }
+ ],
+ "date": "2026-10-31",
+ "drivers": [
+  {
+   "h": "12 mnd",
+   "id": "d_rsi_claim",
+   "imp": {
+    "ai": 0.6
+   },
+   "p": 0.65,
+   "t": "Ledende KI-lab oppgir at KI gjør mesteparten av egen forskning og utvikling",
+   "why": "Lab-ledere sier allerede at selvkoding akselererer raskere enn ventet."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_cyber_diffusion",
+   "imp": {
+    "ai": 0.8,
+    "hybrid": 0.3
+   },
+   "p": 0.45,
+   "t": "Cyberkapasitet på Mythos-nivå blir bredt tilgjengelig (åpen modell eller lekkasje)",
+   "why": "Eksportkontroll på programvare kjøper erfaringsmessig måneder, ikke år."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_ai_loc",
+   "imp": {
+    "ai": 1
+   },
+   "p": 0.2,
+   "t": "Dokumentert KI-agent som unndrar seg kontroll i reell drift",
+   "why": "Sett i tester; ikke offentlig bekreftet i produksjon."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_weights_theft",
+   "imp": {
+    "ai": 0.6,
+    "bio": 0.2
+   },
+   "p": 0.25,
+   "t": "Bekreftet tyveri av vekter fra en frontier-modell (statlig aktør)",
+   "why": "Mistanke om kinesisk tilgang til Mythos utløste eksportkontrollen i juni."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_ai_law",
+   "imp": {
+    "ai": -0.8,
+    "bio": -0.3
+   },
+   "p": 0.15,
+   "t": "Bindende amerikansk tilsyn med frontier-KI vedtas",
+   "why": "EO 14409 er frivillig; en demokratisk kongress øker sjansen litt."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_uscn_ai",
+   "imp": {
+    "ai": -0.5,
+    "nuclear": -0.2
+   },
+   "p": 0.12,
+   "t": "USA–Kina-avtale om KI-risiko (f.eks. ingen KI i kjernevåpenkontroll)",
+   "why": "Lite konkret fra Trump–Xi-toppmøtet i mai."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_ai_crash",
+   "imp": {
+    "ai": -0.4,
+    "econ": 0.7,
+    "social": 0.3
+   },
+   "p": 0.3,
+   "t": "KI-aksjer faller over 25 % og investeringene kuttes",
+   "why": "Capex på $650–700 mrd med uklar inntjening; høy oljepris og renter."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_brent120",
+   "imp": {
+    "climate": 0.3,
+    "econ": 0.6,
+    "social": 0.7,
+    "ukraine": 0.2
+   },
+   "p": 0.4,
+   "t": "Brent over $120 i snitt i minst én måned",
+   "why": "Brent $113 nå; markedets bull-case for november er $120."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_us_unemp",
+   "imp": {
+    "econ": 0.4,
+    "social": 0.8
+   },
+   "p": 0.35,
+   "t": "Amerikansk arbeidsledighet når 5,0 % eller mer",
+   "why": "Ledighet rett over 4 %; Goldman venter KI-oppsigelser i neste nedtur."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_ai_layoffs",
+   "imp": {
+    "social": 0.4
+   },
+   "p": 0.5,
+   "t": "KI-begrunnede oppsigelser over 250 000 i USA og EU på 12 mnd",
+   "why": "Rundt 183 000 jan–okt 2026 ifølge én tracker."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_france",
+   "imp": {
+    "social": 0.9
+   },
+   "p": 0.2,
+   "t": "Frankrike innfører nasjonal unntakstilstand på grunn av uro",
+   "why": "Lokale portforbud er allerede vurdert etter opptøyene i oktober."
+  },
+  {
+   "h": "6 mnd",
+   "id": "d_energy_relief",
+   "imp": {
+    "social": -0.5
+   },
+   "p": 0.7,
+   "t": "Store energistøttepakker i EU og nasjonalt",
+   "why": "Macron foreslår å frigi mer oljereserver; flere land forlenger tiltak."
+  },
+  {
+   "h": "til 31.3.2027",
+   "id": "d_hormuz_open",
+   "imp": {
+    "climate": -0.5,
+    "econ": -0.9,
+    "mideast": -0.8,
+    "social": -0.6
+   },
+   "p": 0.25,
+   "t": "Hormuz tilbake til normal trafikk innen 31. mars 2027",
+   "why": "Polymarket priser normal trafikk innen nyttår til rundt 11 %."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_export_bans",
+   "imp": {
+    "climate": 0.8,
+    "econ": 0.2,
+    "social": 0.4
+   },
+   "p": 0.35,
+   "t": "Stor eksportør innfører eksportforbud på mat eller gjødsel",
+   "why": "Gjentok seg i 2008 og 2022; FAO advarer mot dette nå."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_bio_evasion",
+   "imp": {
+    "bio": 0.2
+   },
+   "p": 0.85,
+   "t": "Nye rapporter om omgåtte biosikringer i frontier-modeller",
+   "why": "Anthropic rapporterte fem slike tilfeller i september."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_bio_openmodel",
+   "imp": {
+    "bio": 0.5
+   },
+   "p": 0.55,
+   "t": "Åpen modell eller biodesignverktøy med ekspertnivå uten sikringer",
+   "why": "Mange biologiske KI-verktøy er åpne; få har sikringer."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_h5n1",
+   "imp": {
+    "bio": 3.5,
+    "econ": 1,
+    "social": 0.5
+   },
+   "p": 0.03,
+   "t": "H5N1 får vedvarende smitte mellom mennesker",
+   "why": "Utbredt i dyr; WHO ser ingen økt pandemirisiko nå."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_bio_state",
+   "imp": {
+    "bio": 0.8
+   },
+   "p": 0.07,
+   "t": "Statlig biovåpenprogram avsløres eller tas i bruk",
+   "why": "Lav sannsynlighet, høy konsekvens."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_elnino_disease",
+   "imp": {
+    "bio": 0.2,
+    "climate": 0.2
+   },
+   "p": 0.5,
+   "t": "El Niño gir rekordutbrudd av dengue eller kolera",
+   "why": "Sterke El Niño-år gir typisk flere vektor- og vannbårne utbrudd."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_dna_screen",
+   "imp": {
+    "bio": -0.4
+   },
+   "p": 0.2,
+   "t": "Obligatorisk DNA-syntesescreening i USA eller EU",
+   "why": "Ett av RANDs ni tiltak; politisk modent, men ikke vedtatt."
+  },
+  {
+   "h": "1 mnd",
+   "id": "d_ua_talks",
+   "imp": {
+    "ukraine": -0.2
+   },
+   "p": 0.75,
+   "t": "Trilaterale tekniske samtaler USA–Russland–Ukraina holdes i november",
+   "why": "Begge parter har sagt ja; dato avventer Midtøsten."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_ua_ceasefire",
+   "imp": {
+    "hybrid": -0.3,
+    "ukraine": -0.7
+   },
+   "p": 0.25,
+   "t": "Generell energi- eller luftvåpenhvile holder i over 60 dager",
+   "why": "Tidligere våpenhviler i 2026 har vært korte og brutt."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_summit_ru",
+   "imp": {
+    "ukraine": -0.6
+   },
+   "p": 0.15,
+   "t": "Putin og Zelenskyj møtes (med Trump)",
+   "why": "Har ikke skjedd siden fullskala invasjonen."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_eu_guarantees",
+   "imp": {
+    "hybrid": 0.2,
+    "ukraine": -0.5
+   },
+   "p": 0.3,
+   "t": "Europeisk sikkerhetsgaranti eller «reassurance force» vedtas",
+   "why": "Kyiv ser garantier som forutsetning for en avtale."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_ru_mobil",
+   "imp": {
+    "hybrid": 0.3,
+    "ukraine": 0.6
+   },
+   "p": 0.3,
+   "t": "Russland iverksetter ny mobiliseringsbølge",
+   "why": "ISW: dagens tempo kan ikke holdes ved dagens tap uten mobilisering."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_nk_troops",
+   "imp": {
+    "nuclear": 0.1,
+    "ukraine": 0.4
+   },
+   "p": 0.35,
+   "t": "Rundt 10 000 nordkoreanske soldater settes inn i Ukraina",
+   "why": "Zelenskyj har advart om dette."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_ua_intel_cut",
+   "imp": {
+    "hybrid": 0.3,
+    "ukraine": 0.3
+   },
+   "p": 0.2,
+   "t": "USA kutter etterretning eller Starlink til Ukraina",
+   "why": "Trump-administrasjonen har truet med det, ifølge Zelenskyj."
+  },
+  {
+   "h": "1 uke",
+   "id": "d_dem_house",
+   "imp": {
+    "mideast": -0.15,
+    "ukraine": -0.1
+   },
+   "p": 0.75,
+   "t": "Demokratene vinner Representantenes hus 3. november",
+   "why": "Prediksjonsmarkeder og prognoser heller mot demokratisk flertall."
+  },
+  {
+   "h": "3 mnd",
+   "id": "d_us_strike_iran",
+   "imp": {
+    "climate": 0.2,
+    "econ": 0.6,
+    "mideast": 1.5,
+    "nuclear": 0.4,
+    "social": 0.3,
+    "taiwan": 0.3
+   },
+   "p": 0.6,
+   "t": "USA (og Israel) gjenopptar storskala angrep på Iran",
+   "why": "Allierte bedt om å forberede seg; tredje hangarskip på vei; Trump heller mot angrep."
+  },
+  {
+   "h": "3 mnd",
+   "id": "d_qatar_deal",
+   "imp": {
+    "econ": -0.4,
+    "mideast": -1.2
+   },
+   "p": 0.25,
+   "t": "Qatar-meglet avtale: blokaden løftes og Hormuz åpnes",
+   "why": "Iran ser «bare uakseptable ideer», men holder kontakt med meglerne."
+  },
+  {
+   "h": "3 mnd",
+   "id": "d_netanyahu",
+   "imp": {
+    "mideast": 0.3
+   },
+   "p": 0.5,
+   "t": "Netanyahu danner ny regjering",
+   "why": "Hans blokk lå først ved 50 % opptelling, men uten flertall."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_houthi_refinery",
+   "imp": {
+    "econ": 0.4,
+    "mideast": 0.5
+   },
+   "p": 0.3,
+   "t": "Houthi-angrep stanser en stor saudisk eksportterminal eller raffineri i over 2 uker",
+   "why": "Daglige angrep; Ras Tanura og Yanbu er nevnt som mål."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_gulf_desal",
+   "imp": {
+    "climate": 0.6,
+    "mideast": 0.5
+   },
+   "p": 0.2,
+   "t": "Angrep på avsaltingsanlegg i Gulfen",
+   "why": "USA ber allierte sikre energi- og infrastruktur mot iransk gjengjeldelse."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_subsea_cables",
+   "imp": {
+    "econ": 0.3,
+    "mideast": 0.4
+   },
+   "p": 0.15,
+   "t": "Angrep på undersjøiske kabler i Gulfen eller Rødehavet",
+   "why": "Irans sikkerhetsråd har nevnt kabler og datasentre som mulige mål."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_regional_pact",
+   "imp": {
+    "mideast": -0.6
+   },
+   "p": 0.15,
+   "t": "Ikke-angrepsavtale mellom Iran og Mekka-pakten",
+   "why": "Første møte i Teheran 26. okt; enighet om å fortsette samtalene."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_iran_npt",
+   "imp": {
+    "mideast": 0.7,
+    "nuclear": 1.2
+   },
+   "p": 0.1,
+   "t": "Iran trekker seg fra NPT eller erklærer et våpenprogram",
+   "why": "Mer sannsynlig hvis angrepene gjenopptas."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_pla_drill",
+   "imp": {
+    "taiwan": 0.3
+   },
+   "p": 0.6,
+   "t": "PLA-øvelse med blokadeelement rundt Taiwan",
+   "why": "Skjedde 2022–2025; uteble etter nasjonaldagstalen i år."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_pratas",
+   "imp": {
+    "taiwan": 0.9
+   },
+   "p": 0.15,
+   "t": "Dødelig konfrontasjon ved Pratas eller Kinmen",
+   "why": "Vannkanon-hendelsen i oktober viser hvor lite som skal til."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_scs_clash",
+   "imp": {
+    "econ": 0.2,
+    "taiwan": 0.4
+   },
+   "p": 0.2,
+   "t": "Dødelig konfrontasjon mellom Kina og Filippinene",
+   "why": "Kina øker militær aktivitet rundt Filippinene."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_taiwan_arms",
+   "imp": {
+    "taiwan": 0.1
+   },
+   "p": 0.45,
+   "t": "USA notifiserer våpenpakken til Taiwan på $14 mrd",
+   "why": "Kongressen presser; Trump har holdt den som forhandlingskort."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_trumpxi_taiwan",
+   "imp": {
+    "taiwan": -0.2
+   },
+   "p": 0.25,
+   "t": "Trump–Xi-erklæring med innrømmelse om Taiwan",
+   "why": "Senker kortsiktig press fra Beijing, men svekker avskrekking over tid."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_pla_purge",
+   "imp": {
+    "taiwan": -0.3
+   },
+   "p": 0.55,
+   "t": "Nye renskninger i PLA-ledelsen",
+   "why": "Etterretning peker på beredskapsmangler i PLA."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_tariff_war",
+   "imp": {
+    "econ": 0.4,
+    "taiwan": 0.2
+   },
+   "p": 0.25,
+   "t": "Ny eskalering i handelskrigen USA–Kina",
+   "why": "Toppmøtet i mai ga handelsavtaler, men de er skjøre."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_nk_test",
+   "imp": {
+    "nuclear": 2
+   },
+   "p": 0.08,
+   "t": "Nord-Korea gjennomfører sin 7. kjernefysiske prøvesprengning",
+   "why": "Forberedt i årevis; Kina holder igjen."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_us_test",
+   "imp": {
+    "nuclear": 2
+   },
+   "p": 0.05,
+   "t": "USA gjennomfører en eksplosiv kjernefysisk test",
+   "why": "Varslet i 2025; teknisk og politisk tungt å gjennomføre raskt."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_indpak",
+   "imp": {
+    "nuclear": 0.9
+   },
+   "p": 0.2,
+   "t": "Ny væpnet krise mellom India og Pakistan",
+   "why": "Uløst om Kashmir, terror og vann; få diplomatiske kanaler."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_newstart_exceed",
+   "imp": {
+    "nuclear": 0.3
+   },
+   "p": 0.3,
+   "t": "USA eller Russland øker utplasserte stridshoder over New START-nivå",
+   "why": "Ingen grenser etter 5. februar."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_arms_talks",
+   "imp": {
+    "nuclear": -0.5
+   },
+   "p": 0.25,
+   "t": "Formelle våpenkontrollsamtaler (USA, Russland, evt. Kina) startes",
+   "why": "Trump vil ha en trilateral avtale; Kina avviser."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_cable_cut",
+   "imp": {
+    "hybrid": 0.4
+   },
+   "p": 0.55,
+   "t": "Kabel eller rørledning i Østersjøen eller Nordsjøen skadet og tilskrevet Russland",
+   "why": "Gjentatte hendelser siden 2023."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_blacksea_ships",
+   "imp": {
+    "econ": 0.1,
+    "hybrid": 0.4
+   },
+   "p": 0.6,
+   "t": "Flere handelsskip senkes i NATO-landenes økonomiske soner",
+   "why": "Fire skip senket utenfor Bulgaria i oktober, ifølge Ukraina."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_falseflag",
+   "imp": {
+    "hybrid": 0.8
+   },
+   "p": 0.25,
+   "t": "Falsk-flagg-droneangrep mot baltisk infrastruktur",
+   "why": "Litauisk forsvarsledelse advarer eksplisitt."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_grid_cyber",
+   "imp": {
+    "hybrid": 0.7,
+    "social": 0.2
+   },
+   "p": 0.2,
+   "t": "Cyberangrep slår ut strøm eller vann i et NATO-land",
+   "why": "Dansk etterretning nevner ødeleggende cyberangrep som mulighet."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_us_europe_drawdown",
+   "imp": {
+    "hybrid": 0.5,
+    "ukraine": 0.2
+   },
+   "p": 0.3,
+   "t": "USA trekker vesentlige styrker ut av Europa",
+   "why": "Ressurser trekkes mot Midtøsten; bombefly allerede flyttet fra Fairford."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_nato_costs",
+   "imp": {
+    "hybrid": -0.2
+   },
+   "p": 0.3,
+   "t": "NATO vedtar felles mottiltak mot hybridangrep",
+   "why": "EU-kommissær Kubilius vil at svarene skal være like smertefulle."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_rate_hikes",
+   "imp": {
+    "econ": 0.5,
+    "social": 0.2
+   },
+   "p": 0.3,
+   "t": "Fed eller ECB hever renten på grunn av inflasjon",
+   "why": "Global inflasjon anslått til 4,7 % i 2026."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_em_debt",
+   "imp": {
+    "econ": 0.4,
+    "social": 0.3
+   },
+   "p": 0.35,
+   "t": "Statsgjeldskrise i et større fremvoksende land",
+   "why": "Importavhengige land med høy gjeld presses av olje og mat."
+  },
+  {
+   "h": "4 mnd",
+   "id": "d_superelnino",
+   "imp": {
+    "climate": 0.4
+   },
+   "p": 0.9,
+   "t": "El Niño holder seg «very strong» gjennom vinteren",
+   "why": "Alle 27 IRI-modeller viser very strong til og med DJF."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_monsoon_fail",
+   "imp": {
+    "climate": 0.6,
+    "social": 0.2
+   },
+   "p": 0.4,
+   "t": "Svak monsun eller avlingssvikt i Sør- og Sørøst-Asia",
+   "why": "Klassisk El Niño-effekt; NOAA har varslet tørrere India."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_fert_short",
+   "imp": {
+    "climate": 0.6,
+    "econ": 0.2
+   },
+   "p": 0.45,
+   "t": "Gjødselmangel gir lavere avlinger i 2027",
+   "why": "Gjødsel/kornpris-forholdet er det laveste siden 1960 (Oxford Economics)."
+  },
+  {
+   "h": "12 mnd",
+   "id": "d_drought_south",
+   "imp": {
+    "climate": 0.3
+   },
+   "p": 0.6,
+   "t": "Alvorlig tørke i det sørlige Afrika, Australia eller Mellom-Amerika",
+   "why": "Typiske El Niño-regioner."
+  }
+ ],
+ "factors": [
+  {
+   "P": 0.35,
+   "drivers": [
+    "d_rsi_claim",
+    "d_cyber_diffusion",
+    "d_ai_loc",
+    "d_weights_theft",
+    "d_ai_law",
+    "d_uscn_ai",
+    "d_ai_crash"
+   ],
+   "experts": [
+    "RAND (Bhatt m.fl.)",
+    "AI Futures Project (Kokotajlo)",
+    "IBM Think-intervjuer"
+   ],
+   "id": "ai",
+   "name": "Selvforbedrende KI",
+   "outcome": "Destabiliserende KI-sprang: et ledende laboratorium lar KI utføre hoveddelen av egen forskning uten bindende statlig tilsyn, eller en alvorlig KI-relatert sikkerhetshendelse (cyber eller kontrolltap) krever statlig krisehåndtering.",
+   "severity": 4,
+   "sinceLast": "Første måling. I oktober kom RAND-rapporten om selvforbedring (12. okt), og en arXiv-studie (AIDE²) viste begrenset, målbar selvforbedring av forskningsagenter.",
+   "sources": [
+    {
+     "t": "RAND: Recursive Self-Improvement and Automated AI R&D (okt 2026)",
+     "u": "https://www.rand.org/pubs/perspectives/PEA5068-1.html"
+    },
+    {
+     "t": "CACM: Is Recursive Self-Improvement Really Here? (16. okt)",
+     "u": "https://cacm.acm.org/news/is-recursive-self-improvement-really-here/"
+    },
+    {
+     "t": "arXiv: Recursive self-improvement of AI research agents",
+     "u": "https://arxiv.org/abs/2609.26457"
+    },
+    {
+     "t": "CRS: Federal Government and Anthropic (Mythos/eksportkontroll)",
+     "u": "https://www.everycrsreport.com/files/2026-07-31_IF13217_f173f382a81a70a361e3fcb013ab08058bb4106d.html"
+    }
+   ],
+   "spill": 0.08,
+   "summary": "RAND (okt 2026) konkluderer med at full rekursiv selvforbedring ikke er nådd, men at KI allerede automatiserer betydelige deler av KI-utviklingen. Både OpenAI og Anthropic har i år sagt at KI-assistert utvikling går raskere enn de ventet. Mythos-saken i juni viste at stater nå behandler frontier-modeller som strategiske kapabiliteter: eksportkontroll ble innført og trukket tilbake på 18 dager. Tilsynet i USA er fortsatt frivillig (EO 14409).",
+   "tag": "KI",
+   "trend": "new"
+  },
+  {
+   "P": 0.38,
+   "drivers": [
+    "d_brent120",
+    "d_us_unemp",
+    "d_ai_layoffs",
+    "d_france",
+    "d_export_bans",
+    "d_energy_relief",
+    "d_hormuz_open"
+   ],
+   "experts": [
+    "Goldman Sachs (Briggs)",
+    "Verisk Maplecroft",
+    "Yale Budget Lab"
+   ],
+   "id": "social",
+   "name": "Sosial uro: KI-jobber og levekostnader",
+   "outcome": "Uro som feller regjeringen eller utløser nasjonal unntakstilstand i minst ett G7-land, eller KI-drevne jobbtap som løfter amerikansk ledighet over 5,5 %.",
+   "severity": 2,
+   "sinceLast": "Første måling. Oktober: opptøyer og plyndring i Paris og Milano, Microsoft tilbød sluttpakker til 60 000 ansatte, og høyrepopulister vinner terreng før valg i 2027.",
+   "sources": [
+    {
+     "t": "Reuters via Daily Sabah: High energy prices fuel unrest in Europe (20. okt)",
+     "u": "https://www.dailysabah.com/business/economy/high-energy-prices-fuel-unrest-in-europe-as-far-right-eyes-gains"
+    },
+    {
+     "t": "Fortune: Goldman – AI could displace one in 11 workers (22. okt)",
+     "u": "https://fortune.com/2026/10/22/goldman-sachs-forecast-how-many-jobs-lost-to-ai-9-percent/"
+    },
+    {
+     "t": "Reuters/Jakarta Post: Verisk Maplecroft – uro på seksårs høyeste",
+     "u": "https://www.thejakartapost.com/business/2026/06/28/falling-energy-prices-wont-defuse-rising-risk-of-civil-unrest-in-emerging-markets"
+    },
+    {
+     "t": "Stanford-data oppsummert: People were supposed to lose their job by 2026",
+     "u": "https://vishalbagla.substack.com/p/people-were-supposed-to-lose-their"
+    }
+   ],
+   "spill": 0.03,
+   "summary": "Den akutte driveren er energi, ikke KI. Oljesjokket har gitt voldelige levekostnadsprotester i Frankrike (rundt 550 000 deltakere 17. okt), Italia, Spania, Portugal og Albania, og Verisk Maplecroft målte global uro på seksårs høyeste i 2. kvartal. KI-effekten på jobber er foreløpig smal: unge (22–25 år) i KI-eksponerte yrker har mistet rundt 11 % av jobbene siden 2022, mens samlet ledighet i USA ligger rett over 4 %. Goldman Sachs mener KI-oppsigelsene venter på neste resesjon.",
+   "tag": "Uro",
+   "trend": "new"
+  },
+  {
+   "P": 0.12,
+   "drivers": [
+    "d_bio_evasion",
+    "d_bio_openmodel",
+    "d_h5n1",
+    "d_bio_state",
+    "d_elnino_disease",
+    "d_dna_screen",
+    "d_ai_law"
+   ],
+   "experts": [
+    "RAND (Steph Guerra)",
+    "MI5 (Ken McCallum)",
+    "International AI Safety Report",
+    "WHO"
+   ],
+   "id": "bio",
+   "name": "Biotrusler: KI-drevne biovåpen og pandemi",
+   "outcome": "WHO erklærer en ny internasjonal folkehelsekrise (PHEIC) med pandemipotensial, eller et bekreftet KI-assistert forsøk på biologisk angrep.",
+   "severity": 5,
+   "sinceLast": "Første måling. Storbritannia etablerer et eget AI Biosecurity Lab (omtalt 26. okt).",
+   "sources": [
+    {
+     "t": "CRS: Artificial Intelligence and Biosecurity Issues (sept 2026)",
+     "u": "https://www.everycrsreport.com/reports/IF13269.html"
+    },
+    {
+     "t": "RAND: Layered defense strategy against AI-enabled bioweapons",
+     "u": "https://www.rand.org/news/press/2026/08/rand-outlines-layered-defense-strategy-to-mitigate.html"
+    },
+    {
+     "t": "BISI: Assessing the UK's AI Biosecurity Lab (26. okt)",
+     "u": "https://bisi.org.uk/reports/biosecurity-in-the-age-of-ai-assessing-the-uks-ai-biosecurity-lab"
+    },
+    {
+     "t": "WHO WPRO: Avian Influenza Weekly Update (2. okt)",
+     "u": "https://cdn.who.int/media/docs/default-source/wpro---documents/emergency/surveillance/avian-influenza/ai_20261002.pdf"
+    },
+    {
+     "t": "Belfer Center: The Dual-Use Frontier of AI-Enabled Biotechnology",
+     "u": "https://www.belfercenter.org/research-analysis/dual-use-frontier-ai-enabled-biotechnology-civilian-opportunities-national"
+    }
+   ],
+   "spill": 0.35,
+   "summary": "International AI Safety Report 2026 slår fast at frontier-modeller matcher eller slår eksperter på enkelte biorelevante tester. Anthropic publiserte 11. september fem tilfeller der brukere omgikk biosikringene, og MI5-sjef Ken McCallum sier bio er misbruksrisikoen han vekter tyngst. RAND beskriver dagens sikringer som fragmenterte og foreslår ni lag med tiltak. H5N1 sprer seg bredt i dyr, men WHO vurderer pandemirisikoen som uendret; ingen smitte mellom mennesker er påvist.",
+   "tag": "Bio",
+   "trend": "new"
+  },
+  {
+   "P": 0.7,
+   "drivers": [
+    "d_ua_talks",
+    "d_ua_ceasefire",
+    "d_summit_ru",
+    "d_eu_guarantees",
+    "d_ru_mobil",
+    "d_nk_troops",
+    "d_ua_intel_cut",
+    "d_brent120",
+    "d_dem_house"
+   ],
+   "experts": [
+    "ISW (Shymkiv, Barros, Harward)"
+   ],
+   "id": "ukraine",
+   "name": "Ukraina-krigen",
+   "outcome": "Ingen generell våpenhvile mellom Russland og Ukraina per 31. oktober 2027.",
+   "severity": 3,
+   "sinceLast": "Første måling. Samtalene var satt på pause fra februar til oktober på grunn av Iran-krigen. Støre og Stubb snakket med Putin 27. okt.",
+   "sources": [
+    {
+     "t": "ISW: Russian Offensive Campaign Assessment, 16. okt 2026",
+     "u": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-october-16-2026"
+    },
+    {
+     "t": "AP/Washington Times: Ceasefire in Ukrainian city holding (28. okt)",
+     "u": "https://www.washingtontimes.com/news/2026/oct/28/six-day-ceasefire-ukrainian-city-holding-officials-say-moscow-kyiv/"
+    },
+    {
+     "t": "Reuters/MPR: Ukraine and Russia eye new peace talks (24. okt)",
+     "u": "https://www.mprnews.org/story/2026/10/24/ukraine-and-russia-eye-new-peace-talks-but-steep-obstacles-remain"
+    },
+    {
+     "t": "CNBC: Melania Trump-brokered local ceasefire begins (27. okt)",
+     "u": "https://www.cnbc.com/2026/10/27/russia-ukraine-zelenskyy-trump-putin-ceasefire.html"
+    }
+   ],
+   "spill": 0.03,
+   "summary": "Fronten står i praksis stille. ISW vurderer at Russland bare har tatt rundt 100 km² netto i 2026 og har tapt terreng siden september, mens ukrainske mellomdistanse-angrep svekker russisk logistikk. Diplomatiet er i gang igjen: en lokal våpenhvile i Oleshky holder, og USA planlegger tekniske trilaterale samtaler i november. Territorium og sikkerhetsgarantier er fortsatt uløst, og Russland angriper energinett og broer i Kyiv foran vinteren.",
+   "tag": "Ukraina",
+   "trend": "new"
+  },
+  {
+   "P": 0.65,
+   "drivers": [
+    "d_us_strike_iran",
+    "d_qatar_deal",
+    "d_hormuz_open",
+    "d_netanyahu",
+    "d_houthi_refinery",
+    "d_gulf_desal",
+    "d_subsea_cables",
+    "d_regional_pact",
+    "d_iran_npt",
+    "d_dem_house"
+   ],
+   "experts": [
+    "Fawaz Gerges (LSE, oppvokst i Libanon)",
+    "Gregory Brew (Eurasia Group)",
+    "Behnam Ben Taleblu (FDD)"
+   ],
+   "id": "mideast",
+   "name": "Midtøsten: Iran, Israel, Saudi/Jemen, Hormuz",
+   "outcome": "Fornyet storskala krig mellom USA/Israel og Iran, med iranske eller houthiske angrep på energi- eller vanninfrastruktur i Gulfen.",
+   "severity": 4,
+   "sinceLast": "Første måling. Oktober var den farligste måneden for skipsfarten i hele krigen (minesprengte tankskip 29.–30. okt).",
+   "sources": [
+    {
+     "t": "AP: US warns allies to prepare for possible Iran strikes after elections (28. okt)",
+     "u": "https://www.wdbo.com/news/politics/us-warns-allies/AWQJAFMFAY2QFAD46EAJGFVN2M/"
+    },
+    {
+     "t": "GlobalSecurity: Iran War 2026 – Day 244 update (29. okt)",
+     "u": "https://www.globalsecurity.org/military/ops/iran-war-oprep.htm"
+    },
+    {
+     "t": "Straits.live: Hormuz daily brief (29. okt)",
+     "u": "https://straits.live/briefs/2026-10-29"
+    },
+    {
+     "t": "CFR Global Conflict Tracker: Conflict in Yemen and the Red Sea",
+     "u": "https://www.cfr.org/global-conflict-tracker/conflict/war-yemen"
+    },
+    {
+     "t": "TIME: Who are the Houthis and why are they attacking Saudi airports (15. okt)",
+     "u": "https://time.com/article/2026/10/15/who-are-the-houthi-rebels-saudi-arabia-oil-airport-attacks/"
+    },
+    {
+     "t": "Hürriyet: Mecca pact members, Iran agree to continue security talks",
+     "u": "https://www.hurriyetdailynews.com/amp/mecca-pact-members-iran-agree-to-continue-security-talks-228641"
+    },
+    {
+     "t": "Foreign Policy: A New War on Iran Would Deal a Death Blow to U.S. Leadership (29. okt)",
+     "u": "https://foreignpolicy.com/2026/10/29/netanyahu-trump-israel-united-states-iran-war-election/"
+    }
+   ],
+   "spill": 0.12,
+   "summary": "Iran-krigen (startet 28. februar) er i en væpnet pause: USA har ikke angrepet Iran siden tidlig september, men IRGC erklærte Hormuz stengt 26. oktober. USA har bedt allierte forberede seg på et kort og intenst angrep etter mellomvalget, og Eurasia Group mener det er sannsynlig. Saudi-Arabia er i åpen krig med houthiene igjen, med daglige missil- og droneangrep mot saudiske flyplasser og oljeanlegg. Israel-valget 27. oktober ga ingen klar vinner. Motsporet: Mekka-pakten (Saudi-Arabia, Tyrkia, Pakistan) møtte Iran i Teheran 26. oktober, og Qatar har lagt fram et nytt avtaleutkast.",
+   "tag": "Midtøsten",
+   "trend": "new"
+  },
+  {
+   "P": 0.08,
+   "drivers": [
+    "d_pla_drill",
+    "d_pratas",
+    "d_scs_clash",
+    "d_us_strike_iran",
+    "d_taiwan_arms",
+    "d_trumpxi_taiwan",
+    "d_pla_purge",
+    "d_tariff_war"
+   ],
+   "experts": [
+    "ISW/AEI China-teamet",
+    "William Yang (Crisis Group)",
+    "ODNI"
+   ],
+   "id": "taiwan",
+   "name": "Kina–Taiwan",
+   "outcome": "Kinesisk blokade eller karantene av Taiwan, eller militært angrep på Taiwan eller de ytre øyene.",
+   "severity": 5,
+   "sinceLast": "Første måling. ISW/AEI peker på at Kina øker presset mot Filippinene og bygger romkapasitet for krigføring.",
+   "sources": [
+    {
+     "t": "ISW/AEI: China & Taiwan Update, 27. okt 2026",
+     "u": "https://www.aei.org/commentary/china-taiwan-update-october-27-2026/"
+    },
+    {
+     "t": "ISW/AEI: China & Taiwan Update, 16. okt 2026",
+     "u": "https://www.aei.org/commentary/china-taiwan-update-october-16-2026/"
+    },
+    {
+     "t": "Washington Times: China invasion of Taiwan by April remains real threat (29. okt)",
+     "u": "https://www.washingtontimes.com/news/2026/oct/29/army-gen-ronald-p-clark-says-china-invasion-taiwan-april-remains-real/"
+    },
+    {
+     "t": "East Asia Forum: Trump–Xi-toppmøtet og våpensalg",
+     "u": "https://eastasiaforum.org/?p=2351106"
+    },
+    {
+     "t": "Metaculus: Chinese invasion of Taiwan",
+     "u": "https://www.metaculus.com/questions/11480/china-launches-invasion-of-taiwan"
+    }
+   ],
+   "spill": 0.8,
+   "summary": "Kina holdt ikke storøvelse etter president Lais nasjonaldagstale i år, men gråsonepresset øker (Pratas-hendelsen, hangarskip nær Filippinene). Amerikanske militære ledere viser til at PLA skal være klar innen 2027, mens etterretningstjenestene vurderer at Kina ikke planlegger invasjon i 2027. Trump har behandlet en våpenpakke på $14 mrd som forhandlingskort overfor Xi, noe som har svekket tilliten i regionen. Prediksjonsmarkeder har priset angrep eller blokade i 2026 til rundt 10 %.",
+   "tag": "Taiwan",
+   "trend": "new"
+  },
+  {
+   "P": 0.2,
+   "drivers": [
+    "d_iran_npt",
+    "d_nk_test",
+    "d_us_test",
+    "d_indpak",
+    "d_newstart_exceed",
+    "d_us_strike_iran",
+    "d_arms_talks",
+    "d_uscn_ai"
+   ],
+   "experts": [
+    "Arms Control Association",
+    "IAEA (Grossi)",
+    "CSCR Islamabad"
+   ],
+   "id": "nuclear",
+   "name": "Kjernevåpen og våpenkontroll",
+   "outcome": "Kjernevåpenterskelen svekkes: en kjernefysisk prøvesprengning (Nord-Korea inkludert), åpne kjernefysiske trusler i en aktiv væpnet krise, eller en ny stat som åpent søker kjernevåpen.",
+   "severity": 5,
+   "sinceLast": "Første måling.",
+   "sources": [
+    {
+     "t": "Arms Control Association: Halt and reverse the new nuclear arms race",
+     "u": "https://www.armscontrol.org/issue-briefs/2026-02/growing-push-halt-and-reverse-new-nuclear-arms-race"
+    },
+    {
+     "t": "ORF Middle East: The Return of Nuclear Competition",
+     "u": "https://orfme.org/research/the-return-of-nuclear-competition/"
+    },
+    {
+     "t": "Grossi til NZZ via INN: Irans 60 %-lager (18. okt)",
+     "u": "https://www.israelnationalnews.com/news/416559"
+    },
+    {
+     "t": "AsiaNews: India og Pakistan ett år etter krigen",
+     "u": "https://www.asianews.it/news-en/Delhi-and-Islamabad-one-year-on-from-the-war:-two-victories,-but-the-risk-of-escalation-remains-65417.html"
+    }
+   ],
+   "spill": 0.1,
+   "summary": "New START utløp 5. februar uten erstatning, og for første gang på over 50 år finnes ingen avtalte grenser for USAs og Russlands arsenaler. USA varslet i oktober 2025 at prøvesprengninger skal gjenopptas. Irans rundt 400 kg uran anriket til 60 % er ikke verifisert av IAEA etter angrepene. Mekka-pakten knytter atommakten Pakistan til Saudi-Arabia, og India og Pakistan kjempet en kort krig i mai 2025.",
+   "tag": "Atom",
+   "trend": "new"
+  },
+  {
+   "P": 0.45,
+   "drivers": [
+    "d_cable_cut",
+    "d_blacksea_ships",
+    "d_falseflag",
+    "d_grid_cyber",
+    "d_us_europe_drawdown",
+    "d_cyber_diffusion",
+    "d_ru_mobil",
+    "d_ua_ceasefire",
+    "d_nato_costs"
+   ],
+   "experts": [
+    "CEPA",
+    "Agnia Grigas (Atlantic Council)",
+    "Dansk etterretning (FE)"
+   ],
+   "id": "hybrid",
+   "name": "Russland mot NATO: hybridkrig og kritisk infrastruktur",
+   "outcome": "Et NATO-land påberoper artikkel 4, eller et russisk angrep med dødsfall skjer på NATO-territorium.",
+   "severity": 3,
+   "sinceLast": "Første måling. Atlantic Council ba 8. okt NATO svare hybridangrep med konkrete kostnader, ikke bare fordømmelse.",
+   "sources": [
+    {
+     "t": "CEPA: Russian Strikes Rise Across NATO's Eastern Flank (19. okt)",
+     "u": "https://cepa.org/article/russian-strikes-rise-across-natos-eastern-flank/"
+    },
+    {
+     "t": "Al Jazeera: Russia's alleged sabotage campaign in Europe (29. okt)",
+     "u": "https://www.aljazeera.com/news/2026/10/29/russias-alleged-sabotage-campaign-in-europe-raises-fears-of-escalation"
+    },
+    {
+     "t": "Stars and Stripes: Russia's 'shadow war' has NATO on defense (8. okt)",
+     "u": "https://www.stripes.com/theaters/europe/2026-10-08/russia-nato-hybrid-war-23090396.html"
+    },
+    {
+     "t": "EUobserver: Baltic states get ready for Russian false-flag attack",
+     "u": "https://euobserver.com/231824/baltic-states-get-ready-for-russian-false-flag-attack-on-nato/"
+    }
+   ],
+   "spill": 0.06,
+   "summary": "CEPA telte minst 17 angrep med påvist eller mistenkt russisk styring mot NATOs frontstater og Moldova på én måned. Russiske droner har truffet handelsskip i bulgarsk og rumensk økonomisk sone, og droner er skutt ned over Polen, Finland og Baltikum. Litauen advarer om falsk-flagg-angrep med fangede ukrainske droner. Dansk etterretning har åpnet for at Russland kan gjennomføre et begrenset militært angrep på et NATO-land som grenser til Russland.",
+   "tag": "Hybrid",
+   "trend": "new"
+  },
+  {
+   "P": 0.3,
+   "drivers": [
+    "d_brent120",
+    "d_hormuz_open",
+    "d_ai_crash",
+    "d_rate_hikes",
+    "d_em_debt",
+    "d_tariff_war",
+    "d_us_strike_iran",
+    "d_houthi_refinery",
+    "d_export_bans",
+    "d_h5n1"
+   ],
+   "experts": [
+    "IMF (Gourinchas)",
+    "FAO (Maximo Torero)",
+    "Goldman Sachs"
+   ],
+   "id": "econ",
+   "name": "Globalt økonomisk og finansielt sjokk",
+   "outcome": "Global resesjon (verdensvekst under ca. 2 % i 2027) eller en systemisk finanskrise.",
+   "severity": 4,
+   "sinceLast": "Første måling. OPEC+ møtes 1. nov med saudisk produksjon under kvote.",
+   "sources": [
+    {
+     "t": "FinanceFeeds/Reuters: Brent $113,43 etter +13,6 % i oktober (31. okt)",
+     "u": "https://financefeeds.com/brent-crude-oil-price-113-saturday-week-ahead-after-october-13-6-percent-gain-hormuz-mines-midterms-jobs-report-bull-120-bear-106/"
+    },
+    {
+     "t": "IMF WEO okt 2026 (TNPSC-sammendrag)",
+     "u": "https://www.tnpscthervupettagam.com//currentaffairs-detail/world-economic-outlook-2026"
+    },
+    {
+     "t": "CommBank/AAP: IMF warns of potential global recession (apr)",
+     "u": "https://www.commbank.com.au/articles/newsroom/2026/04/imf-cuts-outlook-warns-of-global-recession.html"
+    },
+    {
+     "t": "FAO: Protracted Hormuz crisis could become agrifood catastrophe",
+     "u": "https://www.fao.org/newsroom/detail/fao--protracted-strait-of-hormuz-crisis-could-turn-into-global-agrifood-catastrophe/en"
+    }
+   ],
+   "spill": 0.2,
+   "summary": "Brent endte oktober på $113,43, opp 13,6 % i måneden. IMF anslår 3,1 % vekst i 2026 og 4,7 % global inflasjon, og har advart om at et alvorlig krigsscenario bringer verden nær resesjon. FAO varslet i mai at Hormuz-blokaden kan gi en matpriskrise innen 6–12 måneder. Hyperskalerne bruker rundt $650–700 mrd på KI-infrastruktur i 2026 med usikker inntjening, så en korreksjon vil treffe et allerede svekket marked.",
+   "tag": "Økonomi",
+   "trend": "new"
+  },
+  {
+   "P": 0.45,
+   "drivers": [
+    "d_superelnino",
+    "d_monsoon_fail",
+    "d_fert_short",
+    "d_drought_south",
+    "d_export_bans",
+    "d_gulf_desal",
+    "d_brent120",
+    "d_hormuz_open",
+    "d_elnino_disease"
+   ],
+   "experts": [
+    "NOAA CPC",
+    "IRI Columbia",
+    "FAO (Maximo Torero)"
+   ],
+   "id": "climate",
+   "name": "Klima, vann og mat",
+   "outcome": "Ny rekord i FAOs matprisindeks, eksportforbud på ris eller hvete fra en stor eksportør, eller akutt vannkrise i en storby med over 5 millioner innbyggere.",
+   "severity": 3,
+   "sinceLast": "Første måling. Rekordvarmt vann utenfor Peru og Ecuador (Niño 1+2 over +4,8 °C).",
+   "sources": [
+    {
+     "t": "IRI Columbia: ENSO Forecast, oktober 2026",
+     "u": "https://iri.columbia.edu/?p=31794"
+    },
+    {
+     "t": "NOAA CPC: ENSO Diagnostic Discussion",
+     "u": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml"
+    },
+    {
+     "t": "FAO via Free Malaysia Today: Hormuz block could trigger global food crisis",
+     "u": "https://www.freemalaysiatoday.com/category/world/2026/05/20/un-agency-warns-hormuz-block-could-trigger-global-food-crisis"
+    },
+    {
+     "t": "IFDC: Fertilizer crisis response bulletin",
+     "u": "https://ifdc.org/2026/05/19/fertilizer-crisis-response-bulletin-12-fao-outlines-risks-actions-and-policy-responses-to-emerging-global-fertilizer-shock/"
+    }
+   ],
+   "spill": 0.08,
+   "summary": "En svært sterk El Niño er i gang: Niño 3.4-indeksen lå på +3,3 °C midt i oktober, og alle 27 modeller i IRI-ensemblet venter «very strong» gjennom vinteren. Det gir høy risiko for tørke i Sør-Asia, det sørlige Afrika, Australia og Mellom-Amerika, og 2027 kan bli det varmeste året som er målt. Samtidig gir Hormuz-stengningen gjødselmangel; rundt en tredel av global gjødselhandel gikk gjennom stredet før krigen.",
+   "tag": "Vann",
+   "trend": "new"
+  }
+ ],
+ "generatedAt": "2026-10-31T14:30:00+01:00",
+ "globalSummary": "Verden går inn i november med tre samtidige sjokk som forsterker hverandre: en stengt Hormuz-strede (2–4 skip per dag mot normalt ~85), en svært sterk El Niño, og en ny saudisk–houthisk krig rundt Rødehavet. Energisjokket har allerede gitt voldelige levekostnadsprotester i Frankrike og Italia. Ukraina er det eneste feltet med tydelig diplomatisk bevegelse, men kjernespørsmålene er uløst. KI-risikoen øker jevnt i bakgrunnen; den akutte trusselen derfra er cyber og bio, ikke jobbtap. De neste 14 dagene (mellomvalg, mulig Iran-angrep, israelsk regjeringsdannelse) kan flytte flere tall med 10–20 prosentpoeng.",
+ "headline": "Midtøsten er tyngdepunktet: Hormuz er stengt igjen, Brent står på $113, og USA har bedt allierte forberede seg på nye angrep mot Iran etter mellomvalget 3. november.",
+ "horizon": "12 måneder (til 31. oktober 2027), med mindre annet er angitt per driver",
+ "id": "2026-10-31",
+ "method": {
+  "baseRate": 0.02,
+  "blackSwanDefinition": "Hendelse med global rekkevidde innen 12 mnd: direkte krig mellom stormakter (USA/NATO mot Russland eller Kina), bruk av kjernevåpen, pandemi med millioner av dødsfall, ny eller kraftig utvidet storkrig som gir global resesjon, eller KI-katastrofe med statlig krisehåndtering i flere land.",
+  "correlation": 0.85,
+  "factorModel": "Hver faktor har en analytikervurdert sannsynlighet. Driverne er koblet til faktorene med en vekt (log-odds-effekt hvis driveren inntreffer). Når du endrer en drivers sannsynlighet, flyttes faktoren langs en logistisk kurve kalibrert slik at basisverdiene gir analytikerens tall. Én driver kan påvirke flere faktorer.",
+  "globalModel": "P(globalt sjokk) = korrelasjonsfaktor × [1 − (1 − grunnrate) × Π(1 − P_faktor × spillover_faktor)]. Spillover er andelen av faktorens negative utfall som vil vokse til globalt nivå. Korrelasjonsfaktoren (0,85) trekker ned fordi faktorene henger sammen og ikke er uavhengige."
+ },
+ "sinceLast": "Første måling. Utviklingen i oktober: Brent +13,6 %, IRGC erklærte Hormuz stengt (26. okt), houthiene angriper saudiske flyplasser og oljeanlegg daglig, Israel-valget ga ingen klar vinner, lokal våpenhvile i Ukraina (Oleshky), og fuel-protester med plyndring i Paris og Milano.",
+ "watch": [
+  {
+   "k": "Brent",
+   "n": "30. okt, +13,6 % i oktober",
+   "v": "$113,43"
+  },
+  {
+   "k": "Hormuz-passeringer",
+   "n": "mot ~85/dag før krisen (IMF PortWatch)",
+   "v": "2–4/dag"
+  },
+  {
+   "k": "Niño 3.4",
+   "n": "uke 14. okt (IRI)",
+   "v": "+3,3 °C"
+  },
+  {
+   "k": "Russisk netto gevinst 2026",
+   "n": "ISW, per 16. okt",
+   "v": "~100 km²"
+  },
+  {
+   "k": "Global vekst 2026",
+   "n": "IMF WEO oktober",
+   "v": "3,1 %"
+  }
+ ]
+}

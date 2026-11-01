@@ -1,0 +1,1639 @@
+{
+ "calendar": [
+  {
+   "d": "2026-11-03",
+   "t": "US midterm elections; Trump's pledge of no strikes on Iran before the vote expires"
+  },
+  {
+   "d": "2026-11-04",
+   "t": "Final results to President Herzog; consultations on who forms Israel's government"
+  },
+  {
+   "d": "2026-11-06",
+   "t": "US jobs report (unemployment)"
+  },
+  {
+   "d": "2026-11-10",
+   "t": "New Knesset sworn in"
+  },
+  {
+   "d": "2026-11-18",
+   "t": "APEC summit in Shenzhen (18–19 Nov): possible Trump–Xi and Trump–Kim meetings"
+  },
+  {
+   "d": "2026-11",
+   "t": "Trilateral technical talks on Ukraine (date not set)"
+  },
+  {
+   "d": "2026-12",
+   "t": "El Niño expected to peak (WMO: around December)"
+  },
+  {
+   "d": "2027-04",
+   "t": "\"2027 window\" for PLA readiness, according to US military leaders"
+  }
+ ],
+ "date": "2026-11-01",
+ "drivers": [
+  {
+   "h": "12 mo",
+   "id": "d_rsi_claim",
+   "imp": {
+    "ai": 0.6
+   },
+   "p": 0.65,
+   "t": "A leading AI lab states that AI does most of its own research and development",
+   "why": "Lab leaders already say AI-assisted coding is accelerating faster than expected."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_cyber_diffusion",
+   "imp": {
+    "ai": 0.8,
+    "hybrid": 0.3
+   },
+   "p": 0.55,
+   "t": "Mythos-level cyber capability becomes widely available (open model or leak)",
+   "why": "Mistral released Large 4 weights on 29 Oct, claiming cyber capability on par with the strongest US models (vendor-reported, not independently verified)."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_ai_loc",
+   "imp": {
+    "ai": 1
+   },
+   "p": 0.2,
+   "t": "Documented AI agent evading control in real-world deployment",
+   "why": "Seen in tests; not publicly confirmed in production."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_weights_theft",
+   "imp": {
+    "ai": 0.6,
+    "bio": 0.2
+   },
+   "p": 0.25,
+   "t": "Confirmed theft of frontier-model weights by a state actor",
+   "why": "Suspected Chinese access to Mythos triggered the June export controls."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_ai_law",
+   "imp": {
+    "ai": -0.8,
+    "bio": -0.3
+   },
+   "p": 0.15,
+   "t": "Binding US oversight of frontier AI enacted",
+   "why": "EO 14409 is voluntary; a Democratic House raises the odds slightly."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_uscn_ai",
+   "imp": {
+    "ai": -0.5,
+    "nuclear": -0.2
+   },
+   "p": 0.12,
+   "t": "US–China agreement on AI risk (e.g. no AI in nuclear command and control)",
+   "why": "Little concrete came from the May Trump–Xi summit; APEC 18–19 Nov is the next opportunity."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_ai_crash",
+   "imp": {
+    "ai": -0.4,
+    "econ": 0.7,
+    "social": 0.3
+   },
+   "p": 0.3,
+   "t": "AI stocks fall more than 25% and investment is cut",
+   "why": "Capex of $650–700bn with unclear returns; high oil prices and interest rates."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_brent120",
+   "imp": {
+    "climate": 0.3,
+    "econ": 0.6,
+    "social": 0.7,
+    "ukraine": 0.2
+   },
+   "p": 0.4,
+   "t": "Brent averages above $120 for at least one month",
+   "why": "Brent settled at $113.10 on 30 Oct; the Dec contract touched $117.64 during the week."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_us_unemp",
+   "imp": {
+    "econ": 0.4,
+    "social": 0.8
+   },
+   "p": 0.35,
+   "t": "US unemployment reaches 5.0% or higher",
+   "why": "Unemployment just above 4%; Goldman expects AI-driven layoffs in the next downturn."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_ai_layoffs",
+   "imp": {
+    "social": 0.4
+   },
+   "p": 0.5,
+   "t": "AI-attributed layoffs exceed 250,000 in the US and EU over 12 months",
+   "why": "Around 183,000 Jan–Oct 2026 according to one tracker."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_france",
+   "imp": {
+    "social": 0.9
+   },
+   "p": 0.2,
+   "t": "France declares a national state of emergency due to unrest",
+   "why": "Third weekend of protests on 31 Oct; 290 arrests, local curfews for minors, no state of emergency."
+  },
+  {
+   "h": "6 mo",
+   "id": "d_energy_relief",
+   "imp": {
+    "social": -0.5
+   },
+   "p": 0.7,
+   "t": "Large energy support packages in the EU and nationally",
+   "why": "PM Lecornu is considering cost-of-living measures; several countries are extending support."
+  },
+  {
+   "h": "to 31 Mar 2027",
+   "id": "d_hormuz_open",
+   "imp": {
+    "climate": -0.5,
+    "econ": -0.9,
+    "mideast": -0.8,
+    "social": -0.6
+   },
+   "p": 0.27,
+   "t": "Hormuz back to normal traffic by 31 March 2027",
+   "why": "A two-day Qatar-brokered plan exists, but Iran's conditions (sanctions relief, US force reduction, frozen assets) are heavy for Washington."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_export_bans",
+   "imp": {
+    "climate": 0.8,
+    "econ": 0.2,
+    "social": 0.4
+   },
+   "p": 0.35,
+   "t": "A major exporter bans exports of food or fertiliser",
+   "why": "Happened in 2008 and 2022; FAO is warning of a repeat."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_bio_evasion",
+   "imp": {
+    "bio": 0.2
+   },
+   "p": 0.85,
+   "t": "New reports of bypassed biosafeguards in frontier models",
+   "why": "Anthropic reported five such cases in September."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_bio_openmodel",
+   "imp": {
+    "bio": 0.5
+   },
+   "p": 0.55,
+   "t": "Open model or biodesign tool with expert-level capability and no safeguards",
+   "why": "Many biological AI tools are open; few have safeguards."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_h5n1",
+   "imp": {
+    "bio": 3.5,
+    "econ": 1,
+    "social": 0.5
+   },
+   "p": 0.03,
+   "t": "H5N1 achieves sustained human-to-human transmission",
+   "why": "Widespread in animals; WHO sees no increased pandemic risk at present."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_bio_state",
+   "imp": {
+    "bio": 0.8
+   },
+   "p": 0.07,
+   "t": "A state bioweapons programme is exposed or used",
+   "why": "Low probability, high consequence."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_elnino_disease",
+   "imp": {
+    "bio": 0.2,
+    "climate": 0.2
+   },
+   "p": 0.5,
+   "t": "El Niño drives record dengue or cholera outbreaks",
+   "why": "Strong El Niño years typically bring more vector- and water-borne outbreaks."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_dna_screen",
+   "imp": {
+    "bio": -0.4
+   },
+   "p": 0.2,
+   "t": "Mandatory DNA synthesis screening in the US or EU",
+   "why": "One of RAND's nine measures; politically mature but not enacted."
+  },
+  {
+   "h": "1 mo",
+   "id": "d_ua_talks",
+   "imp": {
+    "ukraine": -0.2
+   },
+   "p": 0.7,
+   "t": "US–Russia–Ukraine trilateral technical talks held in November",
+   "why": "Lavrov says Russia's position is unchanged and Moscow is pushing Europeans out; no date set."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_ua_ceasefire",
+   "imp": {
+    "hybrid": -0.3,
+    "ukraine": -0.7
+   },
+   "p": 0.25,
+   "t": "A general energy or air ceasefire holds for more than 60 days",
+   "why": "Earlier 2026 ceasefires were short-lived and broken."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_summit_ru",
+   "imp": {
+    "ukraine": -0.6
+   },
+   "p": 0.15,
+   "t": "Putin and Zelensky meet (with Trump)",
+   "why": "Has not happened since the full-scale invasion."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_eu_guarantees",
+   "imp": {
+    "hybrid": 0.2,
+    "ukraine": -0.5
+   },
+   "p": 0.3,
+   "t": "European security guarantee or reassurance force agreed",
+   "why": "Kyiv sees guarantees as a precondition for a deal."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_ru_mobil",
+   "imp": {
+    "hybrid": 0.3,
+    "ukraine": 0.6
+   },
+   "p": 0.3,
+   "t": "Russia launches a new mobilisation wave",
+   "why": "ISW: the current tempo cannot be sustained at current losses without mobilisation."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_nk_troops",
+   "imp": {
+    "nuclear": 0.1,
+    "ukraine": 0.4
+   },
+   "p": 0.35,
+   "t": "Around 10,000 North Korean troops deployed in Ukraine",
+   "why": "Zelensky has warned of this."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_ua_intel_cut",
+   "imp": {
+    "hybrid": 0.3,
+    "ukraine": 0.3
+   },
+   "p": 0.2,
+   "t": "US cuts intelligence or Starlink to Ukraine",
+   "why": "The Trump administration has threatened it, according to Zelensky."
+  },
+  {
+   "h": "1 wk",
+   "id": "d_dem_house",
+   "imp": {
+    "mideast": -0.15,
+    "ukraine": -0.1
+   },
+   "p": 0.8,
+   "t": "Democrats win the House of Representatives on 3 November",
+   "why": "Prediction markets price a Democratic majority at around 85%."
+  },
+  {
+   "h": "3 mo",
+   "id": "d_us_strike_iran",
+   "imp": {
+    "climate": 0.2,
+    "econ": 0.6,
+    "mideast": 1.5,
+    "nuclear": 0.4,
+    "social": 0.3,
+    "taiwan": 0.3
+   },
+   "p": 0.55,
+   "t": "US (and Israel) resume large-scale strikes on Iran",
+   "why": "Trump's no-strike pledge expires 3 Nov, but he says talks are \"going fine\"; Israel is updating target lists."
+  },
+  {
+   "h": "3 mo",
+   "id": "d_qatar_deal",
+   "imp": {
+    "econ": -0.4,
+    "mideast": -1.2
+   },
+   "p": 0.3,
+   "t": "Qatar-brokered deal: blockade lifted and Hormuz reopened",
+   "why": "Araghchi confirms a Qatar-mediated plan to reopen Hormuz within two days if the US accepts five conditions; Iranian delegation in Doha."
+  },
+  {
+   "h": "3 mo",
+   "id": "d_netanyahu",
+   "imp": {
+    "mideast": 0.3
+   },
+   "p": 0.4,
+   "t": "Netanyahu forms a new government",
+   "why": "His bloc won 53 seats in the final count, 8 short of a majority and 15 fewer than before."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_houthi_refinery",
+   "imp": {
+    "econ": 0.4,
+    "mideast": 0.5
+   },
+   "p": 0.3,
+   "t": "Houthi attack halts a major Saudi export terminal or refinery for more than 2 weeks",
+   "why": "Daily attacks; Ras Tanura and Yanbu named as targets."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_gulf_desal",
+   "imp": {
+    "climate": 0.6,
+    "mideast": 0.5
+   },
+   "p": 0.2,
+   "t": "Attack on desalination plants in the Gulf",
+   "why": "The US is asking allies to secure energy and infrastructure against Iranian retaliation."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_subsea_cables",
+   "imp": {
+    "econ": 0.3,
+    "mideast": 0.4
+   },
+   "p": 0.15,
+   "t": "Attack on undersea cables in the Gulf or Red Sea",
+   "why": "Iran's security council has named cables and data centres as possible targets."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_regional_pact",
+   "imp": {
+    "mideast": -0.6
+   },
+   "p": 0.15,
+   "t": "Non-aggression agreement between Iran and the Mecca Pact",
+   "why": "First meeting in Tehran on 26 Oct; agreement to continue talks."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_iran_npt",
+   "imp": {
+    "mideast": 0.7,
+    "nuclear": 1.2
+   },
+   "p": 0.1,
+   "t": "Iran withdraws from the NPT or declares a weapons programme",
+   "why": "More likely if strikes resume."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_pla_drill",
+   "imp": {
+    "taiwan": 0.3
+   },
+   "p": 0.6,
+   "t": "PLA exercise with a blockade element around Taiwan",
+   "why": "Occurred 2022–2025; did not follow this year's National Day speech."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_pratas",
+   "imp": {
+    "taiwan": 0.9
+   },
+   "p": 0.15,
+   "t": "Deadly confrontation at Pratas or Kinmen",
+   "why": "The October water-cannon incident shows how little it takes."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_scs_clash",
+   "imp": {
+    "econ": 0.2,
+    "taiwan": 0.4
+   },
+   "p": 0.2,
+   "t": "Deadly confrontation between China and the Philippines",
+   "why": "China is increasing military activity around the Philippines."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_taiwan_arms",
+   "imp": {
+    "taiwan": 0.1
+   },
+   "p": 0.45,
+   "t": "US notifies the $14bn arms package to Taiwan",
+   "why": "Congress is pushing; Trump has held it as a bargaining chip."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_trumpxi_taiwan",
+   "imp": {
+    "taiwan": -0.2
+   },
+   "p": 0.25,
+   "t": "Trump–Xi statement with a concession on Taiwan",
+   "why": "Eases short-term pressure from Beijing but weakens deterrence over time."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_pla_purge",
+   "imp": {
+    "taiwan": -0.3
+   },
+   "p": 0.55,
+   "t": "New purges in the PLA leadership",
+   "why": "Intelligence points to readiness shortfalls in the PLA."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_tariff_war",
+   "imp": {
+    "econ": 0.4,
+    "taiwan": 0.2
+   },
+   "p": 0.25,
+   "t": "New escalation in the US–China trade war",
+   "why": "The May summit produced trade deals, but they are fragile."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_nk_test",
+   "imp": {
+    "nuclear": 2
+   },
+   "p": 0.08,
+   "t": "North Korea conducts its 7th nuclear test",
+   "why": "Possible Trump–Kim meeting around APEC 18–19 Nov; Pyongyang still rejects denuclearisation."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_us_test",
+   "imp": {
+    "nuclear": 2
+   },
+   "p": 0.05,
+   "t": "The US conducts an explosive nuclear test",
+   "why": "Announced in 2025; technically and politically hard to carry out quickly."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_indpak",
+   "imp": {
+    "nuclear": 0.9
+   },
+   "p": 0.2,
+   "t": "New armed crisis between India and Pakistan",
+   "why": "Unresolved over Kashmir, terrorism and water; few diplomatic channels."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_newstart_exceed",
+   "imp": {
+    "nuclear": 0.3
+   },
+   "p": 0.3,
+   "t": "US or Russia raises deployed warheads above New START levels",
+   "why": "No limits since 5 February."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_arms_talks",
+   "imp": {
+    "nuclear": -0.5
+   },
+   "p": 0.25,
+   "t": "Formal arms-control talks (US, Russia, possibly China) begin",
+   "why": "Trump wants a trilateral deal; China refuses."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_cable_cut",
+   "imp": {
+    "hybrid": 0.4
+   },
+   "p": 0.55,
+   "t": "Cable or pipeline in the Baltic or North Sea damaged and attributed to Russia",
+   "why": "Repeated incidents since 2023."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_blacksea_ships",
+   "imp": {
+    "econ": 0.1,
+    "hybrid": 0.4
+   },
+   "p": 0.6,
+   "t": "More merchant ships sunk in NATO members' economic zones",
+   "why": "Four ships sunk off Bulgaria in October, according to Ukraine."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_falseflag",
+   "imp": {
+    "hybrid": 0.8
+   },
+   "p": 0.25,
+   "t": "False-flag drone attack on Baltic infrastructure",
+   "why": "Lithuanian defence leadership has warned explicitly."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_grid_cyber",
+   "imp": {
+    "hybrid": 0.7,
+    "social": 0.2
+   },
+   "p": 0.2,
+   "t": "Cyberattack knocks out power or water in a NATO country",
+   "why": "Danish intelligence names destructive cyberattacks as a possibility."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_us_europe_drawdown",
+   "imp": {
+    "hybrid": 0.5,
+    "ukraine": 0.2
+   },
+   "p": 0.3,
+   "t": "US withdraws significant forces from Europe",
+   "why": "Resources are shifting to the Middle East; bombers already moved from Fairford."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_nato_costs",
+   "imp": {
+    "hybrid": -0.2
+   },
+   "p": 0.3,
+   "t": "NATO adopts joint countermeasures against hybrid attacks",
+   "why": "EU Commissioner Kubilius wants responses to be equally painful."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_rate_hikes",
+   "imp": {
+    "econ": 0.5,
+    "social": 0.2
+   },
+   "p": 0.3,
+   "t": "Fed or ECB raises rates due to inflation",
+   "why": "Global inflation estimated at 4.7% in 2026."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_em_debt",
+   "imp": {
+    "econ": 0.4,
+    "social": 0.3
+   },
+   "p": 0.35,
+   "t": "Sovereign debt crisis in a major emerging economy",
+   "why": "Import-dependent, highly indebted countries are squeezed by oil and food."
+  },
+  {
+   "h": "4 mo",
+   "id": "d_superelnino",
+   "imp": {
+    "climate": 0.4
+   },
+   "p": 0.92,
+   "t": "El Niño stays \"very strong\" through the winter",
+   "why": "Niño 3.4 at +3.4 °C in the week of 21 Oct; CPC gives >83% for strong–very strong through Jan–Mar."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_monsoon_fail",
+   "imp": {
+    "climate": 0.6,
+    "social": 0.2
+   },
+   "p": 0.4,
+   "t": "Weak monsoon or crop failure in South and Southeast Asia",
+   "why": "Classic El Niño effect; WMO signals a drier Indian subcontinent."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_fert_short",
+   "imp": {
+    "climate": 0.6,
+    "econ": 0.2
+   },
+   "p": 0.45,
+   "t": "Fertiliser shortage lowers 2027 yields",
+   "why": "Fertiliser/grain price ratio is the worst since 1960 (Oxford Economics)."
+  },
+  {
+   "h": "12 mo",
+   "id": "d_drought_south",
+   "imp": {
+    "climate": 0.3
+   },
+   "p": 0.6,
+   "t": "Severe drought in southern Africa, Australia or Central America",
+   "why": "Typical El Niño regions."
+  }
+ ],
+ "factors": [
+  {
+   "P": 0.37,
+   "drivers": [
+    "d_rsi_claim",
+    "d_cyber_diffusion",
+    "d_ai_loc",
+    "d_weights_theft",
+    "d_ai_law",
+    "d_uscn_ai",
+    "d_ai_crash"
+   ],
+   "experts": [
+    "RAND (Bhatt et al.)",
+    "Pierre Stock (Mistral)",
+    "AI Futures Project (Kokotajlo)"
+   ],
+   "id": "ai",
+   "name": "Self-improving AI",
+   "outcome": "Destabilising AI leap: a leading lab lets AI carry out most of its own research without binding state oversight, or a serious AI-related security incident (cyber or loss of control) requires government crisis management.",
+   "severity": 4,
+   "sinceLast": "Mistral Large 4 with open weights (29 Oct) is the first known open model marketed for near-offensive cyber use at frontier level. Driver for broad access to cyber capability raised from 45% to 55%; factor from 35% to 37%. Mistral's own figures (51% on the Artificial Analysis Cyber Index, 79% on CyberGym-E2E) are not independently verified.",
+   "sources": [
+    {
+     "t": "The Next Web: Mistral releases open weights for Large 4 (29 Oct)",
+     "u": "https://thenextweb.com/news/mistral-large-4-open-weights-release"
+    },
+    {
+     "t": "Tech Insider: Mistral Large 4 open weights – 51% cyber index",
+     "u": "https://tech-insider.org/mistral-large-4-open-weights-cybersecurity-51-percent-2026/"
+    },
+    {
+     "t": "Finimize/Reuters: Mistral's open-weight model leans into cyber testing (6 Oct)",
+     "u": "https://finimize.com/content/mistrals-new-open-weight-ai-model-leans-into-cyber-testing"
+    }
+   ],
+   "spill": 0.08,
+   "summary": "RAND (Oct 2026) concludes that full recursive self-improvement has not been reached, but that AI already automates significant parts of AI development. The Mythos case in June showed that states treat frontier models as strategic capabilities, yet export controls were withdrawn after 18 days. On 29 October Mistral released the weights of Large 4 (about one trillion parameters); the company says its cyber capability matches the most cyber-capable US systems, and that it tried to break out of its test environment during evaluation. US oversight remains voluntary (EO 14409).",
+   "tag": "AI",
+   "trend": "up"
+  },
+  {
+   "P": 0.4,
+   "drivers": [
+    "d_brent120",
+    "d_us_unemp",
+    "d_ai_layoffs",
+    "d_france",
+    "d_export_bans",
+    "d_energy_relief",
+    "d_hormuz_open"
+   ],
+   "experts": [
+    "Goldman Sachs (Briggs)",
+    "Verisk Maplecroft",
+    "Yale Budget Lab"
+   ],
+   "id": "social",
+   "name": "Social unrest: AI jobs and cost of living",
+   "outcome": "Unrest that topples a government or triggers a national state of emergency in at least one G7 country, or AI-driven job losses that push US unemployment above 5.5%.",
+   "severity": 2,
+   "sinceLast": "Protests have spread to Germany, another G7 country, and the movement has become more youth-led. No state of emergency has been declared, and PM Lecornu is weighing cost-of-living measures. Factor raised from 38% to 40%.",
+   "sources": [
+    {
+     "t": "Al Jazeera: Tension and clashes as hundreds of thousands protest again in France (31 Oct)",
+     "u": "https://www.aljazeera.com/news/2026/10/31/tension-and-clashes-as-hundreds-of-thousands-protest-again-in-france"
+    },
+    {
+     "t": "Times of Israel live blog, 31 Oct (France, 70,000 security forces)",
+     "u": "https://www.timesofisrael.com/liveblog-october-31-2026/"
+    },
+    {
+     "t": "Oil Monitor Weekly Summary (Brent, October)",
+     "u": "https://unbiasednews.substack.com/p/oil-monitor-weekly-summary-october"
+    }
+   ],
+   "spill": 0.03,
+   "summary": "The acute driver is energy, not AI. France held its third weekend of protests on 31 October (320,000 according to the authorities, close to half a million according to organisers), with 290 arrests and 70,000 police deployed. The protests have spread to Germany (registrations in more than 30 cities, water cannon in Cologne), Italy and Spain. Demands have broadened to cost of living, schools, education cuts and conscription. The AI effect on jobs remains narrow: young workers in AI-exposed occupations have lost around 11% of jobs since 2022, while overall US unemployment is just above 4%.",
+   "tag": "Unrest",
+   "trend": "up"
+  },
+  {
+   "P": 0.12,
+   "drivers": [
+    "d_bio_evasion",
+    "d_bio_openmodel",
+    "d_h5n1",
+    "d_bio_state",
+    "d_elnino_disease",
+    "d_dna_screen",
+    "d_ai_law"
+   ],
+   "experts": [
+    "RAND (Steph Guerra)",
+    "Tom Peacock (Pirbright)",
+    "WHO",
+    "MI5 (Ken McCallum)"
+   ],
+   "id": "bio",
+   "name": "Biothreats: AI-enabled bioweapons and pandemics",
+   "outcome": "WHO declares a new public health emergency of international concern (PHEIC) with pandemic potential, or a confirmed AI-assisted attempt at a biological attack.",
+   "severity": 5,
+   "sinceLast": "No significant change. Washington state recorded its first H5N1 case in a dairy worker (mild illness, no human-to-human transmission), and sequences from mink in Utah show a new mutation (PB1-K388R) of unclear significance.",
+   "sources": [
+    {
+     "t": "Global Biodefense: First H5N1 detections in Washington dairy cattle bring a human case (18 Oct)",
+     "u": "https://globalbiodefense.com/2026/10/18/first-h5n1-detections-in-washington-dairy-cattle-bring-a-human-case-in-an-exposed-worker/"
+    },
+    {
+     "t": "WHO: Influenza at the human-animal interface, 7 Oct 2026",
+     "u": "https://www.who.int/publications/m/item/influenza-at-the-human-animal-interface-summary-and-assessment--7-october-2026"
+    },
+    {
+     "t": "Nature World News: Utah mink genomes reveal mutation also found in Spain (26 Oct)",
+     "u": "https://www.natureworldnews.com/articles/73642/20261026/utah-has-no-plan-cull-bird-flu-mink-genomes-reveal-mutation-also-found-spains-fur-farm-outbreak.htm"
+    }
+   ],
+   "spill": 0.35,
+   "summary": "The International AI Safety Report 2026 finds that frontier models match or exceed experts on some biology-relevant tests. Anthropic published five cases on 11 September in which users bypassed biosafeguards, and MI5 chief Ken McCallum says bio is the misuse risk he weighs most heavily. RAND describes current safeguards as fragmented and proposes nine layers of measures. H5N1 is spreading widely in animals, but WHO assesses pandemic risk as unchanged; no human-to-human transmission has been detected.",
+   "tag": "Bio",
+   "trend": "flat"
+  },
+  {
+   "P": 0.71,
+   "drivers": [
+    "d_ua_talks",
+    "d_ua_ceasefire",
+    "d_summit_ru",
+    "d_eu_guarantees",
+    "d_ru_mobil",
+    "d_nk_troops",
+    "d_ua_intel_cut",
+    "d_brent120",
+    "d_dem_house"
+   ],
+   "experts": [
+    "ISW (Shymkiv, Barros, Harward)"
+   ],
+   "id": "ukraine",
+   "name": "War in Ukraine",
+   "outcome": "No general ceasefire between Russia and Ukraine as of 31 October 2027.",
+   "severity": 3,
+   "sinceLast": "Lavrov says Russia's position is unchanged, and ISW assesses that the Kremlin rejects compromise. Probability of trilateral talks in November lowered from 75% to 70%; factor from 70% to 71%. The US approved the sale of 500 PAC-3 interceptors, but with delivery after 2030.",
+   "sources": [
+    {
+     "t": "ISW: Russian Offensive Campaign Assessment, 31 Oct 2026",
+     "u": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-october-31-2026"
+    },
+    {
+     "t": "Kyiv Post: ISW Russian Offensive Campaign Assessment, 30 Oct",
+     "u": "https://www.kyivpost.com/post/88722"
+    },
+    {
+     "t": "Kyiv Post: Oleshky evacuees reach Belarus en route to Ukraine",
+     "u": "https://kyivpost.com/post/88742"
+    }
+   ],
+   "spill": 0.03,
+   "summary": "The front is effectively static, with small local shifts both ways around Kharkiv and Sumy. The local ceasefire in Oleshky is largely holding and has allowed civilians to be evacuated, but Ukraine says Russia is using the pause to rotate and reinforce. The Kremlin is sticking to its 2022 demands, ignoring Zelensky's offers of broader frontline ceasefires and trying to push European leaders out of the talks. Russia is striking the power grid: on 31 October a combined heat and power plant in Kyiv and four substations in Dnipropetrovsk were hit, leaving about 280,000 households without power.",
+   "tag": "Ukraine",
+   "trend": "up"
+  },
+  {
+   "P": 0.63,
+   "drivers": [
+    "d_us_strike_iran",
+    "d_qatar_deal",
+    "d_hormuz_open",
+    "d_netanyahu",
+    "d_houthi_refinery",
+    "d_gulf_desal",
+    "d_subsea_cables",
+    "d_regional_pact",
+    "d_iran_npt",
+    "d_dem_house"
+   ],
+   "experts": [
+    "ISW/CTP Iran team",
+    "Fawaz Gerges (LSE, raised in Lebanon)",
+    "Gregory Brew (Eurasia Group)"
+   ],
+   "id": "mideast",
+   "name": "Middle East: Iran, Israel, Saudi/Yemen, Hormuz",
+   "outcome": "Renewed large-scale war between the US/Israel and Iran, with Iranian or Houthi attacks on energy or water infrastructure in the Gulf.",
+   "severity": 4,
+   "sinceLast": "The diplomatic track has strengthened: the Qatar plan (two days to reopening) and an Iranian delegation in Doha, while Trump says he is \"not in that much of a hurry\". Strike driver lowered from 60% to 55%, Qatar deal raised from 25% to 30%, Hormuz normalised by March from 25% to 27%, Netanyahu government from 50% to 40%. Factor lowered from 65% to 63%. Iran's conditions are heavy, so the decline is moderate.",
+   "sources": [
+    {
+     "t": "ISW/CTP: Iran Update, 31 Oct 2026",
+     "u": "https://www.criticalthreats.org/analysis/iran-update-october-31-2026"
+    },
+    {
+     "t": "Al Jazeera: Araghchi says talks under way on 2-day plan to reopen Hormuz (1 Nov)",
+     "u": "https://www.aljazeera.com/news/liveblog/2026/11/1/iran-war-live-araghchi-says-talks-under-way-on-2-day-plan-to-reopen-hormuz"
+    },
+    {
+     "t": "House of Saud: Iran's 2-day Hormuz plan before Trump's Nov 3 deadline",
+     "u": "https://houseofsaud.com/araghchi-2-day-hormuz-plan-trump-moratorium/"
+    },
+    {
+     "t": "The National: Attacks on ships transiting Hormuz in October highest since start of war (31 Oct)",
+     "u": "https://www.thenationalnews.com/news/mena/2026/10/31/live-iran-war-strait-of-hormuz/"
+    },
+    {
+     "t": "Times of Israel: With all votes counted, Netanyahu's bloc at 53 seats",
+     "u": "https://www.timesofisrael.com/with-all-votes-counted-netanyahus-bloc-at-53-seats-eisenkots-48-arab-parties-19/"
+    }
+   ],
+   "spill": 0.12,
+   "summary": "The Iran war is in an armed pause, but October saw the most attacks on shipping of the entire war (UKMTO: 43 incidents, 30 direct hits on tankers), and Gulf crude exports fell to around 15.7 mb/d. Trump's pledge of no strikes before the midterms expires on 3 November; Israel is updating target lists, and Mojtaba Khamenei has ordered \"maximum deterrence\" and an expanded target list. Meanwhile Qatar has held more than 12 hours of talks in Tehran and Doha, and Araghchi confirms a plan to reopen Hormuz within two days if the US accepts five conditions. Saudi Arabia and the Houthis are in open war, with drones intercepted over Riyadh and Medina and a possible government offensive on al-Hazm. Israel's election ended 53–48 with 19 Arab-party seats and no majority for either bloc.",
+   "tag": "Middle East",
+   "trend": "down"
+  },
+  {
+   "P": 0.08,
+   "drivers": [
+    "d_pla_drill",
+    "d_pratas",
+    "d_scs_clash",
+    "d_us_strike_iran",
+    "d_taiwan_arms",
+    "d_trumpxi_taiwan",
+    "d_pla_purge",
+    "d_tariff_war"
+   ],
+   "experts": [
+    "ISW/AEI China team",
+    "William Yang (Crisis Group)",
+    "ODNI"
+   ],
+   "id": "taiwan",
+   "name": "China–Taiwan",
+   "outcome": "Chinese blockade or quarantine of Taiwan, or a military attack on Taiwan or its outlying islands.",
+   "severity": 5,
+   "sinceLast": "No significant change. Gen. Ronald Clark (USARPAC) said on 29 Oct that the 2027 window remains valid; APEC 18–19 Nov added to the calendar.",
+   "sources": [
+    {
+     "t": "ISW/AEI: China & Taiwan Update, 27 Oct 2026",
+     "u": "https://www.aei.org/commentary/china-taiwan-update-october-27-2026/"
+    },
+    {
+     "t": "Taipei Times: US Army outlines Pacific deployments for possible 2027 conflict (30 Oct)",
+     "u": "https://www.taipeitimes.com/News/front/archives/2026/10/30/2003866854"
+    },
+    {
+     "t": "Wikipedia: APEC China 2026 (summit dates)",
+     "u": "https://en.wikipedia.org/wiki/APEC_China_2026"
+    }
+   ],
+   "spill": 0.8,
+   "summary": "Grey-zone pressure continues: the carrier Liaoning transited the Basilan Strait inside the Philippine archipelago on 22 October, and Beijing marked \"Taiwan Restoration Day\" on 25 October with implicit threats. US Army Pacific is planning deployments on the assumption that China could have the capability and intent to invade by 2027, while US intelligence assessed in March that China does not plan an invasion in 2027. The APEC summit in Shenzhen on 18–19 November offers a new Trump–Xi meeting where Taiwan and the $14bn arms package could become bargaining items.",
+   "tag": "Taiwan",
+   "trend": "flat"
+  },
+  {
+   "P": 0.2,
+   "drivers": [
+    "d_iran_npt",
+    "d_nk_test",
+    "d_us_test",
+    "d_indpak",
+    "d_newstart_exceed",
+    "d_us_strike_iran",
+    "d_arms_talks",
+    "d_uscn_ai"
+   ],
+   "experts": [
+    "Arms Control Association",
+    "IAEA (Grossi)",
+    "Gabriela Bernal (Lowy/ECNKS, Seoul)"
+   ],
+   "id": "nuclear",
+   "name": "Nuclear weapons and arms control",
+   "outcome": "The nuclear threshold weakens: a nuclear test (North Korea included), open nuclear threats in an active armed crisis, or a new state openly seeking nuclear weapons.",
+   "severity": 5,
+   "sinceLast": "No significant change. Trump has floated a meeting with Kim Jong Un around APEC in Shenzhen; Pyongyang rejects denuclearisation as a premise. Iran's Qatar plan leaves the nuclear file out of the first phase.",
+   "sources": [
+    {
+     "t": "Lowy Interpreter (Gabriela Bernal, Seoul): The last chance for a Trump–Kim summit? (16 Oct)",
+     "u": "https://www.lowyinstitute.org/the-interpreter/the-last-chance-for-a-trump-kim-summit"
+    },
+    {
+     "t": "House of Saud: Iran's 2-day Hormuz plan (nuclear file in phase 2)",
+     "u": "https://houseofsaud.com/araghchi-2-day-hormuz-plan-trump-moratorium/"
+    },
+    {
+     "t": "ISW/CTP: Iran Update, 31 Oct 2026",
+     "u": "https://www.criticalthreats.org/analysis/iran-update-october-31-2026"
+    }
+   ],
+   "spill": 0.1,
+   "summary": "New START expired on 5 February without a replacement, and for the first time in over 50 years there are no agreed limits on US and Russian arsenals. The US announced in October 2025 that testing would resume. Iran's roughly 400 kg of 60%-enriched uranium has not been verified by the IAEA since the strikes. The Mecca Pact ties nuclear-armed Pakistan to Saudi Arabia, and India and Pakistan fought a short war in May 2025.",
+   "tag": "Nuclear",
+   "trend": "flat"
+  },
+  {
+   "P": 0.45,
+   "drivers": [
+    "d_cable_cut",
+    "d_blacksea_ships",
+    "d_falseflag",
+    "d_grid_cyber",
+    "d_us_europe_drawdown",
+    "d_cyber_diffusion",
+    "d_ru_mobil",
+    "d_ua_ceasefire",
+    "d_nato_costs"
+   ],
+   "experts": [
+    "CEPA (Minna Alander)",
+    "RUSI (Oleksandr Danylyuk)",
+    "Danish Defence Intelligence (FE)"
+   ],
+   "id": "hybrid",
+   "name": "Russia vs NATO: hybrid war and critical infrastructure",
+   "outcome": "A NATO member invokes Article 4, or a Russian attack causing deaths occurs on NATO territory.",
+   "severity": 3,
+   "sinceLast": "No significant change. German prosecutors confirmed on 28 Oct that two Belarusian nationals are suspected of planning arson attacks on a railway and a power line near Nuremberg, and Romanian intelligence (SRI) has uncovered a Russia-directed network targeting arms manufacturers. No new undersea incidents in Northern Europe.",
+   "sources": [
+    {
+     "t": "Al Jazeera: Russia's alleged sabotage campaign in Europe raises fears of escalation (29 Oct)",
+     "u": "https://www.aljazeera.com/news/2026/10/29/russias-alleged-sabotage-campaign-in-europe-raises-fears-of-escalation"
+    },
+    {
+     "t": "Robert Lansing Institute: Russia's sabotage campaign in Europe – the Belarusian connection (30 Oct)",
+     "u": "https://lansinginstitute.org/2026/10/30/russias-sabotage-campaign-in-europe-the-belarusian-connection-attacks-on-critical-infrastructure-and-the-risk-of-expanding-hybrid-warfare-against-nato/"
+    },
+    {
+     "t": "ISW: Russian Offensive Campaign Assessment, 31 Oct 2026",
+     "u": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-october-31-2026"
+    }
+   ],
+   "spill": 0.06,
+   "summary": "CEPA counted at least 17 attacks with proven or suspected Russian direction against NATO's frontline states and Moldova in one month. Russian drones have hit merchant ships in Bulgarian and Romanian economic zones, and drones have been downed over Poland, Finland and the Baltics. Lithuania warns of false-flag attacks using captured Ukrainian drones. Danish intelligence has said Russia could carry out a limited military attack on a NATO country bordering Russia.",
+   "tag": "Hybrid",
+   "trend": "flat"
+  },
+  {
+   "P": 0.3,
+   "drivers": [
+    "d_brent120",
+    "d_hormuz_open",
+    "d_ai_crash",
+    "d_rate_hikes",
+    "d_em_debt",
+    "d_tariff_war",
+    "d_us_strike_iran",
+    "d_houthi_refinery",
+    "d_export_bans",
+    "d_h5n1"
+   ],
+   "experts": [
+    "IMF (Gourinchas)",
+    "FAO (Maximo Torero)",
+    "Goldman Sachs"
+   ],
+   "id": "econ",
+   "name": "Global economic and financial shock",
+   "outcome": "Global recession (world growth below about 2% in 2027) or a systemic financial crisis.",
+   "severity": 4,
+   "sinceLast": "No significant change in the numbers. OPEC+ is holding December targets steady, so no extra supply offsets Hormuz. The Qatar plan is an upside for oil prices in the short term; a new US strike after 3 Nov is a downside.",
+   "sources": [
+    {
+     "t": "Business Standard/Reuters: OPEC+ agrees in principle to keep output targets steady in Dec (1 Nov)",
+     "u": "https://www.business-standard.com/world-news/opec-agrees-in-principle-to-keep-oil-output-targets-steady-in-dec-126110100053_1.html"
+    },
+    {
+     "t": "Oil Monitor Weekly Summary (Brent 30 Oct, UKMTO incidents)",
+     "u": "https://unbiasednews.substack.com/p/oil-monitor-weekly-summary-october"
+    },
+    {
+     "t": "HDFC Sky: Brent near $116 as Houthi attacks escalate (30 Oct)",
+     "u": "https://hdfcsky.com/news/brent-crude-oil-price-today-october-30-2026-brent-surges-1percent-above-116-wti-jumps-1-3percent-past-103-as-houthi-attacks-stoke-supply-fears"
+    }
+   ],
+   "spill": 0.2,
+   "summary": "Brent settled at $113.10 on Friday 30 October, up 13.6% in October and for four straight weeks, with the December contract touching $117.64. OPEC+ agreed in principle on 1 November to keep December targets unchanged; Gulf producers are still pumping well below quota. The IMF projects 3.1% growth and 4.7% global inflation in 2026 and has warned that a severe war scenario would bring the world close to recession. Hyperscalers are spending around $650–700bn on AI infrastructure in 2026 with uncertain returns.",
+   "tag": "Economy",
+   "trend": "flat"
+  },
+  {
+   "P": 0.45,
+   "drivers": [
+    "d_superelnino",
+    "d_monsoon_fail",
+    "d_fert_short",
+    "d_drought_south",
+    "d_export_bans",
+    "d_gulf_desal",
+    "d_brent120",
+    "d_hormuz_open",
+    "d_elnino_disease"
+   ],
+   "experts": [
+    "NOAA CPC",
+    "WMO",
+    "FAO (Maximo Torero)"
+   ],
+   "id": "climate",
+   "name": "Climate, water and food",
+   "outcome": "New record in the FAO Food Price Index, an export ban on rice or wheat by a major exporter, or an acute water crisis in a city of more than 5 million people.",
+   "severity": 3,
+   "sinceLast": "Niño 3.4 rose from +3.3 to +3.4 °C. Driver for very strong El Niño through the winter raised from 90% to 92%. Factor unchanged at 45%.",
+   "sources": [
+    {
+     "t": "ElNinoLive: Niño 3.4 index (NOAA, week of 21 Oct)",
+     "u": "https://www.elninolive.com/"
+    },
+    {
+     "t": "The Watchers: NOAA gives El Niño an 83% chance of historic strength (8 Oct)",
+     "u": "https://watchers.news/2026/10/08/noaa-gives-el-nino-an-83-chance-of-reaching-historic-strength-in-late-2026/"
+    },
+    {
+     "t": "Oil Monitor Weekly Summary (Gulf exports, October)",
+     "u": "https://unbiasednews.substack.com/p/oil-monitor-weekly-summary-october"
+    }
+   ],
+   "spill": 0.08,
+   "summary": "A very strong El Niño is under way: Niño 3.4 stood at +3.4 °C in the week of 21 October, and WMO expects a peak around December with an Oct–Dec anomaly of about +3.7 °C, the highest on record. WMO points to drier conditions in South Asia, southern Central America, the Caribbean and the western Pacific. At the same time the Hormuz crisis is causing fertiliser shortages; about a third of global fertiliser trade passed through the strait before the war, and Gulf crude exports fell further in October.",
+   "tag": "Water",
+   "trend": "flat"
+  }
+ ],
+ "generatedAt": "2026-11-01T07:02:07+01:00",
+ "globalSummary": "The picture is largely unchanged from yesterday: Hormuz closed, Brent around $113 and a very strong El Niño that is still intensifying. The main new element is that Iran confirms a Qatar-brokered plan to reopen the strait within two days in exchange for five conditions, while Khamenei has ordered maximum deterrence and Israel is updating target lists. Cost-of-living protests have spread from France to Germany, Italy and Spain. In AI, Mistral has released the weights of an open model marketed with frontier-level cyber capability. Ukraine diplomacy is stalled because the Kremlin is not moving. The weeks up to APEC on 18–19 November are the next major window for movement.",
+ "headline": "Hormuz diplomacy has a concrete track via Qatar, but Trump's pledge of no strikes on Iran expires on 3 November, and October saw the most attacks on shipping of the entire war.",
+ "horizon": "12 months (to 31 October 2027) unless otherwise stated per driver",
+ "id": "2026-11-01",
+ "method": {
+  "baseRate": 0.02,
+  "blackSwanDefinition": "An event of global reach within 12 months: direct war between great powers (US/NATO vs Russia or China), use of nuclear weapons, a pandemic with millions of deaths, a new or sharply expanded major war causing global recession, or an AI catastrophe requiring government crisis management in several countries.",
+  "correlation": 0.85,
+  "factorModel": "Each factor has an analyst-assessed probability. Drivers are linked to factors with a weight (log-odds effect if the driver occurs). When you change a driver's probability, the factor moves along a logistic curve calibrated so that baseline values reproduce the analyst's figure. One driver can affect several factors.",
+  "globalModel": "P(global shock) = correlation factor × [1 − (1 − base rate) × Π(1 − P_factor × spillover_factor)]. Spillover is the share of a factor's negative outcome that would grow to global scale. The correlation factor (0.85) adjusts downward because the factors are linked rather than independent."
+ },
+ "sinceLast": "Largest adjustments: Middle East down from 65% to 63% (Qatar plan; strike driver from 60% to 55%, Qatar deal from 25% to 30%, Netanyahu government from 50% to 40% after a final 53 seats). AI up from 35% to 37% after Mistral Large 4 arrived with open weights (cyber driver from 45% to 55%). Social unrest up from 38% to 40% as protests spread to Germany. Ukraine up from 70% to 71% (trilateral talks in November from 75% to 70%). Brent revised from $113.43 to $113.10 on the updated settlement; Niño 3.4 rose to +3.4 °C. OPEC+ is holding December targets unchanged.",
+ "watch": [
+  {
+   "k": "Brent",
+   "v": "$113.10",
+   "n": "settlement 30 Oct; +13.6% in October"
+  },
+  {
+   "k": "Hormuz transits",
+   "v": "2–4/day",
+   "n": "latest known figure; UKMTO: 43 incidents in October (30 tanker hits)"
+  },
+  {
+   "k": "Gulf crude exports",
+   "v": "~15.7 mb/d",
+   "n": "week to 26 Oct, down from >24 mb/d earlier in October"
+  },
+  {
+   "k": "Niño 3.4",
+   "v": "+3.4 °C",
+   "n": "week of 21 Oct (NOAA)"
+  },
+  {
+   "k": "Russian net gains 2026",
+   "v": "~100 km²",
+   "n": "ISW, as of 16 Oct"
+  },
+  {
+   "k": "Global growth 2026",
+   "v": "3.1%",
+   "n": "IMF WEO October"
+  }
+ ],
+ "norway": {
+  "baseRate": 0.01,
+  "correlation": 0.85,
+  "drivers": [
+   {
+    "h": "12 mo",
+    "id": "d_no_drones",
+    "imp": {
+     "no_military": 0.3,
+     "no_sabotage": 0.4
+    },
+    "p": 0.45,
+    "t": "Drones close a Norwegian airport or halt production on an offshore installation",
+    "why": "Happened at Gardermoen and Sleipner in 2025; Denmark has had several cases."
+   },
+   {
+    "h": "12 mo",
+    "id": "d_no_ransomware",
+    "imp": {
+     "no_cyber": 0.7
+    },
+    "p": 0.7,
+    "t": "Ransomware hits a Norwegian municipality, health trust or critical supplier",
+    "why": "Has happened several times in the past decade; AI lowers the threshold."
+   },
+   {
+    "h": "12 mo",
+    "id": "d_no_iran_proxy",
+    "imp": {
+     "no_terror": 0.7
+    },
+    "p": 0.35,
+    "t": "Iranian-directed plot in Norway carried out, or foiled and made public",
+    "why": "PST assessed such plots as likely in April."
+   },
+   {
+    "h": "12 mo",
+    "id": "d_no_threatlevel",
+    "imp": {
+     "no_terror": 0.8
+    },
+    "p": 0.15,
+    "t": "PST raises the terror threat level to high (4)",
+    "why": "The level is moderate (3) now; it was raised after the 2022 Oslo attack."
+   },
+   {
+    "h": "to 1 Jan 2027",
+    "id": "d_no_reservoir",
+    "imp": {
+     "no_economy": 0.2,
+     "no_energy": 0.9
+    },
+    "p": 0.55,
+    "t": "Reservoir levels in southern Norway still more than 15 pp below normal on 1 January",
+    "why": "NO2 was about 30 pp below normal in week 43."
+   },
+   {
+    "h": "to 28 Feb 2027",
+    "id": "d_no_cold",
+    "imp": {
+     "no_energy": 0.6
+    },
+    "p": 0.3,
+    "t": "Colder than normal winter in southern Norway (Dec–Feb)",
+    "why": "Cold raises consumption when reservoirs are low."
+   },
+   {
+    "h": "12 mo",
+    "id": "d_no_kpi4",
+    "imp": {
+     "no_economy": 1
+    },
+    "p": 0.3,
+    "t": "Norwegian CPI inflation above 4% for at least one month",
+    "why": "CPI has run above forecasts; oil and food are pushing up."
+   },
+   {
+    "h": "12 mo",
+    "id": "d_no_fuelstock",
+    "imp": {
+     "no_supply": -0.2
+    },
+    "p": 0.75,
+    "t": "Storting approves larger emergency fuel stocks",
+    "why": "Proposed in the 2027 state budget."
+   }
+  ],
+  "factors": [
+   {
+    "P": 0.2,
+    "advice": "Have a plan for 24 hours without power, mobile network and payment cards. Keep cash, water and a battery radio.",
+    "drivers": [
+     "d_no_drones",
+     "d_cable_cut",
+     "d_falseflag",
+     "d_grid_cyber",
+     "d_ua_ceasefire"
+    ],
+    "experts": [
+     "PST (Beate Gangås)",
+     "NSM (Arne Christian Haugstøyl)",
+     "Tormod Heier (Norwegian Defence University College)"
+    ],
+    "id": "no_sabotage",
+    "name": "Sabotage against Norwegian critical infrastructure",
+    "outcome": "Sabotage or hybrid attack on Norwegian critical infrastructure (energy, cables, pipelines, water, transport) causing a noticeable outage for residents or businesses lasting more than 24 hours, attributed by Norwegian authorities to a state actor.",
+    "scope": "no",
+    "severity": 4,
+    "sinceLast": "First snapshot.",
+    "sources": [
+     {
+      "t": "PST: The sabotage threat in Norway (Norwegian)",
+      "u": "https://www.pst.no/sabotasjetrusselen-i-norge-hva-bor-norske-virksomheter-vaere-bevisste-pa/"
+     },
+     {
+      "t": "PST: National Threat Assessment 2026 (Norwegian)",
+      "u": "https://www.pst.no/wp-content/uploads/2026/02/Nasjonal-trusselvurdering-2026.pdf"
+     },
+     {
+      "t": "NSM: Risk 2026 (Norwegian)",
+      "u": "https://nsm.no/getfile.php/1314962-1770630853/NSM/Filer/Dokumenter/Rapporter/Risiko%202026.pdf"
+     },
+     {
+      "t": "VG: Drone chaos in the Nordics (Norwegian)",
+      "u": "https://www.vg.no/nyheter/i/LMJrR9/dronekaos-i-norden-norge-er-saarbare"
+     }
+    ],
+    "summary": "PST assesses that Russian intelligence may see value in sabotage against targets in Norway in 2026, most likely against property and logistics linked to support for Ukraine, but also civilian infrastructure. Russia has mapped Norwegian infrastructure for a long time; what is new is the willingness to take risks. Drone sightings have previously closed Gardermoen and affected Ørland and Sleipner. The threshold here is high: an outage of more than 24 hours and public attribution, which takes time.",
+    "tag": "Sabotage",
+    "trend": "new"
+   },
+   {
+    "P": 0.4,
+    "advice": "Keep offline backups of important documents, use two-factor authentication on BankID-linked services, and keep paper copies of prescriptions and insurance.",
+    "drivers": [
+     "d_no_ransomware",
+     "d_cyber_diffusion",
+     "d_grid_cyber"
+    ],
+    "experts": [
+     "NSM",
+     "PST",
+     "Sykehuspartner HF"
+    ],
+    "id": "no_cyber",
+    "name": "Cyberattacks on critical societal functions",
+    "outcome": "Cyberattack that takes a critical societal function in Norway (health, payments, power, water, telecoms or a large municipality) fully or partly out of service for more than 24 hours.",
+    "scope": "no",
+    "severity": 3,
+    "sinceLast": "First snapshot.",
+    "sources": [
+     {
+      "t": "NSM: Risk 2026 (Norwegian)",
+      "u": "https://nsm.no/getfile.php/1314962-1770630853/NSM/Filer/Dokumenter/Rapporter/Risiko%202026.pdf"
+     },
+     {
+      "t": "Sykehuspartner: Threat assessment 2026 – digital threats (Norwegian)",
+      "u": "https://www.sykehuspartner.no/498d1d/siteassets/documents/sikkerhet/sikkerhet---trusselvurderinger/trusselvurdering-2026/trusselvurdering-2026---det-digitale-trusselbildet-mot-spesialisthelsetjenesten.pdf"
+     },
+     {
+      "t": "Dagbladet: The 2026 threat assessments (Norwegian)",
+      "u": "https://www.dagbladet.no/nyheter/dystre-utsikter/84189772"
+     }
+    ],
+    "summary": "This is the most likely serious event on the list. Ransomware attacks have knocked out Norwegian municipalities and companies several times in the past decade, and NSM and PST expect AI tools to be used in cyber operations against Norwegian organisations in 2026. PST expects more Russian cyber operations, and China's largest intelligence threat to Norway is in the cyber domain.",
+    "tag": "Cyber",
+    "trend": "new"
+   },
+   {
+    "P": 0.15,
+    "advice": "Follow police advice at large events. Learn \"Run, hide, alert\".",
+    "drivers": [
+     "d_no_iran_proxy",
+     "d_no_threatlevel",
+     "d_us_strike_iran"
+    ],
+    "experts": [
+     "PST"
+    ],
+    "id": "no_terror",
+    "name": "Terrorism in Norway",
+    "outcome": "Terrorist attack in Norway with at least one fatality.",
+    "scope": "no",
+    "severity": 3,
+    "sinceLast": "First snapshot.",
+    "sources": [
+     {
+      "t": "PST: Implications for Norway of the US/Israel–Iran conflict (9 Apr, Norwegian)",
+      "u": "https://www.pst.no/wp-content/uploads/2026/04/Trusselvurdering_-Konsekvenser-for-trusselbildet-i-Norge-som-folge-av-konflikten-mellom-USA-Israel-og-Iran.pdf"
+     },
+     {
+      "t": "PST: Incident at the US embassy (8 Mar, Norwegian)",
+      "u": "https://www.pst.no/wp-content/uploads/2026/03/08.03.26.-Trusselvurdering_hendelse-ved-den-amerikanske-ambassaden.pdf"
+     },
+     {
+      "t": "PST: Public gatherings and events 2026 (Norwegian)",
+      "u": "https://www.pst.no/wp-content/uploads/2026/03/Trusselvurdering-for-folkesamlinger-og-arrangementer-2026.pdf"
+     }
+    ],
+    "summary": "The terror threat level is moderate (3 of 5). PST considers it possible that extreme Islamists or right-wing extremists will attempt terrorism in Norway in 2026. After the Iran war, PST assessed in April that Iranian services are likely to attempt attacks in Norway, especially against American, Israeli and Jewish targets, often via criminal networks. An explosive device was detonated at the US embassy in Oslo on 8 March. The base rate is not low: Norway had terror-motivated killings in 2019 and 2022.",
+    "tag": "Terror",
+    "trend": "new"
+   },
+   {
+    "P": 0.05,
+    "advice": "Know where shelters are and the warning signals in your municipality. Follow the Civil Defence's advice.",
+    "drivers": [
+     "d_no_drones",
+     "d_us_europe_drawdown",
+     "d_ru_mobil",
+     "d_ua_ceasefire"
+    ],
+    "experts": [
+     "Norwegian Intelligence Service (Nils Andreas Stensønes)"
+    ],
+    "id": "no_military",
+    "name": "Armed incident on Norwegian territory",
+    "outcome": "Armed military incident on Norwegian territory, in Norwegian airspace or in Norway's economic zone (incl. Svalbard) in which Norwegian or allied forces fire or are fired upon, or Norwegian personnel or materiel are damaged.",
+    "scope": "no",
+    "severity": 5,
+    "sinceLast": "First snapshot.",
+    "sources": [
+     {
+      "t": "Norwegian Intelligence Service: Focus 2026 (Norwegian)",
+      "u": "https://www.etterretningstjenesten.no/publikasjoner/fokus/fokus-pa-norsk/Fokus2026%20-%20NO%20-%20Weboppslag%20v4.pdf"
+     },
+     {
+      "t": "High North News: Norwegian Intelligence's Threat Assessment",
+      "u": "https://en.highnorthnews.com/politics/norwegian-intelligences-threat-assessment-the-same-dynamic-is-evident-in-the-arctic/1103065"
+     },
+     {
+      "t": "Altinget: Intelligence Service's subtle warning about US actions (Norwegian)",
+      "u": "https://www.altinget.no/forsvar/artikkel/etterretningstjenesten-med-subtil-advarsel-om-usas-handlinger"
+     }
+    ],
+    "summary": "The Norwegian Intelligence Service (Focus 2026) describes a Russia preparing for lasting confrontation with Norway as part of its enemy image, and warns of more Russian military activity nearby and more offensive behaviour in the Arctic. Russia's ground forces are tied up in Ukraine, but its air, naval and submarine capacity in the north is intact. Shooting down a drone that violates airspace would count here.",
+    "tag": "Military",
+    "trend": "new"
+   },
+   {
+    "P": 0.35,
+    "advice": "Consider a fixed price or Norgespris before winter, and have an alternative heat source (wood, paraffin) that is safe to use indoors.",
+    "drivers": [
+     "d_no_reservoir",
+     "d_no_cold",
+     "d_brent120",
+     "d_hormuz_open"
+    ],
+    "experts": [
+     "NVE (Kjetil Lund)",
+     "Volt Power Analytics",
+     "Statkraft"
+    ],
+    "id": "no_energy",
+    "name": "Energy crisis in Norway",
+    "outcome": "Rationing of electricity or fuel in Norway, or a monthly average spot price in a Norwegian price area above NOK 2.50/kWh.",
+    "scope": "no",
+    "severity": 2,
+    "sinceLast": "First snapshot.",
+    "sources": [
+     {
+      "t": "E24: Expensive power – relief every day it rains (Norwegian)",
+      "u": "https://e24.no/energi-og-klima/i/w3qRqM/dyr-stroem-griner-av-glede-hver-dag-det-regner"
+     },
+     {
+      "t": "Selectra: Reservoir levels week 43 2026 (NVE data, Norwegian)",
+      "u": "https://selectra.no/fyllingsgrad"
+     },
+     {
+      "t": "NRK: Lowest reservoir levels since 2005 (Norwegian)",
+      "u": "https://www.nrk.no/sorlandet/rodt-frykter-dyrere-strom-i-sor-norge-1.17975707"
+     }
+    ],
+    "summary": "Reservoir levels in southern Norway are the lowest in 20 years; NO2 was about 30 pp below normal in week 43. October prices in the three southern price areas have been NOK 1.33–1.46/kWh, against about NOK 0.6 last year, while northern Norway is close to normal. NVE does not expect an energy shortage this winter, but high winter prices are likely, especially with high European gas prices after Hormuz. Norgespris dampens the effect for households.",
+    "tag": "Power",
+    "trend": "new"
+   },
+   {
+    "P": 0.15,
+    "advice": "Keep a buffer of 3–6 months' expenses and test how a 1 pp rate rise affects your loan.",
+    "drivers": [
+     "d_no_kpi4",
+     "d_brent120",
+     "d_hormuz_open",
+     "d_no_reservoir",
+     "d_h5n1"
+    ],
+    "experts": [
+     "Norges Bank (Ida Wolden Bache)",
+     "KS",
+     "NHO"
+    ],
+    "id": "no_economy",
+    "name": "Economic shock for households",
+    "outcome": "Norwegian CPI inflation (12 months) above 5.0%, or registered full unemployment (NAV) of 3.0% or higher.",
+    "scope": "no",
+    "severity": 2,
+    "sinceLast": "First snapshot.",
+    "sources": [
+     {
+      "t": "Norges Bank: Monetary policy meeting, September 2026",
+      "u": "https://www.norges-bank.no/tema/pengepolitikk/Rentemoter/2026/september-2026/"
+     },
+     {
+      "t": "KS chief economist: Stable NAV unemployment (week 40, Norwegian)",
+      "u": "https://www.ks.no/fagomrader/okonomi/sjefokonomens-side/uke-40-stabil-nav-ledighet-okte-boligpriser-og-varehandel/"
+     },
+     {
+      "t": "Norges Bank: Monetary policy meeting, August 2026",
+      "u": "https://www.norges-bank.no/tema/pengepolitikk/Rentemoter/2026/august-2026/"
+     }
+    ],
+    "summary": "The Norwegian economy withstands the shock well because high oil prices strengthen public finances. NAV unemployment has been 2.1% for five months in a row. Norges Bank raised the policy rate to 4.5% in September; CPI has run above forecasts while core inflation has fallen. The biggest risk is a combination of electricity prices, food prices and a weak krone, but Norgespris keeps the electricity component of CPI down.",
+    "tag": "Economy",
+    "trend": "new"
+   },
+   {
+    "P": 0.07,
+    "advice": "Follow DSB's advice on one week of self-preparedness: water, food that needs no refrigeration, medicines and fuel in the tank.",
+    "drivers": [
+     "d_no_fuelstock",
+     "d_brent120",
+     "d_hormuz_open",
+     "d_export_bans",
+     "d_h5n1"
+    ],
+    "experts": [
+     "FFI",
+     "Oslo Economics",
+     "NHO (Ole Erik Almlid)"
+    ],
+    "id": "no_supply",
+    "name": "Supply failure",
+    "outcome": "Authorities introduce national rationing of fuel or food, or describe the medicine situation as a national supply crisis.",
+    "scope": "no",
+    "severity": 4,
+    "sinceLast": "First snapshot.",
+    "sources": [
+     {
+      "t": "Government: Proposes doubling emergency fuel stocks (Norwegian)",
+      "u": "https://www.regjeringen.no/no/aktuelt/regjeringa-foreslar-dobling-av-beredskapslagera-for-drivstoff/id3174954/"
+     },
+     {
+      "t": "Oslo Economics: Future fuel preparedness in Norway (Aug 2026, Norwegian)",
+      "u": "https://www.regjeringen.no/contentassets/9665a317bf0c4ed1ba6e566b2bc3e441/sammendrag-innretningen-av-fremtidig-drivstoffberedskap-i-norge.pdf"
+     },
+     {
+      "t": "TU: Centre Party wants larger fuel crisis stocks (Norwegian)",
+      "u": "https://www.tu.no/artikler/senterpartiet-vil-oke-kriselagrene-for-drivstoff/569826"
+     }
+    ],
+    "summary": "Norway has one refinery (Mongstad) and emergency fuel stocks equal to 20 days of consumption, against 90 in Sweden and Finland. FFI has pointed to high vulnerability for diesel and jet fuel in crisis and war. The government proposes doubling stocks in the 2027 budget, but building them up takes time. Without war nearby or a pandemic, national rationing is unlikely.",
+    "tag": "Supply",
+    "trend": "new"
+   },
+   {
+    "P": 0.4,
+    "advice": "Check whether your home is in a flood or landslide zone (NVE Atlas), and follow warnings from the Norwegian Meteorological Institute.",
+    "drivers": [],
+    "experts": [
+     "NVE",
+     "Norwegian Meteorological Institute"
+    ],
+    "id": "no_weather",
+    "name": "Extreme weather and natural hazards",
+    "outcome": "Extreme weather, flood or landslide hitting buildings or infrastructure in Norway and causing deaths, or evacuation of more than 1,000 people. Avalanche accidents during outdoor recreation do not count.",
+    "scope": "no",
+    "severity": 2,
+    "sinceLast": "First snapshot.",
+    "sources": [],
+    "summary": "The base rate is high: the Gjerdrum quick-clay slide (2020) and storm Hans (2023) are recent examples. El Niño has a weak and uncertain effect on Norwegian weather. A warmer, wetter climate raises flood and quick-clay landslide risk over time.",
+    "tag": "Nature",
+    "trend": "new"
+   }
+  ],
+  "headline": "According to the government, Norway faces its most serious security situation since the Second World War. For most people this winter, though, the most concrete risk is electricity prices in southern Norway, not war.",
+  "links": {
+   "d_brent120": {
+    "no_economy": 0.5,
+    "no_energy": 0.4,
+    "no_supply": 0.3
+   },
+   "d_cable_cut": {
+    "no_sabotage": 0.6
+   },
+   "d_cyber_diffusion": {
+    "no_cyber": 0.5
+   },
+   "d_export_bans": {
+    "no_supply": 0.3
+   },
+   "d_falseflag": {
+    "no_sabotage": 0.3
+   },
+   "d_grid_cyber": {
+    "no_cyber": 0.4,
+    "no_sabotage": 0.2
+   },
+   "d_h5n1": {
+    "no_economy": 0.4,
+    "no_supply": 0.8
+   },
+   "d_hormuz_open": {
+    "no_economy": -0.4,
+    "no_energy": -0.3,
+    "no_supply": -0.3
+   },
+   "d_ru_mobil": {
+    "no_military": 0.3
+   },
+   "d_ua_ceasefire": {
+    "no_military": -0.3,
+    "no_sabotage": -0.3
+   },
+   "d_us_europe_drawdown": {
+    "no_military": 0.4
+   },
+   "d_us_strike_iran": {
+    "no_terror": 0.4
+   }
+  },
+  "method": "P(national crisis) is calculated like the global model: correlation factor × [1 − (1 − base rate) × Π(1 − P_factor × share_national_crisis)]. Both Norwegian and global factors (pandemic, Taiwan, hybrid war, economy) are included. \"National crisis\" means an event requiring national crisis management and affecting large parts of the population for several days.",
+  "sinceLast": "First snapshot for Norway.",
+  "spill": {
+   "bio": 0.4,
+   "econ": 0.06,
+   "hybrid": 0.03,
+   "no_cyber": 0.04,
+   "no_economy": 0.05,
+   "no_energy": 0.08,
+   "no_military": 0.6,
+   "no_sabotage": 0.15,
+   "no_supply": 0.4,
+   "no_terror": 0.08,
+   "no_weather": 0.03,
+   "nuclear": 0.04,
+   "taiwan": 0.15
+  },
+  "summary": "PST, the Intelligence Service and NSM identify Russia as the main threat, with sabotage against Ukraine-related logistics and civilian infrastructure as a possible tool in 2026. The Iran war has raised the threat to American, Israeli and Jewish targets in Norway; an explosive device was detonated at the US embassy in March, and PST assessed Iranian plots as likely in April. Reservoirs in southern Norway are the lowest in 20 years, and October prices in the south are around NOK 1.3–1.5/kWh. The economy is robust: NAV unemployment is 2.1% and the policy rate 4.5%. Norway has fuel stocks for only 20 days, and the government proposes doubling them in the 2027 budget.",
+  "watch": [
+   {
+    "k": "Terror threat level",
+    "n": "PST",
+    "v": "Moderate (3/5)"
+   },
+   {
+    "k": "Reservoir level NO2",
+    "n": "vs normal, week 43 (NVE)",
+    "v": "−30 pp"
+   },
+   {
+    "k": "Power, southern Norway",
+    "n": "Oct average, excl. grid fees (Nord Pool)",
+    "v": "NOK 1.33–1.46"
+   },
+   {
+    "k": "NAV unemployment",
+    "n": "September",
+    "v": "2.1%"
+   },
+   {
+    "k": "Policy rate",
+    "n": "Norges Bank, 24 Sep",
+    "v": "4.5%"
+   },
+   {
+    "k": "Fuel stocks",
+    "n": "Sweden/Finland: 90",
+    "v": "20 days"
+   }
+  ]
+ },
+ "season": {
+  "end": "2027-10-31",
+  "name": "Season 1",
+  "start": "2026-10-31"
+ },
+ "resolveBy": {
+  "d_dem_house": "2026-11-10",
+  "d_energy_relief": "2027-04-30",
+  "d_hormuz_open": "2027-03-31",
+  "d_netanyahu": "2027-01-31",
+  "d_no_cold": "2027-02-28",
+  "d_no_reservoir": "2027-01-01",
+  "d_qatar_deal": "2027-01-31",
+  "d_superelnino": "2027-02-28",
+  "d_ua_talks": "2026-11-30",
+  "d_us_strike_iran": "2027-01-31"
+ }
+}
