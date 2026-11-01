@@ -517,9 +517,11 @@ async function boot(){
   const h=location.hash.slice(1); if(h==="norge") S.tab=h;
   if(window.__TEST){ const T=window.__TEST; setReds(T.reds||[]); setSnaps(T.snaps||[]); return; }
   try{
-    const m=await (await fetch("data/manifest.json",{cache:"no-cache"})).json();
+    let base="data/snapshots/", r=await fetch("data/manifest.json",{cache:"no-cache"});
+    if(!r.ok){ r=await fetch("manifest.json",{cache:"no-cache"}); base=""; }
+    const m=await r.json();
     const dates=(m.snapshots||[]).slice().sort().reverse().slice(0,120);
-    const docs=await Promise.all(dates.map(d=>fetch("data/snapshots/"+d+".json",{cache:"no-cache"}).then(r=>r.ok?r.json():null).catch(()=>null)));
+    const docs=await Promise.all(dates.map(d=>fetch(base+d+".json",{cache:"no-cache"}).then(r=>r.ok?r.json():null).catch(()=>null)));
     setSnaps(docs.filter(Boolean));
   }catch(e){ setStatus(false,"Error"); $("#app").innerHTML='<div class="loading">Could not load the analysis data.</div>'; }
 }
