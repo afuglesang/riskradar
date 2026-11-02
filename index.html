@@ -192,13 +192,12 @@ footer{margin-top:24px;font-size:12px;color:var(--faint)}
         <path d="M20 20 L36 12" stroke="#3fd0ff" stroke-width="2"/>
         <circle cx="30" cy="11" r="2.4" fill="#ff4d5e"/>
       </svg>
-      <div><h1>RISK RADAR</h1><small id="subtitle">global security · Norway · 12-month horizon</small></div>
+      <div><h1>RISK RADAR</h1><small id="subtitle">global security · Norway · Maldives · France · 12-month horizon</small></div>
     </div>
     <div class="status" id="status"><span class="dot warn"></span>Connecting…</div>
   </div>
   <nav class="tabs" id="tabs">
     <button class="tab on" data-t="global">Global</button>
-    <button class="tab" data-t="norge">Norway</button>
   </nav>
   <div class="note" id="note"></div>
   <div id="app"><div class="loading">Loading latest analysis…</div></div>
@@ -238,12 +237,16 @@ const S = { snaps:[], cur:null, prev:null, reds:[], red:null, ov:{}, db:null, op
 // ---------- normalize snapshot ----------
 function normalize(raw){
   const s = JSON.parse(JSON.stringify(raw));
-  const nor = s.norway && Array.isArray(s.norway.factors) ? s.norway : null;
-  const links = (nor && nor.links) || {};
-  s.gF = (s.factors||[]).filter(f=>f.scope!=="no");
-  s.nF = nor ? nor.factors.map(f=>Object.assign({scope:"no"},f)) : [];
+  const C = [];
+  if(s.norway && Array.isArray(s.norway.factors)) C.push(Object.assign({code:"no", name:"Norway", tab:"norge"}, s.norway));
+  if(Array.isArray(s.countries)) s.countries.forEach(c=>{ if(c && c.code && Array.isArray(c.factors) && c.code!=="no") C.push(Object.assign({tab:c.code}, c)); });
+  s.C = C; s.Cmap = {}; C.forEach(c=>s.Cmap[c.code]=c);
+  const links = {};
+  C.forEach(c=>{ const L=c.links||{}; for(const k in L) links[k]=Object.assign(links[k]||{}, L[k]); });
+  s.gF = (s.factors||[]).filter(f=>!f.scope);
+  s.nF = []; C.forEach(c=>c.factors.forEach(f=>s.nF.push(Object.assign({}, f, {scope:c.code}))));
   s.allF = s.gF.concat(s.nF);
-  const D = (s.drivers||[]).concat(nor&&Array.isArray(nor.drivers)?nor.drivers:[]);
+  let D = (s.drivers||[]).slice(); C.forEach(c=>{ if(Array.isArray(c.drivers)) D=D.concat(c.drivers); });
   s.D = D.map(d=>{ const imp=Object.assign({}, d.imp||{}, links[d.id]||{}); return Object.assign({}, d, {imp}); });
   s.Dmap = {}; s.D.forEach(d=>s.Dmap[d.id]=d);
   s.Fmap = {}; s.allF.forEach(f=>s.Fmap[f.id]=f);
@@ -265,13 +268,14 @@ function globalP(snap, Ps){
   let prod=1-base; for(const f of snap.gF) prod*=1-((Ps[f.id]||0)*(f.spill||0));
   return corr*(1-prod);
 }
-function norwayP(snap, Ps){
-  const n=snap.norway; if(!n) return null;
+function norwayP(snap, Ps){ return countryP(snap,"no",Ps); }
+function countryP(snap, code, Ps){
+  const n=snap.Cmap&&snap.Cmap[code]; if(!n) return null;
   const base=num(n.baseRate)?n.baseRate:0.01, corr=num(n.correlation)?n.correlation:0.85, sp=n.spill||{};
   let prod=1-base; for(const id in sp){ if(Ps[id]==null) continue; prod*=1-(Ps[id]*sp[id]); }
   return corr*(1-prod);
 }
-function anyNorway(snap, Ps){ let prod=1; for(const f of snap.nF) prod*=1-(Ps[f.id]||0); return 1-prod; }
+function anyCountry(snap, code, Ps){ let prod=1; for(const f of snap.nF) if(f.scope===code) prod*=1-(Ps[f.id]||0); return 1-prod; }
 const baseGet=(id,d)=>d.p, curGet=id=>pOf(id);
 function driverEffect(f,d){ const g1=id=>id===d.id?1:pOf(id), g0=id=>id===d.id?0:pOf(id); return factorP(S.cur,f,g1)-factorP(S.cur,f,g0); }
 function driversFor(f){
@@ -283,7 +287,7 @@ function driversFor(f){
 function redPs(rd, snap){ // factor probabilities of red team, filled with analyst values where missing
   if(!rd) return null; const o={}; for(const f of snap.allF) o[f.id]= num(rd.factors&&rd.factors[f.id]) ? rd.factors[f.id] : null; return o;
 }
-function redGlobal(rd, snap){ const R=redPs(rd,snap); if(!R) return null; const P={}; let n=0; for(const f of snap.allF){ P[f.id]= R[f.id]!=null?R[f.id]:f.P; if(R[f.id]!=null) n++; } return n? {g:globalP(snap,P), no:norwayP(snap,P)} : null; }
+function redGlobal(rd, snap){ const R=redPs(rd,snap); if(!R) return null; const P={}; let n=0; for(const f of snap.allF){ P[f.id]= R[f.id]!=null?R[f.id]:f.P; if(R[f.id]!=null) n++; } if(!n) return null; const c={}; for(const k of snap.C){ if(snap.nF.some(f=>f.scope===k.code&&R[f.id]!=null)) c[k.code]=countryP(snap,k.code,P); } return {g:globalP(snap,P), no:c.no, c}; }
 
 // ---------- rendering helpers ----------
 function ring(p, size=68, stroke=7, color){
@@ -330,20 +334,21 @@ function watchHTML(w){ return Array.isArray(w)&&w.length?`<div class="watch">`+w
 // ---------- views ----------
 function render(){
   const s=S.cur; if(!s) return;
-  document.querySelectorAll(".tab").forEach(b=>b.classList.toggle("on", b.dataset.t===S.tab));
+  if(S.tab!=="global" && !s.C.some(c=>c.tab===S.tab)) S.tab="global";
+  $("#tabs").innerHTML=[{tab:"global",name:"Global"}].concat(s.C).map(c=>`<button class="tab${c.tab===S.tab?" on":""}" data-t="${esc(c.tab)}">${esc(c.name)}</button>`).join("");
   const base=allP(s,baseGet), now=allP(s,curGet);
   const prevP = S.prev ? allP(S.prev, baseGet) : null;
   const R = redPs(S.red, s), RG = redGlobal(S.red, s);
   let h="";
   if(S.tab==="global") h=viewGlobal(s,base,now,prevP,R,RG);
-  else if(S.tab==="norge") h=viewNorway(s,base,now,prevP,R,RG);
+  else { const c=s.C.find(c=>c.tab===S.tab); if(c) h=viewCountry(s,c,base,now,prevP,R,RG); }
   $("#app").innerHTML=h;
   document.querySelectorAll(".fc").forEach(b=>b.addEventListener("click",()=>openFactor(b.dataset.f)));
   const hs=$("#histsel"); if(hs){ hs.value=S.histSel; hs.addEventListener("change",e=>{S.histSel=e.target.value; $("#histbox").innerHTML=histSVG();}); }
   const n=Object.keys(S.ov).length;
   $("#scen").classList.toggle("on", n>0);
-  if(n>0){ const gB=globalP(s,base), gN=globalP(s,now), nB=norwayP(s,base), nN=norwayP(s,now);
-    $("#scentxt").textContent=`${n} driver${n>1?"s":""} changed. Global ${pct(gB)} → ${pct(gN)}`+(nB!=null?` · Norway ${pct(nB)} → ${pct(nN)}`:""); }
+  if(n>0){ const gB=globalP(s,base), gN=globalP(s,now);
+    $("#scentxt").textContent=`${n} driver${n>1?"s":""} changed. Global ${pct(gB)} → ${pct(gN)}`+s.C.map(c=>` · ${c.name} ${pct(countryP(s,c.code,base))} → ${pct(countryP(s,c.code,now))}`).join(""); }
   $("#foot").innerHTML=`Analysis ${esc(fmtDate(s.date))}${s.generatedAt?" · "+esc(String(s.generatedAt).slice(11,16))+" Oslo":""} · ${S.snaps.length} snapshot${S.snaps.length===1?"":"s"}${S.reds.length?` · ${S.reds.length} red-team round${S.reds.length===1?"":"s"}`:""}`;
   if(S.open) renderSheet();
 }
@@ -369,7 +374,7 @@ function viewGlobal(s,base,now,prevP,R,RG){
   h+=`<div class="two" style="margin-top:22px"><div class="card pad"><div class="sect" style="margin:0 0 6px"><h3>Upcoming triggers</h3></div><ul class="cal">`+
     (s.calendar||[]).map(c=>`<li><span class="d">${fmtDate(c.d)}</span><span>${esc(c.t)}</span></li>`).join("")+`</ul></div>
     <div class="card pad hist"><div class="sect" style="margin:0 0 6px"><h3>History</h3>
-      <select id="histsel" aria-label="Select series"><option value="global">Global shock</option><option value="norway">National crisis in Norway</option>${s.allF.map(f=>`<option value="${esc(f.id)}">${esc(f.name)}</option>`).join("")}</select></div>
+      <select id="histsel" aria-label="Select series"><option value="global">Global shock</option>${s.C.map(c=>`<option value="c:${esc(c.code)}">National crisis in ${esc(c.place||c.name)}</option>`).join("")}${s.allF.map(f=>`<option value="${esc(f.id)}">${esc(f.name)}</option>`).join("")}</select></div>
       <div id="histbox">${histSVG()}</div></div></div>`;
   h+=`<div class="sect"><h3>Method</h3></div><div class="card pad method">
     <p><b>Horizon:</b> ${esc(s.horizon)}.</p>
@@ -380,42 +385,43 @@ function viewGlobal(s,base,now,prevP,R,RG){
   return h;
 }
 
-function viewNorway(s,base,now,prevP,R,RG){
-  const n=s.norway; if(!n) return `<div class="loading">The Norway analysis has not been added yet.</div>`;
-  const nB=norwayP(s,base), nN=norwayP(s,now), nPrev=S.prev&&S.prev.norway?norwayP(S.prev,prevP):null;
-  const any=anyNorway(s,now); const modded=Object.keys(S.ov).length>0; const [lvl,lcol]=globalLevel(nN);
+function viewCountry(s,n,base,now,prevP,R,RG){
+  const code=n.code, place=n.place||n.name;
+  const nB=countryP(s,code,base), nN=countryP(s,code,now), nPrev=S.prev&&S.prev.Cmap&&S.prev.Cmap[code]?countryP(S.prev,code,prevP):null;
+  const any=anyCountry(s,code,now); const rc=RG&&RG.c?RG.c[code]:null; const modded=Object.keys(S.ov).length>0; const [lvl,lcol]=globalLevel(nN);
   let h=`<div class="hero"><div class="card corner gauge">
-      <div class="glabel">National crisis in Norway · 12 mo</div>${gaugeSVG(nN, RG?RG.no:null)}
+      <div class="glabel">National crisis in ${esc(place)} · 12 mo</div>${gaugeSVG(nN, rc!=null?rc:null)}
       <div class="gval" style="color:${riskColor(nN)}">${pct(nN)}</div>
       <div class="gsub">${modded?`<span class="mod">Scenario · baseline ${pct(nB)}</span>`:(nPrev!=null?`Since last snapshot: ${deltaHTML(nN,nPrev)}`:"First snapshot")}</div>
       <span class="level" style="color:${lcol}">${lvl}</span>
       <div class="sub2">At least one of the events below: ${pct(any)}</div>
-      ${RG&&RG.no!=null?`<div class="rtline">Red team: ${pct(RG.no)} · ${pp(RG.no-nB)}</div>`:""}
+      ${rc!=null?`<div class="rtline">Red team: ${pct(rc)} · ${pp(rc-nB)}</div>`:""}
     </div>
-    <div class="card pad brief"><h2>Norway · ${fmtDate(s.date)}</h2>
+    <div class="card pad brief"><h2>${esc(n.name)} · ${fmtDate(s.date)}</h2>
       <p class="head">${esc(n.headline)}</p><p>${esc(n.summary)}</p>
       <div class="since"><b>SINCE LAST</b>${esc(n.sinceLast)}</div></div></div>`;
   h+=watchHTML(n.watch);
-  h+=`<div class="sect"><h3>Threats to residents of Norway</h3><span class="aside">Each card includes preparedness advice</span></div>`;
-  h+=factorCards(s.nF, now, base, prevP, R);
-  const glob=Object.keys(n.spill||{}).filter(id=>s.Fmap[id]&&s.Fmap[id].scope!=="no");
+  if(Array.isArray(n.calendar)&&n.calendar.length) h+=`<div class="card pad" style="margin-top:14px"><div class="sect" style="margin:0 0 6px"><h3>Upcoming in ${esc(place)}</h3></div><ul class="cal">`+n.calendar.map(c=>`<li><span class="d">${fmtDate(c.d)}</span><span>${esc(c.t)}</span></li>`).join("")+`</ul></div>`;
+  h+=`<div class="sect"><h3>Threats to residents of ${esc(place)}</h3><span class="aside">Each card includes preparedness advice</span></div>`;
+  h+=factorCards(s.nF.filter(f=>f.scope===code), now, base, prevP, R);
+  const glob=Object.keys(n.spill||{}).filter(id=>s.Fmap[id]&&!s.Fmap[id].scope);
   if(glob.length){
-    h+=`<div class="sect"><h3>Global factors affecting Norway</h3><span class="aside">Share that becomes a national crisis here</span></div><div class="card pad"><table class="rs"><tr><th>Factor</th><th>Global P</th><th>Share</th><th>Contribution</th></tr>`+
+    h+=`<div class="sect"><h3>Global factors affecting ${esc(place)}</h3><span class="aside">Share that becomes a national crisis here</span></div><div class="card pad"><table class="rs"><tr><th>Factor</th><th>Global P</th><th>Share</th><th>Contribution</th></tr>`+
       glob.map(id=>{ const f=s.Fmap[id]; return `<tr><td>${esc(f.name)}</td><td>${pct(now[id])}</td><td>${Math.round(n.spill[id]*100)}%</td><td>${pct(now[id]*n.spill[id],1)}</td></tr>`; }).join("")+`</table></div>`;
   }
   h+=`<div class="sect"><h3>Method</h3></div><div class="card pad method"><p>${esc(n.method)}</p>
-    <p class="faint">Sources: PST (National Threat Assessment), Norwegian Intelligence Service (Focus), NSM (Risk), NVE, Norges Bank, NAV, DSB. The assessment applies to residents in general, not specific locations or organisations.</p></div>`;
+    <p class="faint">${esc(n.sourcesNote||"Sources: PST (National Threat Assessment), Norwegian Intelligence Service (Focus), NSM (Risk), NVE, Norges Bank, NAV, DSB.")} The assessment applies to residents in general, not specific locations or organisations.</p></div>`;
   return h;
 }
 
 function histSVG(){
   const pts=[...S.snaps].sort((a,b)=>a.date<b.date?-1:1).map(sn=>{
     const P=allP(sn,baseGet); let v=null;
-    if(S.histSel==="global") v=globalP(sn,P); else if(S.histSel==="norway") v=norwayP(sn,P); else v=P[S.histSel]??null;
+    if(S.histSel==="global") v=globalP(sn,P); else if(S.histSel.startsWith("c:")) v=countryP(sn,S.histSel.slice(2),P); else v=P[S.histSel]??null;
     return {d:sn.date, v};
   }).filter(x=>x.v!=null);
   const rpts=S.reds.slice().sort((a,b)=>a.date<b.date?-1:1).map(rd=>{ const g=redGlobal(rd,S.cur); let v=null;
-    if(S.histSel==="global") v=g&&g.g; else if(S.histSel==="norway") v=g&&g.no; else v=num(rd.factors&&rd.factors[S.histSel])?rd.factors[S.histSel]:null; return {d:rd.date,v}; }).filter(x=>x.v!=null);
+    if(S.histSel==="global") v=g&&g.g; else if(S.histSel.startsWith("c:")) v=g&&g.c?g.c[S.histSel.slice(2)]:null; else v=num(rd.factors&&rd.factors[S.histSel])?rd.factors[S.histSel]:null; return {d:rd.date,v}; }).filter(x=>x.v!=null);
   if(pts.length<2){ const v=pts[0]?pct(pts[0].v):"–"; return `<p class="dim" style="margin:6px 0 0;font-size:13px">One snapshot so far (${v}). The curve builds with each daily update.</p>`; }
   const W=520,H=180,L=36,R=10,T=10,B=26;
   const dates=[...new Set(pts.map(p=>p.d).concat(rpts.map(p=>p.d)))].sort();
@@ -442,9 +448,9 @@ function renderSheet(){
   const col=riskColor(now);
   const rp=S.red&&S.red.factors&&num(S.red.factors[f.id])?S.red.factors[f.id]:null;
   const rnote=S.red&&S.red.notes&&S.red.notes[f.id];
-  const isNo=f.scope==="no";
+  const isNo=!!f.scope; const cty=isNo&&s.Cmap[f.scope];
   let h=`<div class="sheet-inner"><div class="sh-top"><div class="ring" style="width:52px;height:52px">${ring(now,52,6,col)}<div class="rv" style="color:${col};font-size:16px">${Math.round(now*100)}</div></div>
-    <div class="tt"><div class="tag">${isNo?"Norway · ":""}${esc(f.tag)} · ${band(now)}</div><h2>${esc(f.name)}</h2></div><button class="x" id="close" aria-label="Close">×</button></div>
+    <div class="tt"><div class="tag">${cty?esc(cty.name)+" · ":""}${esc(f.tag)} · ${band(now)}</div><h2>${esc(f.name)}</h2></div><button class="x" id="close" aria-label="Close">×</button></div>
     <div class="sh-body"><div class="kpis">
       <div class="kpi"><div class="k">Analyst</div><div class="v" style="color:${col}">${pct(now)}</div><div class="s">${Math.abs(now-base)>0.0005?"baseline "+pct(base):"12-month horizon"}</div></div>
       <div class="kpi"><div class="k">Trend</div><div class="v" style="font-size:18px;padding-top:6px">${f.trend==="up"?'<span class="delta up">▲ rising</span>':f.trend==="down"?'<span class="delta down">▼ easing</span>':f.trend==="new"?'<span class="delta new">NEW</span>':'<span class="delta flat">▬ flat</span>'}</div><div class="s">analyst assessment</div></div>
@@ -486,10 +492,10 @@ $("#reset").addEventListener("click",()=>{ S.ov={}; render(); });
 
 // ---------- tabs / routing ----------
 function setTab(t, push){ S.tab=t; if(push){ try{ history.replaceState(null,"", t==="global"?location.pathname+location.search:"#"+t);}catch(e){} } render(); window.scrollTo(0,0); }
-document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>{ if(S.open) closeSheet(); setTab(b.dataset.t,true); }));
+$("#tabs").addEventListener("click",e=>{ const b=e.target.closest(".tab"); if(!b) return; if(S.open) closeSheet(); setTab(b.dataset.t,true); });
 function route(){ const h=location.hash.slice(1); if(!S.cur) return;
-  if(h==="norge"||h==="global"){ if(S.open) closeSheet(); if(S.tab!==h) setTab(h,false); }
-  else if(h&&S.cur.Fmap[h]){ const f=S.cur.Fmap[h]; const t=f.scope==="no"?"norge":"global"; if(S.tab!==t){ S.tab=t; render(); } openFactor(h); }
+  if(h==="global"||S.cur.C.some(c=>c.tab===h)){ if(S.open) closeSheet(); if(S.tab!==h) setTab(h,false); }
+  else if(h&&S.cur.Fmap[h]){ const f=S.cur.Fmap[h]; const t=f.scope?S.cur.Cmap[f.scope].tab:"global"; if(S.tab!==t){ S.tab=t; render(); } openFactor(h); }
   else if(!h&&S.open) closeSheet(); }
 window.addEventListener("hashchange",route);
 
@@ -514,7 +520,7 @@ function setSnaps(list){
 function setReds(list){ S.reds=list.filter(r=>r&&typeof r.date==="string"&&r.factors).sort((a,b)=>a.date<b.date?1:-1); S.red=S.reds[0]||null; if(S.cur) render(); }
 
 async function boot(){
-  const h=location.hash.slice(1); if(h==="norge") S.tab=h;
+  const h=location.hash.slice(1); if(h&&h.length<=6&&!h.includes("_")) S.tab=h;
   if(window.__TEST){ const T=window.__TEST; setReds(T.reds||[]); setSnaps(T.snaps||[]); return; }
   try{
     let base="data/snapshots/", r=await fetch("data/manifest.json",{cache:"no-cache"});
