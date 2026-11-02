@@ -43,7 +43,7 @@
  ],
  "countries": [
   {
-   "baseRate": 0.01,
+   "baseRate": 0.001,
    "calendar": [
     {
      "d": "2026-11-06",
@@ -70,88 +70,88 @@
    "correlation": 0.85,
    "drivers": [
     {
-     "h": "2027-01-31",
+     "h": "maturity ~25 Jan",
      "id": "d_mv_swap_rollover",
      "imp": {
       "mv_debt": 1.2,
       "mv_political": 0.3
      },
-     "p": 0.15,
+     "p": 0.02,
      "t": "India does not roll over (or replace) the INR 30bn (~USD 320m) RBI swap drawdown at its ~Jan 2027 maturity",
      "why": "Repaying USD 320m from usable reserves of ~USD 170m is impossible without new financing. India has repeatedly rolled over, but only in short tranches."
     },
     {
-     "h": "2027-10-31",
+     "h": "by 2 Dec",
      "id": "d_mv_reserves_burn",
      "imp": {
       "mv_debt": 1,
       "mv_fuel": 0.5,
       "mv_water": 0.2
      },
-     "p": 0.35,
+     "p": 0.04,
      "t": "MMA usable reserves fall below USD 100m at any month-end",
      "why": "Usable reserves fell ~USD 30m in September alone (to USD 169.8m), with an oil bill elevated by Brent ~USD 110."
     },
     {
-     "h": "2027-04-30",
+     "h": "Nov arrivals",
      "id": "d_mv_tourism_shortfall",
      "imp": {
       "mv_debt": 0.8,
       "mv_political": 0.3
      },
-     "p": 0.2,
+     "p": 0.08,
      "t": "Tourist arrivals in Nov 2026-Apr 2027 high season fall ≥10% YoY",
      "why": "Tourism is the main FX source; Gulf airspace disruption cut Mar-Apr 2026 arrivals 20-24%."
     },
     {
-     "h": "2027-10-31",
+     "h": "by 2 Dec",
      "id": "d_mv_subsidy_cut",
      "imp": {
       "mv_fuel": 1,
       "mv_political": 0.5,
       "mv_water": 0.2
      },
-     "p": 0.3,
+     "p": 0.08,
      "t": "Government raises retail diesel price or electricity tariffs by ≥15% to cut subsidies",
      "why": "The World Bank urges phasing out blanket subsidies, and the 2027 deficit target (7.3% of GDP) is ambitious."
     },
     {
-     "h": "2027-04-30",
+     "h": "by 2 Dec",
      "id": "d_mv_rasmale",
      "imp": {
       "mv_political": 0.9,
       "mv_terror": 0.4
      },
-     "p": 0.15,
+     "p": 0.1,
      "t": "Rasmalé (Eagle Hills) protests escalate to arrests of ≥20 people in a single day or a violent clash",
      "why": "Nationalist and religious mobilisation against foreign land deals has a rally planned for 6 Nov 2026."
     },
     {
-     "h": "2027-05-31",
+     "h": "by 2 Dec",
      "id": "d_mv_dry_season",
      "imp": {
       "mv_climate": 0.3,
       "mv_health": 0.4,
       "mv_water": 0.8
      },
-     "p": 0.4,
+     "p": 0.1,
      "t": "NDMA ships emergency water to ≥40 islands in the Dec 2026-Apr 2027 dry season",
      "why": "Under a strong El Niño, the 2016 analogue saw 45 islands short of water in the hottest dry season in 18 years."
     },
     {
-     "h": "2027-06-30",
+     "h": "by 2 Dec",
      "id": "d_mv_bleaching",
      "imp": {
       "mv_climate": 1
      },
-     "p": 0.6,
+     "p": 0.15,
      "t": "NOAA Coral Reef Watch issues Alert Level 1 or higher for the Maldives",
      "why": "A historic El Niño through early 2027 is expected to drive SST anomalies in the Mar-May hot season."
     }
    ],
    "factors": [
     {
-     "P": 0.31,
+     "P": 0.03,
      "advice": "Hold some savings and planned import or travel payments in foreign currency where legal. Expect episodic dollar shortages at banks and possible delays in import-dependent goods and medicines.",
      "drivers": [
       "d_mv_swap_rollover",
@@ -165,7 +165,7 @@
      ],
      "id": "mv_debt",
      "name": "Sovereign default / balance-of-payments crisis",
-     "outcome": "By 31 Oct 2027, any of the following: (a) the Government misses a payment on external public debt beyond the grace period, or announces a restructuring or distressed exchange; (b) Fitch, Moody's or S&P rate the sovereign at RD/SD/C or equivalent; (c) MMA-reported usable official reserves fall below USD 75m at any month-end.",
+     "outcome": "By 2 Dec 2026, the Government misses an external public debt payment beyond grace or announces restructuring; a rating agency rates the sovereign RD/SD/C; or MMA usable reserves fall below USD 75m at a month-end.",
      "severity": 4,
      "sinceLast": "Raised from 30% to 31%: higher US rates (the Fed held on 28 October with a December hike priced) raise refinancing costs for a dollar-pegged economy with usable reserves of about USD 170m. Lower Brent partly offsets. October arrivals were flat year on year, so tourism has not deteriorated further.",
      "sources": [
@@ -199,7 +199,7 @@
      "trend": "up"
     },
     {
-     "P": 0.35,
+     "P": 0.04,
      "advice": "Keep a modest reserve of cooking gas and, on outer islands, fuel for essential boats and generators. Avoid panic buying, which caused local queues in March 2026.",
      "drivers": [
       "d_mv_subsidy_cut",
@@ -211,7 +211,7 @@
      ],
      "id": "mv_fuel",
      "name": "Fuel / energy import shock",
-     "outcome": "By 31 Oct 2027, any of the following: (a) officially acknowledged rationing of petrol/diesel sales, or scheduled load-shedding by STELCO or FENAKA for lack of fuel, lasting ≥3 consecutive days on any inhabited island; (b) STO/FSM raises the retail diesel price in Malé to ≥ MVR 21.00/L (≥20% above MVR 17.54).",
+     "outcome": "By 2 Dec 2026, officially acknowledged fuel rationing or scheduled load-shedding for lack of fuel lasting at least 3 consecutive days on any inhabited island, or Malé retail diesel rises to MVR 21.00/L or more.",
      "severity": 3,
      "sinceLast": "No significant change. Brent eased to about $108.5 on 2 November, a small relief for the import bill and subsidy cost.",
      "sources": [
@@ -233,7 +233,7 @@
      "trend": "flat"
     },
     {
-     "P": 0.12,
+     "P": 0.01,
      "advice": "Keep 3-5 days of drinking water (about 3 L per person per day) and maintain rainwater tanks before the December-April dry season. On outer islands, report shortages to the council early, since NDMA asks for two weeks' notice.",
      "drivers": [
       "d_mv_dry_season",
@@ -245,7 +245,7 @@
      ],
      "id": "mv_water",
      "name": "Drinking-water supply failure",
-     "outcome": "By 31 Oct 2027, either: (a) piped water supply in Greater Malé (Malé/Hulhumalé/Villimalé) or in Addu City is interrupted for the majority of customers for >24 consecutive hours; or (b) the Government or NDMA declares a water emergency/crisis for any island, beyond routine dry-season water deliveries.",
+     "outcome": "By 2 Dec 2026, piped water in Greater Malé or Addu City is interrupted for most customers for more than 24 consecutive hours, or a water emergency is declared for any island beyond routine deliveries.",
      "severity": 3,
      "sinceLast": "No significant change.",
      "sources": [
@@ -271,7 +271,7 @@
      "trend": "flat"
     },
     {
-     "P": 0.55,
+     "P": 0.04,
      "advice": "Follow Maldives Meteorological Service colour-coded alerts and avoid sea travel under yellow or orange alerts. Islanders in low-lying coastal plots should keep sandbags and raised storage for valuables during monsoon transitions and spring tides.",
      "drivers": [
       "d_mv_bleaching",
@@ -284,7 +284,7 @@
      ],
      "id": "mv_climate",
      "name": "Extreme weather, flooding, swell surges and mass coral bleaching",
-     "outcome": "By 31 Oct 2027, either: (a) a single flood/swell/storm event that NDMA or the government reports as affecting ≥20 inhabited islands or causing ≥1 death; or (b) NOAA Coral Reef Watch Alert Level 2 for Maldives waters, with mass bleaching confirmed by MMRI or published reef surveys.",
+     "outcome": "By 2 Dec 2026, a single flood, swell or storm event affects at least 20 inhabited islands or causes at least 1 death, or NOAA Coral Reef Watch reaches Alert Level 2 with mass bleaching confirmed.",
      "severity": 3,
      "sinceLast": "No significant change.",
      "sources": [
@@ -314,7 +314,7 @@
      "trend": "flat"
     },
     {
-     "P": 0.08,
+     "P": 0.01,
      "advice": "Avoid demonstrations around Republic Square, the Majlis and ministers' residences in Malé. Note that court injunctions and media rules can make online sharing of political content legally risky.",
      "drivers": [
       "d_mv_rasmale",
@@ -328,7 +328,7 @@
      ],
      "id": "mv_political",
      "name": "Political instability / unrest",
-     "outcome": "By 31 Oct 2027, any of the following: (a) a state of emergency is declared; (b) ≥1 death in protest-related clashes; (c) the President leaves office before the end of his term; (d) the Supreme Court or People's Majlis is suspended or forcibly prevented from sitting.",
+     "outcome": "By 2 Dec 2026, a state of emergency is declared, at least 1 protest-related death occurs, the President leaves office early, or the Supreme Court or Majlis is forcibly suspended.",
      "severity": 3,
      "sinceLast": "No significant change.",
      "sources": [
@@ -358,7 +358,7 @@
      "trend": "flat"
     },
     {
-     "P": 0.04,
+     "P": 0.003,
      "advice": "Stay aware in crowded places in Malé and at transport hubs, and follow police advisories. Report suspected radicalisation or threats to the Maldives Police Service.",
      "drivers": [
       "d_mv_rasmale"
@@ -369,7 +369,7 @@
      ],
      "id": "mv_terror",
      "name": "Terrorism / violent extremism",
-     "outcome": "By 31 Oct 2027, a terrorist attack on Maldivian territory (including resorts and territorial waters) causing ≥1 death or ≥3 injuries, as reported by Maldives Police Service or major media.",
+     "outcome": "By 2 Dec 2026, a terrorist attack on Maldivian territory causes at least 1 death or 3 injuries.",
      "severity": 4,
      "sinceLast": "No significant change.",
      "sources": [
@@ -395,7 +395,7 @@
      "trend": "flat"
     },
     {
-     "P": 0.3,
+     "P": 0.03,
      "advice": "Remove standing water weekly, cover stored-water containers and use repellent. Seek care early for fever with severe pain or bleeding.",
      "drivers": [
       "d_mv_dry_season"
@@ -405,7 +405,7 @@
      ],
      "id": "mv_health",
      "name": "Disease outbreak (dengue and others)",
-     "outcome": "By 31 Oct 2027, either: (a) HPA-reported dengue cases ≥1,000 in any single calendar month; (b) ≥10 dengue deaths within any 12-month period; or (c) HPA declares an outbreak of any infectious disease requiring nationwide emergency measures.",
+     "outcome": "By 2 Dec 2026, HPA reports at least 1,000 dengue cases in a calendar month, or declares a nationwide infectious-disease emergency.",
      "severity": 2,
      "sinceLast": "No significant change.",
      "sources": [
@@ -519,7 +519,7 @@
    ]
   },
   {
-   "baseRate": 0.01,
+   "baseRate": 0.001,
    "calendar": [
     {
      "d": "2026-11-05",
@@ -550,30 +550,30 @@
    "correlation": 0.85,
    "drivers": [
     {
-     "h": "2026-12-31",
+     "h": "by 2 Dec",
      "id": "d_fr_censure",
      "imp": {
       "fr_fiscal": 0.8,
       "fr_unrest": 1.2
      },
-     "p": 0.25,
+     "p": 0.06,
      "t": "Assemblee adopts a censure motion against the Lecornu government",
      "why": "PS threatens censure if the 2027 budget does not move; LFI will file on any 49.3; RN undecided. Macron's dissolution threat deters some deputies."
     },
     {
-     "h": "2027-01-31",
+     "h": "by 2 Dec",
      "id": "d_fr_protest_escalation",
      "imp": {
       "fr_energy": 0.3,
       "fr_terror": 0.2,
       "fr_unrest": 0.9
      },
-     "p": 0.3,
+     "p": 0.25,
      "t": "A national protest day again exceeds 500,000 by Interior Ministry count",
      "why": "Turnout fell from 550,000 to 320,000 in two weeks, but unions call a general strike on 5 Nov and student demands are unmet."
     },
     {
-     "h": "2026-11-27",
+     "h": "27 Nov",
      "id": "d_fr_sp_downgrade",
      "imp": {
       "fr_fiscal": 1,
@@ -584,52 +584,52 @@
      "why": "The spread eased to 159 bp on 30 Oct from 174.6 bp on 22 Oct, but OFCE sees the 2027 deficit at 5.4% vs a 5% target; Moody's held Aa3 negative on 23 Oct, so S&P may also wait for the budget outcome."
     },
     {
-     "h": "2027-03-01",
+     "h": "by 2 Dec",
      "id": "d_fr_rn_lead",
      "imp": {
       "fr_fiscal": 0.4
      },
-     "p": 0.6,
+     "p": 0.55,
      "t": "Marine Le Pen leads all tested second-round polls by at least 10 points",
      "why": "Ifop 17–19 Oct: 56–44 against Philippe. Markets have previously priced an RN-led government as raising fiscal risk; RN disputes this."
     },
     {
-     "h": "2027-10-31",
+     "h": "by 2 Dec",
      "id": "d_fr_iran_proxy",
      "imp": {
       "fr_sabotage": 0.4,
       "fr_terror": 0.6
      },
-     "p": 0.5,
+     "p": 0.15,
      "t": "A new Iran-linked (e.g. HAYI-claimed) plot or attack in France is made public",
      "why": "Hormuz closed again on 26 Oct; March 2026 Bank of America plot used cheaply recruited minors, a low-cost model that can be repeated."
     },
     {
-     "h": "2027-01-31",
+     "h": "by 2 Dec",
      "id": "d_fr_fuel_strike",
      "imp": {
       "fr_energy": 1,
       "fr_unrest": 0.4
      },
-     "p": 0.35,
+     "p": 0.18,
      "t": "Refinery or fuel-depot strike or blockade lasting at least 3 days",
      "why": "Five unions strike on 5 Nov and gilets jaunes consider prolonged blockades while 16% of stations already report shortages."
     },
     {
-     "h": "2027-03-31",
+     "h": "by 2 Dec",
      "id": "d_fr_cold_snap",
      "imp": {
       "fr_energy": 0.7,
       "fr_weather": 0.3
      },
-     "p": 0.2,
+     "p": 0.01,
      "t": "Cold spell drives national power demand above 90 GW",
      "why": "Nuclear output recovered to 350-370 TWh guidance, but a severe cold spell with low interconnector imports is the main route to an Ecowatt red day."
     }
    ],
    "factors": [
     {
-     "P": 0.35,
+     "P": 0.1,
      "advice": "Avoid demonstration routes and city centres on Saturdays and national strike days (next 5 Nov), and check prefecture orders for curfews or rally bans before travelling.",
      "drivers": [
       "d_fr_censure",
@@ -643,7 +643,7 @@
      ],
      "id": "fr_unrest",
      "name": "Unrest-driven state of emergency or fall of the government",
-     "outcome": "Between 1 Nov 2026 and 31 Oct 2027, either (a) a decree under the law of 3 April 1955 declares an etat d'urgence covering one or more departments of metropolitan France in response to public disorder, or (b) the Assemblee nationale adopts a motion de censure (Art. 49.2 or 49.3), toppling the sitting government. Routine resignation of the government after the May 2027 presidential election does not count.",
+     "outcome": "By 2 Dec 2026, a decree under the law of 3 April 1955 declares an état d'urgence in metropolitan France for public disorder, or the Assemblée adopts a motion de censure that topples the government.",
      "severity": 3,
      "sinceLast": "No significant change. The 5 November intersyndicale strike now includes the four main SNCF unions, teachers and hospitals; no call for refinery or depot blockades found in union communiqués.",
      "sources": [
@@ -673,7 +673,7 @@
      "trend": "flat"
     },
     {
-     "P": 0.65,
+     "P": 0.33,
      "advice": "Households with variable-rate debt or large savings in euro bond funds should expect volatility; fixed-rate mortgages and diversified savings reduce exposure.",
      "drivers": [
       "d_fr_sp_downgrade",
@@ -688,7 +688,7 @@
      ],
      "id": "fr_fiscal",
      "name": "Fiscal and bond-market stress",
-     "outcome": "Between 1 Nov 2026 and 31 Oct 2027, at least one of: (a) the 10-year OAT-Bund yield spread closes at or above 200 bp on any trading day; (b) S&P, Moody's or Fitch lowers France's long-term sovereign rating by at least one notch; (c) no 2027 finance law is promulgated by 31 Dec 2026 and a loi speciale is enacted.",
+     "outcome": "By 2 Dec 2026, the 10-year OAT–Bund spread closes at or above 200 bp, or S&P, Moody's or Fitch lowers France's rating by at least one notch (S&P review 27 Nov).",
      "severity": 3,
      "sinceLast": "No change in the factor (65%). The 10-year OAT–Bund spread eased to 159 bp on 30 October (OAT 4.93%) from a peak of 174.6 bp on 22 October, which lowers the chance of the 200 bp criterion; this is offset by higher global rates after the Fed's hawkish hold. S&P downgrade driver lowered from 35% to 33%.",
      "sources": [
@@ -718,7 +718,7 @@
      "trend": "flat"
     },
     {
-     "P": 0.6,
+     "P": 0.07,
      "advice": "Stay alert in crowded places, places of worship and near US, Israeli or Jewish-linked sites; follow police instructions and report unattended items.",
      "drivers": [
       "d_fr_iran_proxy",
@@ -731,7 +731,7 @@
      ],
      "id": "fr_terror",
      "name": "Deadly terrorist attack in France",
-     "outcome": "Between 1 Nov 2026 and 31 Oct 2027, at least one attack on French territory (metropolitan or overseas) that kills at least one person other than the perpetrator and is taken up by the Parquet national antiterroriste (PNAT).",
+     "outcome": "By 2 Dec 2026, an attack on French territory kills at least one person other than the perpetrator and is taken up by the PNAT.",
      "severity": 3,
      "sinceLast": "No significant change.",
      "sources": [
@@ -761,7 +761,7 @@
      "trend": "flat"
     },
     {
-     "P": 0.2,
+     "P": 0.015,
      "advice": "Keep basic offline backups (cash, water, charged power bank, printed contacts) for multi-hour outages of rail, telecom or payment services.",
      "drivers": [
       "d_fr_iran_proxy",
@@ -773,7 +773,7 @@
      ],
      "id": "fr_sabotage",
      "name": "State-attributed sabotage of critical infrastructure",
-     "outcome": "Between 1 Nov 2026 and 31 Oct 2027, a physical sabotage or destructive cyberattack against French critical infrastructure (rail, energy, telecoms, subsea cables, water) that disrupts service for at least 24 hours or at least 100,000 users, and that the French government or PNAT publicly attributes to a foreign state or its proxies.",
+     "outcome": "By 2 Dec 2026, physical sabotage or a destructive cyberattack disrupts French critical infrastructure for at least 24 hours or 100,000 users and is publicly attributed to a foreign state or its proxies.",
      "severity": 3,
      "sinceLast": "No significant change.",
      "sources": [
@@ -799,7 +799,7 @@
      "trend": "flat"
     },
     {
-     "P": 0.45,
+     "P": 0.08,
      "advice": "Keep the fuel tank above half, avoid panic-buying, and check prix-carburants.gouv.fr for station availability; heating via fuel oil should be ordered early.",
      "drivers": [
       "d_fr_fuel_strike",
@@ -812,7 +812,7 @@
      ],
      "id": "fr_energy",
      "name": "Energy supply crisis (fuel shortages or power load-shedding)",
-     "outcome": "Between 1 Nov 2026 and 31 Oct 2027, either (a) RTE issues an Ecowatt red signal or carries out rolling load-shedding (delestage) of household consumers on any day, or (b) official or PrixCarbu/government data show at least 25% of French filling stations short of at least one fuel nationally on three consecutive days.",
+     "outcome": "By 2 Dec 2026, RTE issues an Ecowatt red signal or carries out rolling load-shedding, or at least 25% of French filling stations are short of a fuel for three consecutive days.",
      "severity": 3,
      "sinceLast": "No significant change.",
      "sources": [
@@ -838,7 +838,7 @@
      "trend": "flat"
     },
     {
-     "P": 0.35,
+     "P": 0.04,
      "advice": "Sign up for FR-Alert and Meteo-France vigilance, avoid driving through flooded roads, and in summer plan for prolonged heat and local water restrictions.",
      "drivers": [
       "d_fr_cold_snap"
@@ -850,7 +850,7 @@
      ],
      "id": "fr_weather",
      "name": "Extreme weather or natural-hazard national crisis",
-     "outcome": "Between 1 Nov 2026 and 31 Oct 2027, a single natural-hazard event (flood, storm, cyclone, wildfire, landslide or earthquake) on French territory, including overseas, that causes at least 10 direct deaths as reported by authorities, or insured losses of at least 1.5 bn EUR as estimated by France Assureurs. Statistical heat-related excess mortality does not count.",
+     "outcome": "By 2 Dec 2026, a single natural-hazard event on French territory (overseas included) causes at least 10 direct deaths or at least EUR 1.5bn in insured losses.",
      "severity": 3,
      "sinceLast": "No significant change.",
      "sources": [
@@ -986,83 +986,83 @@
  "date": "2026-11-02",
  "drivers": [
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_rsi_claim",
    "imp": {
     "ai": 0.6
    },
-   "p": 0.65,
+   "p": 0.05,
    "t": "A leading AI lab states that AI does most of its own research and development",
    "why": "Lab leaders already say AI-assisted coding is accelerating faster than expected."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_cyber_diffusion",
    "imp": {
     "ai": 0.8,
     "hybrid": 0.3
    },
-   "p": 0.55,
+   "p": 0.25,
    "t": "Mythos-level cyber capability becomes widely available (open model or leak)",
    "why": "Mistral released Large 4 weights on 29 Oct, claiming cyber capability on par with the strongest US models (vendor-reported, not independently verified)."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_ai_loc",
    "imp": {
     "ai": 1
    },
-   "p": 0.2,
+   "p": 0.02,
    "t": "Documented AI agent evading control in real-world deployment",
    "why": "Seen in tests; not publicly confirmed in production."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_weights_theft",
    "imp": {
     "ai": 0.6,
     "bio": 0.2
    },
-   "p": 0.25,
+   "p": 0.02,
    "t": "Confirmed theft of frontier-model weights by a state actor",
    "why": "Suspected Chinese access to Mythos triggered the June export controls."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_ai_law",
    "imp": {
     "ai": -0.8,
     "bio": -0.3
    },
-   "p": 0.15,
+   "p": 0.01,
    "t": "Binding US oversight of frontier AI enacted",
    "why": "EO 14409 is voluntary; a Democratic House raises the odds slightly."
   },
   {
-   "h": "12 mo",
+   "h": "APEC 18–19 Nov",
    "id": "d_uscn_ai",
    "imp": {
     "ai": -0.5,
     "nuclear": -0.2
    },
-   "p": 0.12,
+   "p": 0.03,
    "t": "US–China agreement on AI risk (e.g. no AI in nuclear command and control)",
    "why": "Little concrete came from the May Trump–Xi summit; APEC 18–19 Nov is the next opportunity."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_ai_crash",
    "imp": {
     "ai": -0.4,
     "econ": 0.7,
     "social": 0.3
    },
-   "p": 0.3,
+   "p": 0.04,
    "t": "AI stocks fall more than 25% and investment is cut",
    "why": "Capex of $650–700bn with unclear returns; high oil prices and interest rates."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_brent120",
    "imp": {
     "climate": 0.3,
@@ -1070,53 +1070,53 @@
     "social": 0.7,
     "ukraine": 0.2
    },
-   "p": 0.37,
+   "p": 0.1,
    "t": "Brent averages above $120 for at least one month",
    "why": "Brent fell about 4% to roughly $108.5 on 2 November on signs Trump will give diplomacy more time; a month above $120 now requires renewed escalation or a major new supply outage."
   },
   {
-   "h": "12 mo",
+   "h": "jobs reports 6 Nov / 4 Dec",
    "id": "d_us_unemp",
    "imp": {
     "econ": 0.4,
     "social": 0.8
    },
-   "p": 0.35,
+   "p": 0.01,
    "t": "US unemployment reaches 5.0% or higher",
    "why": "Unemployment just above 4%; Goldman expects AI-driven layoffs in the next downturn."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_ai_layoffs",
    "imp": {
     "social": 0.4
    },
-   "p": 0.5,
+   "p": 0.04,
    "t": "AI-attributed layoffs exceed 250,000 in the US and EU over 12 months",
    "why": "Around 183,000 Jan–Oct 2026 according to one tracker."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_france",
    "imp": {
     "social": 0.9
    },
-   "p": 0.2,
+   "p": 0.07,
    "t": "France declares a national state of emergency due to unrest",
    "why": "Third weekend of protests on 31 Oct; 290 arrests, local curfews for minors, no state of emergency."
   },
   {
-   "h": "6 mo",
+   "h": "by 2 Dec",
    "id": "d_energy_relief",
    "imp": {
     "social": -0.5
    },
-   "p": 0.7,
+   "p": 0.4,
    "t": "Large energy support packages in the EU and nationally",
    "why": "PM Lecornu is considering cost-of-living measures; several countries are extending support."
   },
   {
-   "h": "to 31 Mar 2027",
+   "h": "by 2 Dec",
    "id": "d_hormuz_open",
    "imp": {
     "climate": -0.5,
@@ -1124,162 +1124,162 @@
     "mideast": -0.8,
     "social": -0.6
    },
-   "p": 0.27,
+   "p": 0.06,
    "t": "Hormuz back to normal traffic by 31 March 2027",
    "why": "A two-day Qatar-brokered plan exists, but Iran's conditions (sanctions relief, US force reduction, frozen assets) are heavy for Washington."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_export_bans",
    "imp": {
     "climate": 0.8,
     "econ": 0.2,
     "social": 0.4
    },
-   "p": 0.35,
+   "p": 0.05,
    "t": "A major exporter bans exports of food or fertiliser",
    "why": "Happened in 2008 and 2022; FAO is warning of a repeat."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_bio_evasion",
    "imp": {
     "bio": 0.2
    },
-   "p": 0.85,
+   "p": 0.35,
    "t": "New reports of bypassed biosafeguards in frontier models",
    "why": "Anthropic reported five such cases in September."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_bio_openmodel",
    "imp": {
     "bio": 0.5
    },
-   "p": 0.55,
+   "p": 0.06,
    "t": "Open model or biodesign tool with expert-level capability and no safeguards",
    "why": "Many biological AI tools are open; few have safeguards."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_h5n1",
    "imp": {
     "bio": 3.5,
     "econ": 1,
     "social": 0.5
    },
-   "p": 0.03,
+   "p": 0.003,
    "t": "H5N1 achieves sustained human-to-human transmission",
    "why": "Widespread in animals; WHO sees no increased pandemic risk at present."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_bio_state",
    "imp": {
     "bio": 0.8
    },
-   "p": 0.07,
+   "p": 0.005,
    "t": "A state bioweapons programme is exposed or used",
    "why": "Low probability, high consequence."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_elnino_disease",
    "imp": {
     "bio": 0.2,
     "climate": 0.2
    },
-   "p": 0.5,
+   "p": 0.1,
    "t": "El Niño drives record dengue or cholera outbreaks",
    "why": "Strong El Niño years typically bring more vector- and water-borne outbreaks."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_dna_screen",
    "imp": {
     "bio": -0.4
    },
-   "p": 0.2,
+   "p": 0.01,
    "t": "Mandatory DNA synthesis screening in the US or EU",
    "why": "One of RAND's nine measures; politically mature but not enacted."
   },
   {
-   "h": "1 mo",
+   "h": "30 Nov",
    "id": "d_ua_talks",
    "imp": {
     "ukraine": -0.2
    },
-   "p": 0.7,
+   "p": 0.65,
    "t": "US–Russia–Ukraine trilateral technical talks held in November",
    "why": "Lavrov says Russia's position is unchanged and Moscow is pushing Europeans out; no date set."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_ua_ceasefire",
    "imp": {
     "hybrid": -0.3,
     "ukraine": -0.7
    },
-   "p": 0.22,
+   "p": 0.05,
    "t": "A general energy or air ceasefire holds for more than 60 days",
    "why": "Trump's announced 'energy ceasefire' of 11 October was never confirmed by Russia; Russia struck the grid in four regions on 31 Oct–1 Nov and Ukraine hit the NORSI refinery, so both sides are escalating against energy targets."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_summit_ru",
    "imp": {
     "ukraine": -0.6
    },
-   "p": 0.15,
+   "p": 0.02,
    "t": "Putin and Zelensky meet (with Trump)",
    "why": "Has not happened since the full-scale invasion."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_eu_guarantees",
    "imp": {
     "hybrid": 0.2,
     "ukraine": -0.5
    },
-   "p": 0.3,
+   "p": 0.04,
    "t": "European security guarantee or reassurance force agreed",
    "why": "Kyiv sees guarantees as a precondition for a deal."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_ru_mobil",
    "imp": {
     "hybrid": 0.3,
     "ukraine": 0.6
    },
-   "p": 0.3,
+   "p": 0.04,
    "t": "Russia launches a new mobilisation wave",
    "why": "ISW: the current tempo cannot be sustained at current losses without mobilisation."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_nk_troops",
    "imp": {
     "nuclear": 0.1,
     "ukraine": 0.4
    },
-   "p": 0.35,
+   "p": 0.06,
    "t": "Around 10,000 North Korean troops deployed in Ukraine",
    "why": "Zelensky has warned of this."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_ua_intel_cut",
    "imp": {
     "hybrid": 0.3,
     "ukraine": 0.3
    },
-   "p": 0.2,
+   "p": 0.03,
    "t": "US cuts intelligence or Starlink to Ukraine",
    "why": "The Trump administration has threatened it, according to Zelensky."
   },
   {
-   "h": "1 wk",
+   "h": "3 Nov",
    "id": "d_dem_house",
    "imp": {
     "mideast": -0.15,
@@ -1290,7 +1290,7 @@
    "why": "Prediction markets price a Democratic majority at around 85%."
   },
   {
-   "h": "3 mo",
+   "h": "by 2 Dec",
    "id": "d_us_strike_iran",
    "imp": {
     "climate": 0.2,
@@ -1300,338 +1300,338 @@
     "social": 0.3,
     "taiwan": 0.3
    },
-   "p": 0.5,
+   "p": 0.25,
    "t": "US (and Israel) resume large-scale strikes on Iran",
    "why": "Axios (1 Nov): Trump prefers to give Qatar-mediated diplomacy more time and had a 'tough' call with Netanyahu, who wants strikes soon after 3 November; military preparations for major operations are kept open."
   },
   {
-   "h": "3 mo",
+   "h": "by 2 Dec",
    "id": "d_qatar_deal",
    "imp": {
     "econ": -0.4,
     "mideast": -1.2
    },
-   "p": 0.28,
+   "p": 0.08,
    "t": "Qatar-brokered deal: blockade lifted and Hormuz reopened",
    "why": "Iranian negotiators were in Doha for a third day on 1 Nov, but Tehran called Qatar's seven-day trust-building sequence unsatisfactory and says its own plan is the only one on the table."
   },
   {
-   "h": "3 mo",
+   "h": "by 2 Dec",
    "id": "d_netanyahu",
    "imp": {
     "mideast": 0.3
    },
-   "p": 0.4,
+   "p": 0.1,
    "t": "Netanyahu forms a new government",
    "why": "His bloc won 53 seats in the final count, 8 short of a majority and 15 fewer than before."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_houthi_refinery",
    "imp": {
     "econ": 0.4,
     "mideast": 0.5
    },
-   "p": 0.3,
+   "p": 0.03,
    "t": "Houthi attack halts a major Saudi export terminal or refinery for more than 2 weeks",
    "why": "Daily attacks; Ras Tanura and Yanbu named as targets."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_gulf_desal",
    "imp": {
     "climate": 0.6,
     "mideast": 0.5
    },
-   "p": 0.2,
+   "p": 0.03,
    "t": "Attack on desalination plants in the Gulf",
    "why": "The US is asking allies to secure energy and infrastructure against Iranian retaliation."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_subsea_cables",
    "imp": {
     "econ": 0.3,
     "mideast": 0.4
    },
-   "p": 0.15,
+   "p": 0.02,
    "t": "Attack on undersea cables in the Gulf or Red Sea",
    "why": "Iran has again warned that seabed cables and regional infrastructure could be targeted if its civilian infrastructure is hit."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_regional_pact",
    "imp": {
     "mideast": -0.6
    },
-   "p": 0.15,
+   "p": 0.02,
    "t": "Non-aggression agreement between Iran and the Mecca Pact",
    "why": "First meeting in Tehran on 26 Oct; agreement to continue talks."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_iran_npt",
    "imp": {
     "mideast": 0.7,
     "nuclear": 1.2
    },
-   "p": 0.12,
+   "p": 0.02,
    "t": "Iran withdraws from the NPT or declares a weapons programme",
    "why": "Security chief Rezaei says Tehran is debating lifting its ban on nuclear weapons if hostilities resume (Reuters, 1 Nov); no decision taken. More likely if strikes resume."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_pla_drill",
    "imp": {
     "taiwan": 0.3
    },
-   "p": 0.6,
+   "p": 0.05,
    "t": "PLA exercise with a blockade element around Taiwan",
    "why": "Occurred 2022–2025; did not follow this year's National Day speech."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_pratas",
    "imp": {
     "taiwan": 0.9
    },
-   "p": 0.15,
+   "p": 0.01,
    "t": "Deadly confrontation at Pratas or Kinmen",
    "why": "The October water-cannon incident shows how little it takes."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_scs_clash",
    "imp": {
     "econ": 0.2,
     "taiwan": 0.4
    },
-   "p": 0.2,
+   "p": 0.015,
    "t": "Deadly confrontation between China and the Philippines",
    "why": "China is increasing military activity around the Philippines."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_taiwan_arms",
    "imp": {
     "taiwan": 0.1
    },
-   "p": 0.45,
+   "p": 0.07,
    "t": "US notifies the $14bn arms package to Taiwan",
    "why": "Congress is pushing; Trump has held it as a bargaining chip."
   },
   {
-   "h": "12 mo",
+   "h": "APEC 18–19 Nov",
    "id": "d_trumpxi_taiwan",
    "imp": {
     "taiwan": -0.2
    },
-   "p": 0.25,
+   "p": 0.04,
    "t": "Trump–Xi statement with a concession on Taiwan",
    "why": "Eases short-term pressure from Beijing but weakens deterrence over time."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_pla_purge",
    "imp": {
     "taiwan": -0.3
    },
-   "p": 0.55,
+   "p": 0.2,
    "t": "New purges in the PLA leadership",
    "why": "Intelligence points to readiness shortfalls in the PLA."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_tariff_war",
    "imp": {
     "econ": 0.4,
     "taiwan": 0.2
    },
-   "p": 0.25,
+   "p": 0.06,
    "t": "New escalation in the US–China trade war",
    "why": "The May summit produced trade deals, but they are fragile."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_nk_test",
    "imp": {
     "nuclear": 2
    },
-   "p": 0.08,
+   "p": 0.007,
    "t": "North Korea conducts its 7th nuclear test",
    "why": "Possible Trump–Kim meeting around APEC 18–19 Nov; Pyongyang still rejects denuclearisation."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_us_test",
    "imp": {
     "nuclear": 2
    },
-   "p": 0.05,
+   "p": 0.003,
    "t": "The US conducts an explosive nuclear test",
    "why": "Announced in 2025; technically and politically hard to carry out quickly."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_indpak",
    "imp": {
     "nuclear": 0.9
    },
-   "p": 0.2,
+   "p": 0.015,
    "t": "New armed crisis between India and Pakistan",
    "why": "Unresolved over Kashmir, terrorism and water; few diplomatic channels."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_newstart_exceed",
    "imp": {
     "nuclear": 0.3
    },
-   "p": 0.3,
+   "p": 0.02,
    "t": "US or Russia raises deployed warheads above New START levels",
    "why": "No limits since 5 February."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_arms_talks",
    "imp": {
     "nuclear": -0.5
    },
-   "p": 0.25,
+   "p": 0.02,
    "t": "Formal arms-control talks (US, Russia, possibly China) begin",
    "why": "Trump wants a trilateral deal; China refuses."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_cable_cut",
    "imp": {
     "hybrid": 0.4
    },
-   "p": 0.55,
+   "p": 0.1,
    "t": "Cable or pipeline in the Baltic or North Sea damaged and attributed to Russia",
    "why": "Repeated incidents since 2023."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_blacksea_ships",
    "imp": {
     "econ": 0.1,
     "hybrid": 0.4
    },
-   "p": 0.6,
+   "p": 0.25,
    "t": "More merchant ships sunk in NATO members' economic zones",
    "why": "Four ships sunk off Bulgaria in October, according to Ukraine."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_falseflag",
    "imp": {
     "hybrid": 0.8
    },
-   "p": 0.25,
+   "p": 0.02,
    "t": "False-flag drone attack on Baltic infrastructure",
    "why": "Lithuanian defence leadership has warned explicitly."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_grid_cyber",
    "imp": {
     "hybrid": 0.7,
     "social": 0.2
    },
-   "p": 0.2,
+   "p": 0.015,
    "t": "Cyberattack knocks out power or water in a NATO country",
    "why": "Danish intelligence names destructive cyberattacks as a possibility."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_us_europe_drawdown",
    "imp": {
     "hybrid": 0.5,
     "ukraine": 0.2
    },
-   "p": 0.3,
+   "p": 0.03,
    "t": "US withdraws significant forces from Europe",
    "why": "Resources are shifting to the Middle East; bombers already moved from Fairford."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_nato_costs",
    "imp": {
     "hybrid": -0.2
    },
-   "p": 0.3,
+   "p": 0.03,
    "t": "NATO adopts joint countermeasures against hybrid attacks",
    "why": "EU Commissioner Kubilius wants responses to be equally painful."
   },
   {
-   "h": "12 mo",
+   "h": "FOMC 8–9 Dec",
    "id": "d_rate_hikes",
    "imp": {
     "econ": 0.5,
     "social": 0.2
    },
-   "p": 0.6,
+   "p": 0.55,
    "t": "Fed or ECB raises rates due to inflation",
    "why": "The Fed hiked 25 bp in September and held at 3.75–4.00% on 28 October in a 10–2 vote, with two dissents for a hike; markets price a further hike in December. Warsh says he does not prejudge meetings, and lower oil prices would ease pressure."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_em_debt",
    "imp": {
     "econ": 0.4,
     "social": 0.3
    },
-   "p": 0.35,
+   "p": 0.03,
    "t": "Sovereign debt crisis in a major emerging economy",
    "why": "Import-dependent, highly indebted countries are squeezed by oil and food."
   },
   {
-   "h": "4 mo",
+   "h": "by 2 Dec",
    "id": "d_superelnino",
    "imp": {
     "climate": 0.4
    },
-   "p": 0.92,
+   "p": 0.97,
    "t": "El Niño stays \"very strong\" through the winter",
    "why": "Niño 3.4 at +3.4 °C in the week of 21 Oct; CPC gives >83% for strong–very strong through Jan–Mar."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_monsoon_fail",
    "imp": {
     "climate": 0.6,
     "social": 0.2
    },
-   "p": 0.4,
+   "p": 0.25,
    "t": "Weak monsoon or crop failure in South and Southeast Asia",
    "why": "Classic El Niño effect; WMO signals a drier Indian subcontinent."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_fert_short",
    "imp": {
     "climate": 0.6,
     "econ": 0.2
    },
-   "p": 0.45,
+   "p": 0.15,
    "t": "Fertiliser shortage lowers 2027 yields",
    "why": "Fertiliser/grain price ratio is the worst since 1960 (Oxford Economics)."
   },
   {
-   "h": "12 mo",
+   "h": "by 2 Dec",
    "id": "d_drought_south",
    "imp": {
     "climate": 0.3
    },
-   "p": 0.6,
+   "p": 0.25,
    "t": "Severe drought in southern Africa, Australia or Central America",
    "why": "Typical El Niño regions."
   }
  ],
  "factors": [
   {
-   "P": 0.37,
+   "P": 0.05,
    "drivers": [
     "d_rsi_claim",
     "d_cyber_diffusion",
@@ -1648,7 +1648,7 @@
    ],
    "id": "ai",
    "name": "Self-improving AI",
-   "outcome": "Destabilising AI leap: a leading lab lets AI carry out most of its own research without binding state oversight, or a serious AI-related security incident (cyber or loss of control) requires government crisis management.",
+   "outcome": "By 2 Dec 2026, a leading lab states that AI does most of its own research without binding state oversight, or a serious AI-related security incident (cyber or loss of control) requires government crisis management.",
    "severity": 4,
    "sinceLast": "No significant change. New in the week to 1 November: Google's cyber-focused Gemini 4 Carbon (restricted to vetted defenders) and a community-distributed, refusal-stripped variant of DeepSeek V4.1 Flash that ranks top among open models on a cyber index. Both strengthen the cyber-diffusion trend already reflected in the 55% driver; Sakana's self-improving training method (MASS) is incremental evidence for automated AI R&D.",
    "sources": [
@@ -1659,10 +1659,6 @@
     {
      "t": "The Next Web: Mistral releases open weights for Large 4 (29 Oct)",
      "u": "https://thenextweb.com/news/mistral-large-4-open-weights-release"
-    },
-    {
-     "t": "Tech Insider: Mistral Large 4 open weights – 51% cyber index",
-     "u": "https://tech-insider.org/mistral-large-4-open-weights-cybersecurity-51-percent-2026/"
     },
     {
      "t": "Finimize/Reuters: Mistral's open-weight model leans into cyber testing (6 Oct)",
@@ -1679,7 +1675,7 @@
    "trend": "flat"
   },
   {
-   "P": 0.39,
+   "P": 0.07,
    "drivers": [
     "d_brent120",
     "d_us_unemp",
@@ -1696,7 +1692,7 @@
    ],
    "id": "social",
    "name": "Social unrest: AI jobs and cost of living",
-   "outcome": "Unrest that topples a government or triggers a national state of emergency in at least one G7 country, or AI-driven job losses that push US unemployment above 5.5%.",
+   "outcome": "By 2 Dec 2026, unrest topples a government or triggers a national state of emergency in a G7 country, or US unemployment is reported at 5.5% or higher.",
    "severity": 2,
    "sinceLast": "Lowered from 40% to 39%: slightly lower oil and strike risk, partly offset by the higher rate-hike driver. The 5 November French strike is the next test.",
    "sources": [
@@ -1723,7 +1719,7 @@
    "trend": "flat"
   },
   {
-   "P": 0.12,
+   "P": 0.01,
    "drivers": [
     "d_bio_evasion",
     "d_bio_openmodel",
@@ -1741,7 +1737,7 @@
    ],
    "id": "bio",
    "name": "Biothreats: AI-enabled bioweapons and pandemics",
-   "outcome": "WHO declares a new public health emergency of international concern (PHEIC) with pandemic potential, or a confirmed AI-assisted attempt at a biological attack.",
+   "outcome": "By 2 Dec 2026, WHO declares a new public health emergency of international concern with pandemic potential, or a confirmed AI-assisted attempt at a biological attack.",
    "severity": 5,
    "sinceLast": "No significant change. WHO still reports no sustained human-to-human H5N1 transmission and rates the public health risk as low.",
    "sources": [
@@ -1756,10 +1752,6 @@
     {
      "t": "WHO: Influenza at the human-animal interface, 7 Oct 2026",
      "u": "https://www.who.int/publications/m/item/influenza-at-the-human-animal-interface-summary-and-assessment--7-october-2026"
-    },
-    {
-     "t": "Nature World News: Utah mink genomes reveal mutation also found in Spain (26 Oct)",
-     "u": "https://www.natureworldnews.com/articles/73642/20261026/utah-has-no-plan-cull-bird-flu-mink-genomes-reveal-mutation-also-found-spains-fur-farm-outbreak.htm"
     }
    ],
    "spill": 0.35,
@@ -1768,7 +1760,7 @@
    "trend": "flat"
   },
   {
-   "P": 0.71,
+   "P": 0.97,
    "drivers": [
     "d_ua_talks",
     "d_ua_ceasefire",
@@ -1785,7 +1777,7 @@
    ],
    "id": "ukraine",
    "name": "War in Ukraine",
-   "outcome": "No general ceasefire between Russia and Ukraine as of 31 October 2027.",
+   "outcome": "No general ceasefire between Russia and Ukraine is in force on 2 Dec 2026. Near-certain by construction at 30 days; read it as a persistence indicator, not a forecast of escalation.",
    "severity": 3,
    "sinceLast": "No significant change in the factor (71%). Energy-ceasefire driver lowered from 25% to 22% as both sides escalated against energy targets.",
    "sources": [
@@ -1802,13 +1794,13 @@
      "u": "https://www.latintimes.com/russia-ukraine-energy-strikes-norsi-refinery-fire-600748"
     }
    ],
-   "spill": 0.03,
+   "spill": 0.005,
    "summary": "The front is effectively static; Ukraine's General Staff reported 205 engagements on 1 November and says Russia is using the Oleshky local ceasefire to rotate units and bring up ammunition. Russia is intensifying its winter campaign against the grid: on the night of 31 Oct–1 Nov it launched 433 drones and missiles (371 downed), hitting energy infrastructure in four regions; emergency outages hit Kyiv and more than 350,000 consumers around Dnipro, and a further 193 drones followed overnight into 2 November. Ukraine struck Lukoil's NORSI refinery in Kstovo again. Trump's 'energy ceasefire' of 11 October was never confirmed by Moscow, and Kyiv says it never agreed to pause refinery strikes. Diplomacy is stalled: the Kremlin agreed in October to resume trilateral talks in November, but no date is set and Rubio said at the G20 that he does not know whether a negotiated peace is achievable.",
    "tag": "Ukraine",
    "trend": "flat"
   },
   {
-   "P": 0.62,
+   "P": 0.22,
    "drivers": [
     "d_us_strike_iran",
     "d_qatar_deal",
@@ -1830,7 +1822,7 @@
    ],
    "id": "mideast",
    "name": "Middle East: Iran, Israel, Saudi/Yemen, Hormuz",
-   "outcome": "Renewed large-scale war between the US/Israel and Iran, with Iranian or Houthi attacks on energy or water infrastructure in the Gulf.",
+   "outcome": "By 2 Dec 2026, renewed large-scale war between the US/Israel and Iran, with Iranian or Houthi attacks on energy or water infrastructure in the Gulf.",
    "severity": 4,
    "sinceLast": "Factor lowered from 64% to 62%. US strike driver cut from 55% to 50% after Axios reported that Trump favours more time for talks and resisted Netanyahu's push for post-election strikes; oil fell about 4%. Qatar deal driver kept at 28%: a draft is circulating, but Iran restated its preconditions and Kayhan says Tehran rejected US proposals to dilute its 60% stock. Analysts still disagree on whether 3 November ends the restraint or opens a bargaining phase; the new tanker strike in the northern Gulf shows the maritime campaign is widening, not easing.",
    "sources": [
@@ -1865,7 +1857,7 @@
    "trend": "down"
   },
   {
-   "P": 0.08,
+   "P": 0.005,
    "drivers": [
     "d_pla_drill",
     "d_pratas",
@@ -1883,7 +1875,7 @@
    ],
    "id": "taiwan",
    "name": "China–Taiwan",
-   "outcome": "Chinese blockade or quarantine of Taiwan, or a military attack on Taiwan or its outlying islands.",
+   "outcome": "By 2 Dec 2026, a Chinese blockade or quarantine of Taiwan, or a military attack on Taiwan or its outlying islands.",
    "severity": 5,
    "sinceLast": "No significant change. APEC in Shenzhen (18–19 Nov) remains the key event; Xi said on 2 November that the Middle East should not become an arena for great-power rivalry. Slightly lower US strike risk in Iran marginally reduces the Taiwan spillover link.",
    "sources": [
@@ -1910,7 +1902,7 @@
    "trend": "flat"
   },
   {
-   "P": 0.21,
+   "P": 0.03,
    "drivers": [
     "d_iran_npt",
     "d_nk_test",
@@ -1928,7 +1920,7 @@
    ],
    "id": "nuclear",
    "name": "Nuclear weapons and arms control",
-   "outcome": "The nuclear threshold weakens: a nuclear test (North Korea included), open nuclear threats in an active armed crisis, or a new state openly seeking nuclear weapons.",
+   "outcome": "By 2 Dec 2026, a nuclear test (North Korea included), open nuclear threats in an active armed crisis, or a new state openly seeking nuclear weapons.",
    "severity": 5,
    "sinceLast": "No significant change. Lower US strike probability (55%→50%) is offset by further Iranian calls to review NPT membership; factor held at 21%.",
    "sources": [
@@ -1955,7 +1947,7 @@
    "trend": "flat"
   },
   {
-   "P": 0.45,
+   "P": 0.05,
    "drivers": [
     "d_cable_cut",
     "d_blacksea_ships",
@@ -1974,7 +1966,7 @@
    ],
    "id": "hybrid",
    "name": "Russia vs NATO: hybrid war and critical infrastructure",
-   "outcome": "A NATO member invokes Article 4, or a Russian attack causing deaths occurs on NATO territory.",
+   "outcome": "By 2 Dec 2026, a NATO member invokes Article 4, or a Russian attack causing deaths occurs on NATO territory.",
    "severity": 3,
    "sinceLast": "No significant change. Ukraine's air-alert app Povitriana Tryvoha was hacked on 1 November to send false radiation and chemical alerts, and the SBU detained a man in Odesa accused of guiding Russian drones; no new attributed cable incident in the Baltic or North Sea since the last snapshot.",
    "sources": [
@@ -2005,7 +1997,7 @@
    "trend": "flat"
   },
   {
-   "P": 0.32,
+   "P": 0.04,
    "drivers": [
     "d_brent120",
     "d_hormuz_open",
@@ -2025,7 +2017,7 @@
    ],
    "id": "econ",
    "name": "Global economic and financial shock",
-   "outcome": "Global recession (world growth below about 2% in 2027) or a systemic financial crisis.",
+   "outcome": "By 2 Dec 2026, a systemic shock: a fall of at least 15% peak-to-trough in a major global equity index, a G20 sovereign default or emergency IMF request, or an IMF/World Bank cut of 2027 world growth below 2%.",
    "severity": 4,
    "sinceLast": "Raised from 30% to 32%. The rate-hike driver was raised from 30% to 60% after reviewing the 28 October FOMC (10–2 hold, December hike priced; this was under-weighted in the last snapshot). Partly offset by lower Brent (>$120 driver 40%→37%) and a lower US strike probability.",
    "sources": [
@@ -2052,7 +2044,7 @@
    "trend": "up"
   },
   {
-   "P": 0.45,
+   "P": 0.1,
    "drivers": [
     "d_superelnino",
     "d_monsoon_fail",
@@ -2073,7 +2065,7 @@
    ],
    "id": "climate",
    "name": "Climate, water and food",
-   "outcome": "New record in the FAO Food Price Index, an export ban on rice or wheat by a major exporter, or an acute water crisis in a city of more than 5 million people.",
+   "outcome": "By 2 Dec 2026, a new record in the FAO Food Price Index, a rice or wheat export ban by a major exporter, or an acute water crisis in a city of more than 5 million people.",
    "severity": 3,
    "sinceLast": "No significant change. No new weekly Niño 3.4 value verified since the week of 21 October (+3.4 °C); CPC's next monthly discussion is due on 12 November and the FAO Food Price Index on 6 November. Slightly lower oil prices marginally ease fertiliser costs.",
    "sources": [
@@ -2092,10 +2084,6 @@
     {
      "t": "Carbon Brief (Zeke Hausfather): 'Super El Niño' breaks all-time record",
      "u": "https://www.carbonbrief.org/analysis-super-el-nino-reaches-remarkable-all-time-record"
-    },
-    {
-     "t": "Oil Monitor Weekly Summary (Gulf exports, October)",
-     "u": "https://unbiasednews.substack.com/p/oil-monitor-weekly-summary-october"
     }
    ],
    "spill": 0.08,
@@ -2104,76 +2092,77 @@
    "trend": "flat"
   }
  ],
- "generatedAt": "2026-11-02T17:45:00+01:00",
- "globalSummary": "The core of the picture is unchanged: Hormuz remains effectively closed, a record El Niño is still building and Ukraine's grid is under heavy attack before winter. The main change is in Washington: according to Axios, Trump prefers to give Qatari mediation more time and resisted Netanyahu's push for strikes right after the 3 November midterms, and Brent fell about 4% to around $108.5. Iran's negotiators left Doha with a draft proposal in circulation, but Tehran insists the blockade must end first, and a tanker was struck far up the Gulf off Ras Al Khafji on 1 November. Analysts disagree on whether this is a genuine shift towards a deal or a pause while US military options remain open. Monetary conditions are tightening: the Fed held on 28 October with two dissents for a hike and a December hike priced, which raises the risk of a financial shock combined with high energy costs. The next tests are the US vote (3 Nov), the French general strike (5 Nov), Norges Bank (5 Nov), the US jobs report (6 Nov) and APEC (18–19 Nov).",
+ "generatedAt": "2026-11-02T12:50:00+01:00",
+ "globalSummary": "Over the next 30 days the core of the picture is unchanged: Hormuz remains effectively closed, a record El Niño is still building and Ukraine's grid is under heavy attack before winter. The main change is in Washington: according to Axios, Trump prefers to give Qatari mediation more time and resisted Netanyahu's push for strikes right after the 3 November midterms, and Brent fell about 4% to around $108.5. Iran's negotiators left Doha with a draft proposal in circulation, but Tehran insists the blockade must end first, and a tanker was struck far up the Gulf off Ras Al Khafji on 1 November. Analysts disagree on whether this is a genuine shift towards a deal or a pause while US military options remain open. Monetary conditions are tightening: the Fed held on 28 October with two dissents for a hike and a December hike priced, which raises the risk of a financial shock combined with high energy costs. The next tests are the US vote (3 Nov), the French general strike (5 Nov), Norges Bank (5 Nov), the US jobs report (6 Nov) and APEC (18–19 Nov).",
  "headline": "Trump signals more time for Iran diplomacy on the eve of the midterms and oil falls 4%, but Tehran restates its preconditions and tanker attacks spread up the Gulf.",
- "horizon": "12 months (to 31 October 2027) unless otherwise stated per driver",
+ "horizon": "Rolling 30 days (to 2 December 2026); dated catalysts beyond the window are labelled per driver",
+ "horizonDays": 30,
  "id": "2026-11-02",
  "method": {
-  "baseRate": 0.02,
-  "blackSwanDefinition": "An event of global reach within 12 months: direct war between great powers (US/NATO vs Russia or China), use of nuclear weapons, a pandemic with millions of deaths, a new or sharply expanded major war causing global recession, or an AI catastrophe requiring government crisis management in several countries.",
+  "baseRate": 0.002,
+  "blackSwanDefinition": "An event of global reach within the next 30 days: direct war between great powers (US/NATO vs Russia or China), use of nuclear weapons, a pandemic with millions of deaths, a new or sharply expanded major war causing global recession, or an AI catastrophe requiring government crisis management in several countries.",
   "correlation": 0.85,
-  "factorModel": "Each factor has an analyst-assessed probability. Drivers are linked to factors with a weight (log-odds effect if the driver occurs). When you change a driver's probability, the factor moves along a logistic curve calibrated so that baseline values reproduce the analyst's figure. One driver can affect several factors.",
-  "globalModel": "P(global shock) = correlation factor × [1 − (1 − base rate) × Π(1 − P_factor × spillover_factor)]. Spillover is the share of a factor's negative outcome that would grow to global scale. The correlation factor (0.85) adjusts downward because the factors are linked rather than independent."
+  "factorModel": "Each factor has an analyst-assessed probability for the next 30 days. Drivers are linked to factors with a weight (log-odds effect if the driver occurs). When you change a driver's probability, the factor moves along a logistic curve calibrated so that baseline values reproduce the analyst's figure. One driver can affect several factors.",
+  "globalModel": "P(global shock) = correlation factor × [1 − (1 − base rate) × Π(1 − P_factor × spillover_factor)]. Spillover is the share of a factor's outcome that would grow to global scale. The correlation factor (0.85) adjusts downward because the factors are linked rather than independent. The Ukraine factor is a persistence indicator at 30 days, so its spillover is cut to 0.5%."
  },
  "norway": {
-  "baseRate": 0.01,
+  "baseRate": 0.001,
   "correlation": 0.85,
   "drivers": [
    {
-    "h": "12 mo",
+    "h": "by 2 Dec",
     "id": "d_no_drones",
     "imp": {
      "no_military": 0.3,
      "no_sabotage": 0.4
     },
-    "p": 0.45,
+    "p": 0.07,
     "t": "Drones close a Norwegian airport or halt production on an offshore installation",
     "why": "Happened at Gardermoen and Sleipner in 2025; Denmark has had several cases."
    },
    {
-    "h": "12 mo",
+    "h": "by 2 Dec",
     "id": "d_no_ransomware",
     "imp": {
      "no_cyber": 0.7
     },
-    "p": 0.7,
+    "p": 0.1,
     "t": "Ransomware hits a Norwegian municipality, health trust or critical supplier",
     "why": "Has happened several times in the past decade; AI lowers the threshold."
    },
    {
-    "h": "12 mo",
+    "h": "by 2 Dec",
     "id": "d_no_iran_proxy",
     "imp": {
      "no_terror": 0.7
     },
-    "p": 0.35,
+    "p": 0.04,
     "t": "Iranian-directed plot in Norway carried out, or foiled and made public",
     "why": "PST assessed such plots as likely in April."
    },
    {
-    "h": "12 mo",
+    "h": "by 2 Dec",
     "id": "d_no_threatlevel",
     "imp": {
      "no_terror": 0.8
     },
-    "p": 0.15,
+    "p": 0.012,
     "t": "PST raises the terror threat level to high (4)",
     "why": "The level is moderate (3) now; it was raised after the 2022 Oslo attack."
    },
    {
-    "h": "to 1 Jan 2027",
+    "h": "NVE week 48",
     "id": "d_no_reservoir",
     "imp": {
      "no_economy": 0.2,
      "no_energy": 0.9
     },
-    "p": 0.55,
+    "p": 0.7,
     "t": "Reservoir levels in southern Norway still more than 15 pp below normal on 1 January",
     "why": "NO2 was about 30 pp below normal in week 43."
    },
    {
-    "h": "to 28 Feb 2027",
+    "h": "by 2 Dec",
     "id": "d_no_cold",
     "imp": {
      "no_energy": 0.6
@@ -2183,29 +2172,29 @@
     "why": "Cold raises consumption when reservoirs are low."
    },
    {
-    "h": "12 mo",
+    "h": "CPI 10 Nov",
     "id": "d_no_kpi4",
     "imp": {
      "no_economy": 1
     },
-    "p": 0.3,
+    "p": 0.04,
     "t": "Norwegian CPI inflation above 4% for at least one month",
     "why": "CPI has run above forecasts; oil and food are pushing up."
    },
    {
-    "h": "12 mo",
+    "h": "budget vote Dec",
     "id": "d_no_fuelstock",
     "imp": {
      "no_supply": -0.2
     },
-    "p": 0.75,
+    "p": 0.1,
     "t": "Storting approves larger emergency fuel stocks",
     "why": "Proposed in the 2027 state budget."
    }
   ],
   "factors": [
    {
-    "P": 0.2,
+    "P": 0.015,
     "advice": "Have a plan for 24 hours without power, mobile network and payment cards. Keep cash, water and a battery radio.",
     "drivers": [
      "d_no_drones",
@@ -2221,7 +2210,7 @@
     ],
     "id": "no_sabotage",
     "name": "Sabotage against Norwegian critical infrastructure",
-    "outcome": "Sabotage or hybrid attack on Norwegian critical infrastructure (energy, cables, pipelines, water, transport) causing a noticeable outage for residents or businesses lasting more than 24 hours, attributed by Norwegian authorities to a state actor.",
+    "outcome": "By 2 Dec 2026, sabotage or hybrid attack on Norwegian critical infrastructure causes a noticeable outage lasting more than 24 hours and is attributed by Norwegian authorities to a state actor.",
     "scope": "no",
     "severity": 4,
     "sinceLast": "No significant change.",
@@ -2248,7 +2237,7 @@
     "trend": "flat"
    },
    {
-    "P": 0.4,
+    "P": 0.04,
     "advice": "Keep offline backups of important documents, use two-factor authentication on BankID-linked services, and keep paper copies of prescriptions and insurance.",
     "drivers": [
      "d_no_ransomware",
@@ -2262,7 +2251,7 @@
     ],
     "id": "no_cyber",
     "name": "Cyberattacks on critical societal functions",
-    "outcome": "Cyberattack that takes a critical societal function in Norway (health, payments, power, water, telecoms or a large municipality) fully or partly out of service for more than 24 hours.",
+    "outcome": "By 2 Dec 2026, a cyberattack takes a critical societal function in Norway (health, payments, power, water, telecoms or a large municipality) fully or partly out of service for more than 24 hours.",
     "scope": "no",
     "severity": 3,
     "sinceLast": "No significant change.",
@@ -2285,7 +2274,7 @@
     "trend": "flat"
    },
    {
-    "P": 0.15,
+    "P": 0.01,
     "advice": "Follow police advice at large events. Learn \"Run, hide, alert\".",
     "drivers": [
      "d_no_iran_proxy",
@@ -2297,7 +2286,7 @@
     ],
     "id": "no_terror",
     "name": "Terrorism in Norway",
-    "outcome": "Terrorist attack in Norway with at least one fatality.",
+    "outcome": "By 2 Dec 2026, a terrorist attack in Norway with at least one fatality.",
     "scope": "no",
     "severity": 3,
     "sinceLast": "No significant change.",
@@ -2320,7 +2309,7 @@
     "trend": "flat"
    },
    {
-    "P": 0.05,
+    "P": 0.004,
     "advice": "Know where shelters are and the warning signals in your municipality. Follow the Civil Defence's advice.",
     "drivers": [
      "d_no_drones",
@@ -2333,7 +2322,7 @@
     ],
     "id": "no_military",
     "name": "Armed incident on Norwegian territory",
-    "outcome": "Armed military incident on Norwegian territory, in Norwegian airspace or in Norway's economic zone (incl. Svalbard) in which Norwegian or allied forces fire or are fired upon, or Norwegian personnel or materiel are damaged.",
+    "outcome": "By 2 Dec 2026, an armed military incident on Norwegian territory, airspace or economic zone (incl. Svalbard) in which Norwegian or allied forces fire or are fired upon, or personnel or materiel are damaged.",
     "scope": "no",
     "severity": 5,
     "sinceLast": "No significant change.",
@@ -2356,7 +2345,7 @@
     "trend": "flat"
    },
    {
-    "P": 0.35,
+    "P": 0.07,
     "advice": "Consider a fixed price or Norgespris before winter, and have an alternative heat source (wood, paraffin) that is safe to use indoors.",
     "drivers": [
      "d_no_reservoir",
@@ -2371,7 +2360,7 @@
     ],
     "id": "no_energy",
     "name": "Energy crisis in Norway",
-    "outcome": "Rationing of electricity or fuel in Norway, or a monthly average spot price in a Norwegian price area above NOK 2.50/kWh.",
+    "outcome": "By 2 Dec 2026, electricity or fuel is rationed in Norway, or a monthly average spot price in a Norwegian price area exceeds NOK 2.50/kWh.",
     "scope": "no",
     "severity": 2,
     "sinceLast": "No significant change. NVE week 43: NO2 at 53.6% against a median of 84.1% (−30.5 pp); national 69.5%. Week 44 data due 4 November.",
@@ -2394,7 +2383,7 @@
     "trend": "flat"
    },
    {
-    "P": 0.15,
+    "P": 0.01,
     "advice": "Keep a buffer of 3–6 months' expenses and test how a 1 pp rate rise affects your loan.",
     "drivers": [
      "d_no_kpi4",
@@ -2410,7 +2399,7 @@
     ],
     "id": "no_economy",
     "name": "Economic shock for households",
-    "outcome": "Norwegian CPI inflation (12 months) above 5.0%, or registered full unemployment (NAV) of 3.0% or higher.",
+    "outcome": "By 2 Dec 2026, Norwegian 12-month CPI inflation is reported above 5.0%, or registered full unemployment (NAV) is 3.0% or higher.",
     "scope": "no",
     "severity": 2,
     "sinceLast": "No significant change.",
@@ -2437,7 +2426,7 @@
     "trend": "flat"
    },
    {
-    "P": 0.07,
+    "P": 0.004,
     "advice": "Follow DSB's advice on one week of self-preparedness: water, food that needs no refrigeration, medicines and fuel in the tank.",
     "drivers": [
      "d_no_fuelstock",
@@ -2453,7 +2442,7 @@
     ],
     "id": "no_supply",
     "name": "Supply failure",
-    "outcome": "Authorities introduce national rationing of fuel or food, or describe the medicine situation as a national supply crisis.",
+    "outcome": "By 2 Dec 2026, authorities introduce national rationing of fuel or food, or describe the medicine situation as a national supply crisis.",
     "scope": "no",
     "severity": 4,
     "sinceLast": "No significant change.",
@@ -2476,7 +2465,7 @@
     "trend": "flat"
    },
    {
-    "P": 0.4,
+    "P": 0.04,
     "advice": "Check whether your home is in a flood or landslide zone (NVE Atlas), and follow warnings from the Norwegian Meteorological Institute.",
     "drivers": [],
     "experts": [
@@ -2485,7 +2474,7 @@
     ],
     "id": "no_weather",
     "name": "Extreme weather and natural hazards",
-    "outcome": "Extreme weather, flood or landslide hitting buildings or infrastructure in Norway and causing deaths, or evacuation of more than 1,000 people. Avalanche accidents during outdoor recreation do not count.",
+    "outcome": "By 2 Dec 2026, extreme weather, flood or landslide in Norway causes deaths or evacuation of more than 1,000 people (recreational avalanche accidents excluded).",
     "scope": "no",
     "severity": 2,
     "sinceLast": "No significant change.",
@@ -2614,7 +2603,7 @@
   "name": "Season 1",
   "start": "2026-10-31"
  },
- "sinceLast": "Middle East down from 64% to 62% (US strike driver 55%→50%) after reports that Trump favours more time for talks. Economic shock up from 30% to 32%: the rate-hike driver was raised from 30% to 60% after reviewing the 28 October FOMC, partly offset by Brent >$120 driver 40%→37%. Social unrest 40%→39%. Ukraine energy-ceasefire driver 25%→22%; factor unchanged at 71%. Computed global shock moves from 29.1% to 29.2%. Norway unchanged; the Maldives debt factor 30%→31% on higher US rates; France: OAT–Bund spread has eased to about 159 bp, fiscal factor held.",
+ "sinceLast": "Probabilities now follow the rolling 30-day horizon to 2 Dec 2026: the 30-day recalibration values have replaced the earlier 12-month base values in every factor and driver, so the figures are not comparable with the 12-month snapshots of 31 Oct and 1 Nov and the history chart restarts here. Largest effect: Ukraine (persistence indicator) 97%, Middle East 22%, France fiscal 33%; most other factors fall to single digits because a 30-day window leaves little room for slow-moving events. No new primary-source information has been added since this morning's update (Brent about $108.5 after a 4% fall, Trump signalling more time for Qatari mediation, a tanker struck off Ras Al Khafji on 1 Nov); several official sites could not be re-checked in this run. Weak aggregator sources were removed from a few source lists.",
  "watch": [
   {
    "k": "Brent",

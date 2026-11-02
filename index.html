@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Risk Radar – Global Security</title>
-<meta name="description" content="Daily assessment of global and national security risks over the next 12 months: Middle East, Ukraine, Taiwan, AI, biothreats, nuclear, hybrid war, economy and climate. Open sources, transparent method.">
+<meta name="description" content="Daily assessment of global and national security risks over the next 30 days: Middle East, Ukraine, Taiwan, AI, biothreats, nuclear, hybrid war, economy and climate. Open sources, transparent method.">
 <meta property="og:title" content="Risk Radar – Global Security">
-<meta property="og:description" content="Daily, source-linked assessment of the biggest global security risks over the next 12 months.">
+<meta property="og:description" content="Daily, source-linked assessment of the biggest global security risks over the next 30 days.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -192,7 +192,7 @@ footer{margin-top:24px;font-size:12px;color:var(--faint)}
         <path d="M20 20 L36 12" stroke="#3fd0ff" stroke-width="2"/>
         <circle cx="30" cy="11" r="2.4" fill="#ff4d5e"/>
       </svg>
-      <div><h1>RISK RADAR</h1><small id="subtitle">global security · Norway · Maldives · France · 12-month horizon</small></div>
+      <div><h1>RISK RADAR</h1><small id="subtitle">global security · Norway · Maldives · France · 30-day outlook</small></div>
     </div>
     <div class="status" id="status"><span class="dot warn"></span>Connecting…</div>
   </div>
@@ -221,15 +221,19 @@ const clamp = (p,a=0.001,b=0.999) => Math.min(b, Math.max(a, p));
 const logit = p => Math.log(clamp(p)/(1-clamp(p)));
 const sig = x => 1/(1+Math.exp(-x));
 const num = x => typeof x==="number" && isFinite(x);
-const pct = (p,d=0) => (p*100).toFixed(d) + "%";
+const pct = (p,d=0) => { if(d===0&&H30&&p>0&&p<0.1) d=1; return (p*100).toFixed(d) + "%"; };
+const rv = p => (H30&&p<0.1)?(p*100).toFixed(1):Math.round(p*100);
 const pp = x => (Math.abs(x)<0.0005?"±":x>0?"+":"−") + Math.abs(x*100).toFixed(1) + " pp";
 const safeUrl = u => /^https:\/\//i.test(String(u||"")) ? u : "#";
 const MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 function fmtDate(d){ const m=String(d||"").match(/^(\d{4})-(\d{2})(?:-(\d{2}))?/); if(!m) return esc(d); return (m[3]? (+m[3])+" ":"") + MON[+m[2]-1] + " " + m[1]; }
 function osloToday(){ try{ return new Intl.DateTimeFormat("sv-SE",{timeZone:"Europe/Oslo"}).format(new Date()); }catch(e){ return new Date().toISOString().slice(0,10); } }
-function riskColor(p){ return p<0.10?"var(--g)":p<0.25?"#9be15d":p<0.50?"var(--y)":p<0.75?"var(--o)":"var(--r)"; }
-function band(p){ return p<0.10?"LOW":p<0.25?"MODERATE":p<0.50?"ELEVATED":p<0.75?"HIGH":"VERY HIGH"; }
-function globalLevel(p){ return p<0.10?["LEVEL 1 · LOW","var(--g)"]:p<0.20?["LEVEL 2 · MODERATE","#9be15d"]:p<0.30?["LEVEL 3 · ELEVATED","var(--y)"]:p<0.45?["LEVEL 4 · HIGH","var(--o)"]:["LEVEL 5 · CRITICAL","var(--r)"]; }
+let H30=false;
+const FT=()=>H30?[.05,.15,.35,.60]:[.10,.25,.50,.75];
+const GT=()=>H30?[.02,.04,.07,.12]:[.10,.20,.30,.45];
+function riskColor(p){ const t=FT(); return p<t[0]?"var(--g)":p<t[1]?"#9be15d":p<t[2]?"var(--y)":p<t[3]?"var(--o)":"var(--r)"; }
+function band(p){ const t=FT(); return p<t[0]?"LOW":p<t[1]?"MODERATE":p<t[2]?"ELEVATED":p<t[3]?"HIGH":"VERY HIGH"; }
+function globalLevel(p){ const t=GT(); return p<t[0]?["LEVEL 1 · LOW","var(--g)"]:p<t[1]?["LEVEL 2 · MODERATE","#9be15d"]:p<t[2]?["LEVEL 3 · ELEVATED","var(--y)"]:p<t[3]?["LEVEL 4 · HIGH","var(--o)"]:["LEVEL 5 · CRITICAL","var(--r)"]; }
 
 // ---------- state ----------
 const S = { snaps:[], cur:null, prev:null, reds:[], red:null, ov:{}, db:null, open:null, tab:"global", histSel:"global" };
@@ -237,6 +241,11 @@ const S = { snaps:[], cur:null, prev:null, reds:[], red:null, ov:{}, db:null, op
 // ---------- normalize snapshot ----------
 function normalize(raw){
   const s = JSON.parse(JSON.stringify(raw));
+  if(s.h30){ const o=s.h30, br=o.BR||{};
+    const ap=x=>{ if(o.F&&o.F[x.id]!=null) x.P=o.F[x.id]; if(o.O&&o.O[x.id]) x.outcome=o.O[x.id]; if(o.GS&&o.GS[x.id]!=null) x.spill=o.GS[x.id]; if(o.D&&o.D[x.id]!=null){ x.p=o.D[x.id]; if(o.H&&o.H[x.id]) x.h=o.H[x.id]; } };
+    (s.factors||[]).forEach(ap); (s.drivers||[]).forEach(ap);
+    [s.norway].concat(s.countries||[]).forEach(c=>{ if(!c) return; const code=(c===s.norway)?"no":c.code; if(br[code]!=null) c.baseRate=br[code]; if(o.CS&&o.CS[code]) c.spill=Object.assign({}, c.spill, o.CS[code]); (c.factors||[]).forEach(ap); (c.drivers||[]).forEach(ap); });
+  }
   const C = [];
   if(s.norway && Array.isArray(s.norway.factors)) C.push(Object.assign({code:"no", name:"Norway", tab:"norge"}, s.norway));
   if(Array.isArray(s.countries)) s.countries.forEach(c=>{ if(c && c.code && Array.isArray(c.factors) && c.code!=="no") C.push(Object.assign({tab:c.code}, c)); });
@@ -297,12 +306,12 @@ function ring(p, size=68, stroke=7, color){
 function gaugeSVG(p, rp){
   const cx=160, cy=150, r=120, a0=Math.PI, a1=0;
   const arc=(from,to,col,w)=>{ const x0=cx+r*Math.cos(from), y0=cy-r*Math.sin(from), x1=cx+r*Math.cos(to), y1=cy-r*Math.sin(to); return `<path d="M${x0.toFixed(1)} ${y0.toFixed(1)} A${r} ${r} 0 0 1 ${x1.toFixed(1)} ${y1.toFixed(1)}" stroke="${col}" stroke-width="${w}" fill="none"/>`; };
-  const scale=[[0,.10,"#3ddc97"],[.10,.20,"#9be15d"],[.20,.30,"#f3c94b"],[.30,.45,"#ff9a3c"],[.45,1,"#ff4d5e"]];
-  const mapP=x=>Math.min(1,x/0.6);
-  let segs=""; for(const [lo,hi,col] of scale){ const f=mapP(lo), t=mapP(Math.min(hi,0.6)); if(f>=1) continue; segs+=arc(a0-(a0-a1)*f, a0-(a0-a1)*t, col, 14); }
+  const g=GT(), MX=H30?0.15:0.6; const scale=[[0,g[0],"#3ddc97"],[g[0],g[1],"#9be15d"],[g[1],g[2],"#f3c94b"],[g[2],g[3],"#ff9a3c"],[g[3],1,"#ff4d5e"]];
+  const mapP=x=>Math.min(1,x/MX);
+  let segs=""; for(const [lo,hi,col] of scale){ const f=mapP(lo), t=mapP(Math.min(hi,MX)); if(f>=1) continue; segs+=arc(a0-(a0-a1)*f, a0-(a0-a1)*t, col, 14); }
   const ang=a0-(a0-a1)*mapP(p); const nx=cx+(r-26)*Math.cos(ang), ny=cy-(r-26)*Math.sin(ang);
   let rt=""; if(rp!=null){ const ra=a0-(a0-a1)*mapP(rp); const x0=cx+(r-12)*Math.cos(ra), y0=cy-(r-12)*Math.sin(ra), x1=cx+(r+14)*Math.cos(ra), y1=cy-(r+14)*Math.sin(ra); rt=`<line x1="${x0.toFixed(1)}" y1="${y0.toFixed(1)}" x2="${x1.toFixed(1)}" y2="${y1.toFixed(1)}" stroke="#ff7ad9" stroke-width="4" stroke-linecap="round"><title>Red team ${pct(rp)}</title></line>`; }
-  let ticks=""; for(const t of [0,.1,.2,.3,.45,.6]){ const an=a0-(a0-a1)*mapP(t); const x0=cx+(r+12)*Math.cos(an), y0=cy-(r+12)*Math.sin(an); ticks+=`<text x="${x0.toFixed(1)}" y="${(y0+4).toFixed(1)}" fill="#5d6f86" font-family="IBM Plex Mono" font-size="10" text-anchor="middle">${Math.round(t*100)}${t===.6?"+":""}</text>`; }
+  let ticks=""; for(const t of [0].concat(g,[MX])){ const an=a0-(a0-a1)*mapP(t); const x0=cx+(r+12)*Math.cos(an), y0=cy-(r+12)*Math.sin(an); ticks+=`<text x="${x0.toFixed(1)}" y="${(y0+4).toFixed(1)}" fill="#5d6f86" font-family="IBM Plex Mono" font-size="10" text-anchor="middle">${Math.round(t*100)}${t===MX?"+":""}</text>`; }
   return `<svg viewBox="0 0 320 170" role="img" aria-label="Risk ${pct(p)}"><path d="M${cx-r} ${cy} A${r} ${r} 0 0 1 ${cx+r} ${cy}" stroke="#152031" stroke-width="22" fill="none"/>${segs}${ticks}${rt}<line x1="${cx}" y1="${cy}" x2="${nx.toFixed(1)}" y2="${ny.toFixed(1)}" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="${cx}" cy="${cy}" r="7" fill="#fff"/><circle cx="${cx}" cy="${cy}" r="3" fill="#080b10"/></svg>`;
 }
 function deltaHTML(cur, prev){
@@ -320,7 +329,7 @@ function factorCards(list, now, base, prevP, R){
     const p=now[f.id], col=riskColor(p);
     const pv = prevP && prevP[f.id]!=null ? prevP[f.id] : null;
     h+=`<button class="fc" data-f="${esc(f.id)}" aria-label="${esc(f.name)}: ${pct(p)}">
-      <div class="ring">${ring(p,68,7,col)}<div class="rv" style="color:${col}">${Math.round(p*100)}<small>%</small></div></div>
+      <div class="ring">${ring(p,68,7,col)}<div class="rv" style="color:${col}">${rv(p)}<small>%</small></div></div>
       <div><div class="tag">${esc(f.tag)}</div><div class="nm">${esc(f.name)}</div>
       <div class="meta"><span class="band" style="color:${col}">${band(p)}</span>${pips(f.severity||3)}
       ${Math.abs(p-base[f.id])>0.0005?`<span class="delta mod">scenario ${pp(p-base[f.id])}</span>`:deltaHTML(base[f.id],pv)}
@@ -333,7 +342,7 @@ function watchHTML(w){ return Array.isArray(w)&&w.length?`<div class="watch">`+w
 
 // ---------- views ----------
 function render(){
-  const s=S.cur; if(!s) return;
+  const s=S.cur; if(!s) return; H30=(s.horizonDays||365)<=45;
   if(S.tab!=="global" && !s.C.some(c=>c.tab===S.tab)) S.tab="global";
   $("#tabs").innerHTML=[{tab:"global",name:"Global"}].concat(s.C).map(c=>`<button class="tab${c.tab===S.tab?" on":""}" data-t="${esc(c.tab)}">${esc(c.name)}</button>`).join("");
   const base=allP(s,baseGet), now=allP(s,curGet);
@@ -357,8 +366,8 @@ function viewGlobal(s,base,now,prevP,R,RG){
   const gBase=globalP(s,base), gNow=globalP(s,now), gPrev=S.prev?globalP(S.prev,prevP):null;
   const modded=Object.keys(S.ov).length>0; const [lvl,lcol]=globalLevel(gNow);
   let h=`<div class="hero"><div class="card corner gauge">
-      <div class="glabel">Probability of global shock · 12 mo</div>${gaugeSVG(gNow, RG?RG.g:null)}
-      <div class="gval" style="color:${riskColor(gNow)}">${pct(gNow)}</div>
+      <div class="glabel">Probability of global shock · 30 days</div>${gaugeSVG(gNow, RG?RG.g:null)}
+      <div class="gval" style="color:${lcol}">${pct(gNow)}</div>
       <div class="gsub">${modded?`<span class="mod">Scenario · baseline ${pct(gBase)}</span>`:(gPrev!=null?`Since last snapshot: ${deltaHTML(gNow,gPrev)}`:"First snapshot")}</div>
       <span class="level" style="color:${lcol}">${lvl}</span>
       ${RG?`<div class="rtline">Red team (${esc(fmtDate(S.red.date))}): ${pct(RG.g)} · ${pp(RG.g-gBase)} vs analyst</div>`:""}
@@ -390,8 +399,8 @@ function viewCountry(s,n,base,now,prevP,R,RG){
   const nB=countryP(s,code,base), nN=countryP(s,code,now), nPrev=S.prev&&S.prev.Cmap&&S.prev.Cmap[code]?countryP(S.prev,code,prevP):null;
   const any=anyCountry(s,code,now); const rc=RG&&RG.c?RG.c[code]:null; const modded=Object.keys(S.ov).length>0; const [lvl,lcol]=globalLevel(nN);
   let h=`<div class="hero"><div class="card corner gauge">
-      <div class="glabel">National crisis in ${esc(place)} · 12 mo</div>${gaugeSVG(nN, rc!=null?rc:null)}
-      <div class="gval" style="color:${riskColor(nN)}">${pct(nN)}</div>
+      <div class="glabel">National crisis in ${esc(place)} · 30 days</div>${gaugeSVG(nN, rc!=null?rc:null)}
+      <div class="gval" style="color:${lcol}">${pct(nN)}</div>
       <div class="gsub">${modded?`<span class="mod">Scenario · baseline ${pct(nB)}</span>`:(nPrev!=null?`Since last snapshot: ${deltaHTML(nN,nPrev)}`:"First snapshot")}</div>
       <span class="level" style="color:${lcol}">${lvl}</span>
       <div class="sub2">At least one of the events below: ${pct(any)}</div>
@@ -415,14 +424,14 @@ function viewCountry(s,n,base,now,prevP,R,RG){
 }
 
 function histSVG(){
-  const pts=[...S.snaps].sort((a,b)=>a.date<b.date?-1:1).map(sn=>{
+  const hz=S.cur.horizonDays||365; const pts=[...S.snaps].filter(sn=>(sn.horizonDays||365)===hz).sort((a,b)=>a.date<b.date?-1:1).map(sn=>{
     const P=allP(sn,baseGet); let v=null;
     if(S.histSel==="global") v=globalP(sn,P); else if(S.histSel.startsWith("c:")) v=countryP(sn,S.histSel.slice(2),P); else v=P[S.histSel]??null;
     return {d:sn.date, v};
   }).filter(x=>x.v!=null);
   const rpts=S.reds.slice().sort((a,b)=>a.date<b.date?-1:1).map(rd=>{ const g=redGlobal(rd,S.cur); let v=null;
     if(S.histSel==="global") v=g&&g.g; else if(S.histSel.startsWith("c:")) v=g&&g.c?g.c[S.histSel.slice(2)]:null; else v=num(rd.factors&&rd.factors[S.histSel])?rd.factors[S.histSel]:null; return {d:rd.date,v}; }).filter(x=>x.v!=null);
-  if(pts.length<2){ const v=pts[0]?pct(pts[0].v):"–"; return `<p class="dim" style="margin:6px 0 0;font-size:13px">One snapshot so far (${v}). The curve builds with each daily update.</p>`; }
+  if(pts.length<2){ const v=pts[0]?pct(pts[0].v):"–"; return `<p class="dim" style="margin:6px 0 0;font-size:13px">One snapshot so far (${v}). The 30-day curve builds with each daily update; earlier 12-month snapshots are not mixed in.</p>`; }
   const W=520,H=180,L=36,R=10,T=10,B=26;
   const dates=[...new Set(pts.map(p=>p.d).concat(rpts.map(p=>p.d)))].sort();
   const t0=new Date(dates[0]).getTime(), t1=new Date(dates[dates.length-1]).getTime()||t0+1;
@@ -449,10 +458,10 @@ function renderSheet(){
   const rp=S.red&&S.red.factors&&num(S.red.factors[f.id])?S.red.factors[f.id]:null;
   const rnote=S.red&&S.red.notes&&S.red.notes[f.id];
   const isNo=!!f.scope; const cty=isNo&&s.Cmap[f.scope];
-  let h=`<div class="sheet-inner"><div class="sh-top"><div class="ring" style="width:52px;height:52px">${ring(now,52,6,col)}<div class="rv" style="color:${col};font-size:16px">${Math.round(now*100)}</div></div>
+  let h=`<div class="sheet-inner"><div class="sh-top"><div class="ring" style="width:52px;height:52px">${ring(now,52,6,col)}<div class="rv" style="color:${col};font-size:16px">${rv(now)}</div></div>
     <div class="tt"><div class="tag">${cty?esc(cty.name)+" · ":""}${esc(f.tag)} · ${band(now)}</div><h2>${esc(f.name)}</h2></div><button class="x" id="close" aria-label="Close">×</button></div>
     <div class="sh-body"><div class="kpis">
-      <div class="kpi"><div class="k">Analyst</div><div class="v" style="color:${col}">${pct(now)}</div><div class="s">${Math.abs(now-base)>0.0005?"baseline "+pct(base):"12-month horizon"}</div></div>
+      <div class="kpi"><div class="k">Analyst</div><div class="v" style="color:${col}">${pct(now)}</div><div class="s">${Math.abs(now-base)>0.0005?"baseline "+pct(base):(H30?"30-day horizon":"12-month horizon")}</div></div>
       <div class="kpi"><div class="k">Trend</div><div class="v" style="font-size:18px;padding-top:6px">${f.trend==="up"?'<span class="delta up">▲ rising</span>':f.trend==="down"?'<span class="delta down">▼ easing</span>':f.trend==="new"?'<span class="delta new">NEW</span>':'<span class="delta flat">▬ flat</span>'}</div><div class="s">analyst assessment</div></div>
       <div class="kpi"><div class="k">Since last</div><div class="v" style="font-size:18px;padding-top:6px">${prevP!=null?deltaHTML(base,prevP):'<span class="delta new">NEW</span>'}</div><div class="s">${prevP!=null?"from "+pct(prevP):"first snapshot"}</div></div>
       <div class="kpi"><div class="k">Severity</div><div class="v" style="font-size:18px;padding-top:6px">${pips(f.severity||3)}</div><div class="s">${f.severity||3}/5</div></div>
@@ -469,11 +478,11 @@ function renderSheet(){
   for(const d of ds){
     const p=pOf(d.id), eff=driverEffect(f,d), others=Object.keys(d.imp).filter(k=>k!==f.id); const isOv=S.ov[d.id]!=null;
     const drp=S.red&&S.red.drivers&&num(S.red.drivers[d.id])?S.red.drivers[d.id]:null;
-    h+=`<div class="drv" data-d="${esc(d.id)}"><div class="row1"><div><div class="t">${esc(d.t)}</div><div class="why">${esc(d.why)}</div></div><div class="pv" style="color:${isOv?"var(--y)":"var(--txt)"}">${Math.round(p*100)}%</div></div>
+    h+=`<div class="drv" data-d="${esc(d.id)}"><div class="row1"><div><div class="t">${esc(d.t)}</div><div class="why">${esc(d.why)}</div></div><div class="pv" style="color:${isOv?"var(--y)":"var(--txt)"}">${rv(p)}%</div></div>
       <div class="row2"><span class="eff ${eff>=0?"pos":"neg"}">effect ${pp(eff)}</span><span class="hz">horizon ${esc(d.h)}</span>
         ${drp!=null?`<span class="rtc">RT ${Math.round(drp*100)}%</span>`:""}
         ${others.length?`<span class="multi">also affects ${others.map(k=>esc(s.Fmap[k]?s.Fmap[k].tag:k)).join(", ")}</span>`:""}
-        <div class="slwrap"><span class="basemark" style="left:calc(${(d.p*100).toFixed(1)}% - 1px)"></span><input type="range" min="0" max="100" step="1" value="${Math.round(p*100)}" aria-label="${esc(d.t)}"></div>
+        <div class="slwrap"><span class="basemark" style="left:calc(${(d.p*100).toFixed(1)}% - 1px)"></span><input type="range" min="0" max="100" step="${H30?0.5:1}" value="${H30?(p*100).toFixed(1):Math.round(p*100)}" aria-label="${esc(d.t)}"></div>
         <button class="qbtn${p===0&&isOv?" on":""}" data-q="0">Doesn't happen</button><button class="qbtn${!isOv?" on":""}" data-q="b">Baseline</button><button class="qbtn${p===1&&isOv?" on":""}" data-q="1">Happens</button></div></div>`;
   }
   h+=`</div>
@@ -510,14 +519,15 @@ function setSnaps(list){
   const ok=list.filter(valid).sort((a,b)=>a.date<b.date?1:-1).map(normalize);
   if(!ok.length){ $("#app").innerHTML='<div class="loading">No analysis has been saved yet.</div>'; setStatus(false,"Waiting for data"); return; }
   const changed=!S.cur||S.cur.id!==ok[0].id;
-  S.snaps=ok; S.cur=ok[0]; S.prev=ok[1]||null; if(changed) S.ov={};
+  S.snaps=ok; S.cur=ok[0]; const hz0=ok[0].horizonDays||365; S.prev=ok.slice(1).find(x=>(x.horizonDays||365)===hz0)||null; applyReds(); if(changed) S.ov={};
   const age=(Date.now()-new Date(S.cur.generatedAt||S.cur.date).getTime())/36e5;
   setStatus(age<36,(age<36?"Updated ":"Latest analysis ")+fmtDate(S.cur.date));
   if(age>=36) showNote("The latest analysis is more than a day old. The daily update may be delayed.");
   render();
   if(firstRender){ firstRender=false; route(); }
 }
-function setReds(list){ S.reds=list.filter(r=>r&&typeof r.date==="string"&&r.factors).sort((a,b)=>a.date<b.date?1:-1); S.red=S.reds[0]||null; if(S.cur) render(); }
+function applyReds(){ const hz=S.cur?(S.cur.horizonDays||365):365; S.reds=(S.allReds||[]).filter(r=>(r.horizonDays||365)===hz); S.red=S.reds[0]||null; }
+function setReds(list){ S.allReds=list.filter(r=>r&&typeof r.date==="string"&&r.factors).sort((a,b)=>a.date<b.date?1:-1); applyReds(); if(S.cur) render(); }
 
 async function boot(){
   const h=location.hash.slice(1); if(h&&h.length<=6&&!h.includes("_")) S.tab=h;
